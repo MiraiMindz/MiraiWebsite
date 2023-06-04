@@ -13,7 +13,7 @@ export function BodyLayout({ children }: any) {
 
     setIsDarkTheme(localStorageTheme === 'dark' || (!localStorageTheme && getCurrentTheme()));
 
-    const mqListener = (e) => {
+    const mqListener = (e: any) => {
       setIsDarkTheme(e.matches);
       e.matches ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
     };
