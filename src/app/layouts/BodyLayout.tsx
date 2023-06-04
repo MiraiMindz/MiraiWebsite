@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { MiraiLogo } from "../components/assets/Logo";
 import Link from "next/link";
