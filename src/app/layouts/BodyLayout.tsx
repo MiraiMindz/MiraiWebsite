@@ -8,20 +8,22 @@ export function BodyLayout({ children }: any) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
-    const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const localStorageTheme = localStorage.getItem('theme');
+    if (window !== undefined) {
+      const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const localStorageTheme = localStorage.getItem('theme');
 
-    setIsDarkTheme(localStorageTheme === 'dark' || (!localStorageTheme && getCurrentTheme()));
+      setIsDarkTheme(localStorageTheme === 'dark' || (!localStorageTheme && getCurrentTheme()));
 
-    const mqListener = (e: any) => {
-      setIsDarkTheme(e.matches);
-      e.matches ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
-    };
+      const mqListener = (e: any) => {
+        setIsDarkTheme(e.matches);
+        e.matches ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
+      };
 
-    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    darkThemeMq.addListener(mqListener);
+      const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+      darkThemeMq.addListener(mqListener);
 
-    return () => darkThemeMq.removeListener(mqListener);
+      return () => darkThemeMq.removeListener(mqListener);
+    }
   }, []);
 
   const handleTheme = () => {
