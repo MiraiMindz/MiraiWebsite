@@ -1,9 +1,13 @@
 "use client";
 import Typewriter from "typewriter-effect";
-import ScrollButton from "./components/ScrollToButtons/ScrollToButtons";
+import dynamic from 'next/dynamic';
+//import ScrollButton from "./components/ScrollToButtons/ScrollToButtons";
 import { useEffect, useState } from "react";
 import { animateScroll as scroll } from 'react-scroll';
 
+const ScrollButton = dynamic(() => import('./components/ScrollToButtons/ScrollToButtons'), {
+  ssr: false,
+})
 
 export default function Home() {
   const [scrollDown, setScrollDown] = useState<boolean>(false);

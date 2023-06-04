@@ -8,7 +8,7 @@ interface ScrollButtonProps {
 
 export default function ScrollButton(props: ScrollButtonProps) {
   if (window !== undefined) {
-    let amount: number = props.value < 0 ? (window.innerHeight + Math.abs(props.value)) : (window.innerHeight - props.value)
+    let amount: number = props.value < 0 ? ( window.innerHeight + Math.abs(props.value)) : (window.innerHeight - props.value)
     const handleScroll = () => {
       scroll.scrollMore(amount, {smooth:'easeInOutCubic'})
     }
