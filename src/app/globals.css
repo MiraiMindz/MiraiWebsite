@@ -248,3 +248,9 @@
   background-clip: text !important;
   color: transparent !important;
 }
+
+/*
+.blur-mobile {
+  backdrop-filter: blur(2px) !important;
+}
+*/
