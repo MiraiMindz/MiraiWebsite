@@ -188,7 +188,7 @@ export function BodyLayout({ children }: any) {
               <hr className={(isMenuOn ? 'active ' : '') + 'block md:hidden h-1 transition-hr ease-in-out duration-500 bg-neutral-950 dark:bg-neutral-50 rounded-full'} />
             </div>
           </header>
-          <div className="px-2 min-h-screen flex-grow items-stretch flex w-full">
+          <div className="px-2 min-h-screen flex-grow items-stretch flex">
             {children}
           </div>
         </div>
