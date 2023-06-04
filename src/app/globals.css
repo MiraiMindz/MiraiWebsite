@@ -175,7 +175,7 @@
 @keyframes pulseToDark {
   0% {
     transform: scale(0);
-    opacity: 0.5;
+   opacity: 0.5;
   } 10% {
     transform: scale(1);
   } 75% {
@@ -212,7 +212,7 @@
 }
 
 .scroll-down > div > svg {
-  @apply -mr-0.5 fill-neutral-950 transition-all delay-0 dark:fill-neutral-50;
+  @apply -mt-0.5 fill-neutral-950 transition-all delay-0 dark:fill-neutral-50;
 }
 
 .scroll-down:hover > div { 
