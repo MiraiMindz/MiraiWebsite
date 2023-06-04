@@ -254,3 +254,17 @@
   backdrop-filter: blur(2px) !important;
 }
 */
+
+.full-inner-height {
+  min-height: calc(100vh - 8rem);
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

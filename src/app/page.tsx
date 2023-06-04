@@ -19,7 +19,7 @@ export default function Home() {
   
   return (
     <main className="min-h-screen min-w-full flex-grow">
-      <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg">
+      <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
         <Typewriter
           onInit={
             (typewriter) => {
@@ -39,16 +39,20 @@ export default function Home() {
       </section>
       <section className={(scrollDown ? "block" : "hidden") + " min-h-screen relative flex flex-col flex-grow justify-center items-center"}>
         <h1 className="font-black block text-left absolute top-2 w-full text-2xl">Quem sou eu?</h1>
-        <p>
+        <p className="md:mx-16 md:text-2xl">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {(currentYear - 2005)} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies. 
         </p>
-        <div className={(scrollDown ? "toggleScrollDownOn" : "toggleScrollDownOff") + " absolute bottom-32 md:bottom-8"}>
+        <div className={(scrollDown ? "toggleScrollDownOn" : "toggleScrollDownOff") + " absolute bottom-32 md:bottom-16 md:block hidden"}>
+          <ScrollButton value={16}/>
+        </div>
+
+        <div className={(scrollDown ? "toggleScrollDownOn" : "toggleScrollDownOff") + " absolute bottom-32 md:bottom-8 block md:hidden"}>
           <ScrollButton value={-64}/>
         </div>
       </section>
       <section className={(scrollDown ? "block" : "hidden") + " min-h-screen relative flex flex-col flex-grow justify-center items-center"}>
         <h1 className="font-black block text-left absolute top-2 w-full text-2xl">Recomendações</h1>
-        <p>
+        <p className="text-center md:text-2xl">
           Porquê você não dá uma olhada nas outras seções do site? <br/><br/>
           <span className="hidden md:inline-block text-neutral-500 dark:text-neutral-400">Basta usar o menu superior</span>
           <span className="inline-block md:hidden text-neutral-500 dark:text-neutral-400">basta usar o menu no canto superior-direito da tela</span>
