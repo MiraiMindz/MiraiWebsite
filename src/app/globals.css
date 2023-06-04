@@ -195,12 +195,12 @@
 }
 
 .transition-hr.active {
-  width: 95%;
+  width: 98%;
 }
 
 .show-menu {
-  @apply duration-150 ease-in-out delay-300;
   transition: height;
+  @apply duration-150 ease-in-out delay-300;
 }
 
 .scroll-down {
