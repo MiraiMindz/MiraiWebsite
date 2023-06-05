@@ -4,7 +4,8 @@
 
 .nav-bar li:not(:last-child)::after {
   content: "|";
-  @apply mx-2;
+  @apply mx-1 md:mx-2;
+  /*@apply xs:mx-0.5 mx-1 md:mx-2;*/
 }
 
 .logoSvgStyle {
