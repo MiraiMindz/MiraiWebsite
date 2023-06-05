@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen min-w-full flex-grow" onClick={handleSkipAnimation}>
       <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
-        <div className={(skipAnimation ? "hidden" : "inline-block") + "  md:w-[60ch] w-[40ch]"}>
+        <div className={(skipAnimation ? "hidden" : "inline-block") + "  md:w-[80ch] w-[40ch]"}>
           <Typewriter
             onInit={(typewriter) => {
               typewriter
