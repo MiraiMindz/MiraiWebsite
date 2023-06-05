@@ -73,10 +73,8 @@ export function BodyLayout({ children }: any) {
   const lightStopColor = "rgb(255, 0, 255)";
   const tailwindDarkBGColor = "rgb(0, 0, 0)"; // 10, 10, 10
   const tailwindLightBGColor = "rgb(250, 250, 250)";
-  //const tailwindLightMixPercentage = 90;
-  //const tailwindDarkMixPercentage = 90;
-  const tailwindLightMixPercentage = 20;
-  const tailwindDarkMixPercentage = 20;
+  const tailwindLightMixPercentage = 90;
+  const tailwindDarkMixPercentage = 90;
   let darkColors: string[] = [];
   let lightColors: string[] = [];
 
