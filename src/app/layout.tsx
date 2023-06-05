@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="pt-br">
-      <body className={firaCode.className + " transition-colors delay-0 ease-in-out text-justify scroll-smooth min-h-screen w-full"}>
+      <body className={firaCode.className + " transition-colors delay-0 ease-in-out text-justify scroll-smooth min-h-screen w-full scroll-snap"}>
         <BodyLayout>
           {children}
         </BodyLayout>

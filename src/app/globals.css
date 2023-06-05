@@ -286,7 +286,6 @@ html {
 
 /*TODO: add scroll stops on sections of the main page [CURRENTLY BROKEN]*/
 .scroll-snap {
-  overflow-y: scroll;
   scroll-snap-type: y proximity;
   scroll-padding: 4rem;
   /* scroll-snap-stop: always; */
