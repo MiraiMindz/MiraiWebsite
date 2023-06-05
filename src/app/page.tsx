@@ -66,7 +66,7 @@ export default function Home() {
         <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl">
           Quem sou eu?
         </h1>
-        <p className="md:mx-16 md:text-2xl">
+        <p className="md:mx-16 md:text-2xl w-[60ch]">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu
           tenho {currentYear - 2005}{" "}
           anos, e sou principalmente um desenvolvedor Full-Stack; embora também
