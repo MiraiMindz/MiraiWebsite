@@ -284,7 +284,7 @@ html {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
-
+/*TODO: add scroll stops on sections of the main page [CURRENTLY BROKEN]*/
 .scroll-snap {
   scroll-snap-type: both mandatory;
   scroll-snap-align: center;
