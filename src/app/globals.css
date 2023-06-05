@@ -286,7 +286,10 @@ html {
 
 /*TODO: add scroll stops on sections of the main page [CURRENTLY BROKEN]*/
 .scroll-snap {
-  scroll-snap-type: both mandatory;
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-stop: always; */
+}
+
+.scroll-snap section {
   scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
