@@ -4,13 +4,17 @@ import { animateScroll as scroll } from 'react-scroll';
 
 interface ScrollButtonProps {
   value: number,
+  customFunc?: Function;
 }
 
 export default function ScrollButton(props: ScrollButtonProps) {
   if (window !== undefined) {
     let amount: number = props.value < 0 ? ( window.innerHeight + Math.abs(props.value)) : (window.innerHeight - props.value)
     const handleScroll = () => {
-      scroll.scrollMore(amount, {smooth:'easeInOutCubic'})
+      scroll.scrollMore(amount, {smooth:'easeInOutCubic'});
+      if (props.customFunc !== undefined) {
+        props.customFunc()
+      }
     }
 
     return (

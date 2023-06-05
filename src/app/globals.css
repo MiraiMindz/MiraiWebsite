@@ -269,3 +269,18 @@ html {
   scrollbar-width: none;
 }
 
+.header-show-in {
+  letter-spacing: 1rem;
+  @apply text-center transition-all;
+}
+
+/* dark bg */
+.dark .glow-text {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+/* light bg */
+.light .glow-text {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+

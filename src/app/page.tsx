@@ -13,7 +13,7 @@ const ScrollButton = dynamic(
 
 export default function Home() {
   const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const handleScrollDown = () => setScrollDown(!scrollDown);
+  const handleScrollDown = () => setScrollDown(true);
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const handleScroll = () => {
@@ -23,22 +23,34 @@ export default function Home() {
     handleScroll();
   }, []);
 
+  const [skipAnimation, setSkipAnimation] = useState<boolean>(false);
+  const handleSkipAnimation = () => {
+    setSkipAnimation(true);
+    handleScrollDown();
+  }
+
+
   return (
-    <main className="min-h-screen min-w-full flex-grow">
+    <main className="min-h-screen min-w-full flex-grow" onClick={handleSkipAnimation}>
       <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(
-                "Onde a criatividade e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
-              )
-              .pauseFor(500)
-              .callFunction(() => {
-                handleScrollDown();
-              })
-              .start();
-          }}
-        />
+        <div className={skipAnimation ? "hidden" : "inline-block"}>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(
+                  "Onde a criatividade e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
+                )
+                .pauseFor(500)
+                .callFunction(() => {
+                  handleScrollDown();
+                })
+                .start();
+            }}
+          />
+        </div>
+        <p className={skipAnimation ? "inline-block" : "hidden"}>
+          Onde a criatividade e o tecnicismo dão um passo em direção ao <span className="underline">futuro</span>.
+        </p>
         <div
           className={(scrollDown
             ? "toggleScrollDownOn"
@@ -75,7 +87,7 @@ export default function Home() {
             : "toggleScrollDownOff") +
             " absolute bottom-32 md:bottom-8 block md:hidden"}
         >
-          <ScrollButton value={-64} />
+          <ScrollButton value={-52} />
         </div>
       </section>
       <section
