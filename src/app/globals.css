@@ -286,7 +286,7 @@ html {
 
 
 .scroll-snap {
-  scroll-snap-type: mandatory;
+  scroll-snap-type: both mandatory;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
