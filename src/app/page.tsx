@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen min-w-full flex-grow scroll-snap" onClick={handleSkipAnimation}>
-      <div className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
+      <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
         <div className={skipAnimation ? "hidden" : "inline-block"}>
           <Typewriter
             onInit={(typewriter) => {
@@ -58,8 +58,8 @@ export default function Home() {
         >
           <ScrollButton value={48} />
         </div>
-      </div>
-      <div
+      </section>
+      <section
         className={(scrollDown ? "block" : "hidden") +
           " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
       >
@@ -89,8 +89,8 @@ export default function Home() {
         >
           <ScrollButton value={-52} />
         </div>
-      </div>
-      <div
+      </section>
+      <section
         className={(scrollDown ? "block" : "hidden") +
           " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
       >
@@ -107,7 +107,7 @@ export default function Home() {
             basta usar o menu no canto superior-direito da tela
           </span>
         </p>
-      </div>
+      </section>
     </main>
   );
 }
