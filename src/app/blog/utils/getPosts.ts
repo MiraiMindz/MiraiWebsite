@@ -33,3 +33,8 @@ export function getSortedPostsData() {
     }
   });
 }
+
+
+//Failed to compile.
+//./src/app/blog/utils/getPosts.ts
+//Module not found: Can't resolve 'fs'
