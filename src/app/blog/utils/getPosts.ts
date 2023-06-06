@@ -1,40 +1,35 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+export const getPosts = cache(async () => {
+  const posts = await fs.readdir('./posts/');
 
-export async function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.mdx$/, '');
+  return Promise.all(
+    posts
+      .filter((file) => path.extname(file) === '.mdx')
+      .map(async (file) => {
+        const filePath = `./posts/${file}`;
+        const postContent = await fs.readFile(filePath, 'utf8');
+        const { data, content } = matter(postContent);
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+        if (data.published === false) {
+          return null;
+        }
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+        return { ...data, body: content } as Post;
+      })
+  );
+});
 
-    // Combine the data with the id
-    return {
-      id,
-      ...matterResult.data,
-    };
-  });
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+export async function getPost(slug: string) {
+  const posts = await getPosts();
+  return posts.find((post) => post.slug === slug);
 }
 
+export default getPosts;
 
 //Failed to compile.
 //./src/app/blog/utils/getPosts.ts
 //Module not found: Can't resolve 'fs'
+// https://maxleiter.com/blog/build-a-blog-with-nextjs-13
