@@ -7,3 +7,7 @@ export default function blog() {
     </main>
   );
 }
+
+
+// https://dev.to/slanted_dev/nextjs-13-blog-starter-1b6p
+

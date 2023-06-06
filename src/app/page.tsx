@@ -37,6 +37,7 @@ export default function Home() {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
+                .changeDelay(400)
                 .typeString(
                   "Onde a criatividade e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
                 )
