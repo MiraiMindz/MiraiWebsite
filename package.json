@@ -28,7 +28,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.9",
-    "remark": "remark",
+    "remark": "14.0.3",
     "remark-gfm": "3.0.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3",
