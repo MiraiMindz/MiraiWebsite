@@ -1,5 +1,5 @@
 "use client";
-import { getSortedPostsData } from './utils/getPosts.ts';
+import { getSortedPostsData } from '../utils/getPosts.ts';
 
 export default function Mdxpage() {
   const allPostsData = getSortedPostsData();
