@@ -2,7 +2,7 @@
 import { getSortedPostsData } from '../utils/getPosts.ts';
 
 export default function Mdxpage() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData: any = getSortedPostsData();
   return (
     <main>
       {allPostsData.map(({ id, date, title }) => (
