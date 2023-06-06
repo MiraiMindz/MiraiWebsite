@@ -260,14 +260,14 @@
   min-height: calc(100vh - 8rem);
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   display: none;
 }
 
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 
 .header-show-in {
   letter-spacing: 1rem;
@@ -284,3 +284,14 @@ html {
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
+/*TODO: add scroll stops on sections of the main page [CURRENTLY BROKEN]*/
+.scroll-snap {
+  scroll-snap-type: y proximity;
+  scroll-padding: 4rem;
+  /* scroll-snap-stop: always; */
+}
+
+.scroll-snap section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
