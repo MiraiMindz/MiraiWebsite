@@ -4,11 +4,14 @@ import nextMDX from "@next/mdx";
 const withMDX = nextMDX({
   options: {
     remarkPlugins: [remarkGfm],
+    providerImportSource: '@mdx-js/react',
   },
 });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  swcMinify: true,
+  reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
   experimental: {
     appDir: true,
