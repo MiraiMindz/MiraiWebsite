@@ -260,14 +260,14 @@
   min-height: calc(100vh - 8rem);
 }
 
-/* html::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
-} */
+}
 
 .header-show-in {
   letter-spacing: 1rem;
