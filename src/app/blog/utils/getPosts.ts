@@ -1,33 +1,33 @@
-import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
+import * as fs from 'fs';
 
-export const getPosts = cache(async () => {
-  const posts = await fs.readdir('./posts/');
-
-  return Promise.all(
-    posts
-      .filter((file) => path.extname(file) === '.mdx')
-      .map(async (file) => {
-        const filePath = `./posts/${file}`;
-        const postContent = await fs.readFile(filePath, 'utf8');
-        const { data, content } = matter(postContent);
-
-        if (data.published === false) {
-          return null;
-        }
-
-        return { ...data, body: content } as Post;
-      })
-  );
-});
-
-export async function getPost(slug: string) {
-  const posts = await getPosts();
-  return posts.find((post) => post.slug === slug);
+interface FileData {
+  frontmatter: matter.GrayMatterFile<string>['data'];
+  markdown: matter.GrayMatterFile<string>['content'];
 }
 
-export default getPosts;
+export default function parseMdxFiles(directory: string): FileData[] {
+  const files = fs.readdirSync(directory);
+
+  const mdxFiles = files.filter((file) => path.extname(file) === '.mdx');
+
+  const fileData: FileData[] = [];
+
+  mdxFiles.forEach((file) => {
+    const filePath = path.join(directory, file);
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContent);
+
+    fileData.push({
+      frontmatter: data,
+      markdown: content,
+    });
+  });
+
+  return fileData;
+}
+
 
 //Failed to compile.
 //./src/app/blog/utils/getPosts.ts

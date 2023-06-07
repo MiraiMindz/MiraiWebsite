@@ -14,6 +14,14 @@ const nextConfig = {
     appDir: true,
     mdxRs: false,
   },
+  webpack: (config) => {
+    config.resolve.fallback = {
+      fs: false,
+      path: false
+    };
+
+    return config;
+  },
 }
 
 export default withMDX(nextConfig);

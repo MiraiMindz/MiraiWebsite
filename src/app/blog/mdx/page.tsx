@@ -1,19 +1,15 @@
 "use client";
-import { getSortedPostsData } from '../utils/getPosts.ts';
+import React from 'react';
+import parseMdxFiles from '../utils/getPosts';
+import { cwd } from 'process';
 
 export default function Mdxpage() {
-  const allPostsData: any = getSortedPostsData();
+  const postsDir = `${cwd()}/src/app/blog/posts`;
+  const parsedData = parseMdxFiles(postsDir);
+  console.log(parsedData);
   return (
     <main>
-      {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
+      test
     </main>
   );
 }
