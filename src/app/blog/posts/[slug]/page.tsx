@@ -11,11 +11,11 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function Page({ params }: any) {
-    const { content } = await getPageContent(params.slug)
+  const { content } = await getPageContent(params.slug)
 
   return (
-    <section className='py-24'>
-      <div className='container py-4 prose'>{content}</div>
+    <section>
+      {content}
     </section>
   )
 }

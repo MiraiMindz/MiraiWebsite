@@ -28,16 +28,20 @@ export const getPostBySlug = async (slug: any): Promise<Post> => {
     options: { parseFrontmatter: true }
   });
 
+  console.log(content);
   return { meta: { ...frontmatter, slug: realSlug }, content }
 }
 
 export const getAllPostsMeta = async () => {
-  const files = fs.readdirSync(rootDirectory)
+  const files = fs.readdirSync(rootDirectory);
 
-  let posts = []
+  let posts = [];
+
+  console.log(files);
 
   for (const file of files) {
     const { meta } = await getPostBySlug(file);
+    console.log(meta);
     posts.push(meta);
   }
 
