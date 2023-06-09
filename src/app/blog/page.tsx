@@ -1,9 +1,11 @@
+import path from "path";
 import Link from "next/link";
 import { getAllPostsMeta } from "../lib/mdx/parsePosts";
 
+const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'content', 'posts');
+
 export default async function Page() {
-  const posts = await getAllPostsMeta();
-  console.log(posts);
+  const posts = await getAllPostsMeta(postsDirectory);
 
   return (
     <main className="min-h-screen min-w-full flex-grow">
@@ -17,6 +19,3 @@ export default async function Page() {
     </main>
   )
 }
-
-
-// https://dev.to/slanted_dev/nextjs-13-blog-starter-1b6p

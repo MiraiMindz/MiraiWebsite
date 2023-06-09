@@ -1,5 +1,5 @@
-import remarkGfm from 'remark-gfm';
 import nextMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 
 const withMDX = nextMDX({
   options: {

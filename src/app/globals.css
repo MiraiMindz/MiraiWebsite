@@ -216,7 +216,7 @@
   @apply -mt-0.5 fill-neutral-950 transition-all delay-0 dark:fill-neutral-50;
 }
 
-.scroll-down:hover > div { 
+.scroll-down:hover > div {
   @apply bg-neutral-950 transition-all delay-0 dark:bg-neutral-50;
 }
 
@@ -294,4 +294,182 @@ html {
 .scroll-snap section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+
+
+.hljs-wrapper {
+  @apply h-fit w-fit p-2 my-2 overflow-clip border-2 border-neutral-950 dark:border-neutral-50 rounded-lg;
+}
+
+pre code.hljs {
+  @apply block p-2 overflow-x-auto bg-transparent text-neutral-950 dark:text-neutral-50;
+}
+
+.hljs-subst {
+  @apply text-neutral-400 dark:text-neutral-600;
+}
+
+.hljs-selector-tag {
+  @apply text-blue-700 dark:text-blue-400;
+}
+
+.hljs-selector-id {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-selector-class {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-selector-attr {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-selector-pseudo {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-addition {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-deletion {
+  @apply text-red-700 dark:text-red-400;
+}
+
+.hljs-built_in {
+  @apply text-teal-600 dark:text-teal-400;
+}
+
+.hljs-type {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-class {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-function {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-function > .hljs-title {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-keyword {
+  @apply text-amber-600 dark:text-amber-400;
+}
+
+.hljs-literal {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.hljs-symbol {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.hljs-number {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.hljs-regexp {
+  @apply text-yellow-600 dark:text-yellow-400;
+}
+
+.hljs-string {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-title {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-params {
+  @apply text-rose-600 dark:text-rose-400;
+}
+
+.hljs-bullet {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.hljs-code {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-emphasis {
+  @apply italic;
+}
+
+.hljs-formula {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-strong {
+  @apply font-bold;
+}
+
+.hljs-link:hover {
+  @apply underline;
+}
+
+.hljs-quote {
+  @apply text-neutral-400 dark:text-neutral-600;
+}
+
+.hljs-comment {
+  @apply italic text-neutral-400 dark:text-neutral-600;
+}
+
+.hljs-doctag {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-meta {
+  @apply text-cyan-700 dark:text-cyan-400;
+}
+
+.hljs-meta-keyword {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-meta-string {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-attr {
+  @apply text-green-700 dark:text-green-400;
+}
+
+.hljs-attribute {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.hljs-builtin-name {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.hljs-name {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.hljs-section {
+  @apply text-teal-600 dark:text-teal-400;
+}
+
+.hljs-tag {
+  @apply text-rose-600 dark:text-green-400;
+}
+
+.hljs-variable {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.hljs-template-variable {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.hljs-template-tag {
+  @apply text-cyan-700 dark:text-cyan-400;
 }
