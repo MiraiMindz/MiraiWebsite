@@ -31,7 +31,7 @@ function Link(props: LinkProps) {
       break;
   }
 
-  let classes = `${padding} underline text-sm ml-0 hover:ml-4`;
+  let classes = `${padding} underline text-sm`;
 
   return <a className={classes} href={`#${props.href}`}>{props.children}</a>;
 }
@@ -53,7 +53,7 @@ export async function getHeadings(source: string) {
     const text = raw.replace(/^#*\s/, "");
     const headerLink = text.replace(/ /g, "-").toLowerCase();
     const level = countHashes(raw);
-    headersList.push(<li className="truncate list-none"><Link level={level} href={`#${headerLink}`}>{text}</Link></li>);
+    headersList.push(<li className="truncate list-none transition-all ml-0 hover:ml-4"><Link level={level} href={`#${headerLink}`}>{text}</Link></li>);
   });
 
   return headersList;

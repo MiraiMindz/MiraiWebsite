@@ -30,7 +30,7 @@ export default async function Page({ params }: any) {
       <aside className="fixed top-16 right-2 w-64">
         <ul>
           {posts?.map(post => (
-            <li className="my-2" key={post?.slug}>
+            <li className="my-2 mr-0 hover:mr-4 transition-all" key={post?.slug}>
               <PostSide 
                 title={post?.title}
                 shortSum={post?.shortSum}
