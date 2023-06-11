@@ -14,7 +14,7 @@ export function PostSide(props: PostSideProps) {
   const formattedDate = dayjs(props.date).locale('pt-br').format('D/MM/YYYY');
   return (
     <Link href={props.href}>
-      <div className="p-5 border-2 rounded-lg border-neutral-950 dark:border-neutral-50">
+      <div className="p-5 border-2 rounded-lg postSideClass">
         <h2 className="font-black font-base truncate">{props.title}</h2>
         <p className="italic text-neutral-500 font-sm truncate">{props.shortSum}</p>
         <p className="text-neutral-500 font-sm truncate">Publicado em: {formattedDate}</p>
