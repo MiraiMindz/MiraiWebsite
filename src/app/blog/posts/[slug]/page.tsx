@@ -21,13 +21,13 @@ export default async function Page({ params }: any) {
 
   return (
     <section className="flex flex-row justify-center items-start flex-grow">
-      <aside className="fixed top-16 left-2 w-64">
+      <aside className="fixed top-16 left-2 w-60">
         {toc}
       </aside>
       <article className="w-[40ch] md:w-[80ch]">
         {content}
       </article>
-      <aside className="fixed top-16 right-2 w-64">
+      <aside className="fixed top-16 right-2 w-72">
         <ul>
           {posts?.map(post => (
             <li className="my-2 mr-0 hover:mr-4 transition-all" key={post?.slug}>
