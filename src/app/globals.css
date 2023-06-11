@@ -475,7 +475,7 @@ pre code.hljs {
 }
 
 .PostSideClass {
-  @apply border-neutral-950 dark:border-neutral-50 hover:border-violet-400 dark:hover:border-violet-800 transition-all;
+  @apply p-5 rounded-lg border-2 border-neutral-950 dark:border-neutral-50 hover:border-violet-400 hover:dark:border-violet-800 transition-all;
 }
 
 .PostSideClass > h1 {
