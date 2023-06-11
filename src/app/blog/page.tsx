@@ -7,6 +7,7 @@ const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'content',
 export default async function Page() {
   const posts = await getAllPostsMeta(postsDirectory);
 
+
   return (
     <main className="min-h-screen min-w-full flex-grow">
       <ul>

@@ -12,7 +12,7 @@
   "dependencies": {
     "@code-hike/mdx": "^0.8.3",
     "@leafac/rehype-shiki": "^2.2.1",
-    "@mapbox/rehype-prism": "^0.8.0",
+    "@mapbox/rehype-prism": "^0.7.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@mdx-js/util": "^1.6.22",
