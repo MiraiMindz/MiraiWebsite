@@ -27,9 +27,7 @@ type Post = {
 function formatReadingTime(readingTimeString: string) {
   const { text, minutes, time, words } = readingTime(readingTimeString);
   let formattedTime = '';
-  if (minutes == 1) {
-    formattedTime = '1 min.';
-  } else if (minutes < 1) {
+  if (minutes < 1) {
     formattedTime = '< 1 min.';
   } else {
     formattedTime = `${minutes} min.`;
