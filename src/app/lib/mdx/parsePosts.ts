@@ -26,14 +26,15 @@ type Post = {
 
 function formatReadingTime(readingTimeString: string) {
   const { text, minutes, time, words } = readingTime(readingTimeString);
-  let formattedTime = '';
-  if (minutes < 1) {
-    formattedTime = '< 1 min.';
-  } else {
-    formattedTime = `${minutes} min.`;
-  }
+  //let formattedTime = '';
+  //if (minutes < 1) {
+  //  formattedTime = '< 1 min.';
+  //} else {
+  //  formattedTime = `${minutes} min.`;
+  //}
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
-  const formattedText = `Tempo estimado: ${formattedTime}`;
+  //const formattedText = `Tempo estimado: ${formattedTime}`;
+  const formattedText = `Tempo estimado: ${minutes} min.`;
   return { text: formattedText, minutes, time, words };
 }
 
