@@ -27,11 +27,11 @@ export function PostSide(props: PostSideProps) {
 export function PostCard(props: PostSideProps) {
   const formattedDate = dayjs(props.date).locale('pt-br').format('D/MM/YYYY');
   return (
-    <Link href={props.href}>
+    <Link href={props.href} className="w-[40ch] md:w-[80ch]">
       <div className="postCardClass">
-        <h2 className="font-black truncate transition-all text-center text-lg">{props.title}</h2>
+        <h2 className="font-black truncate transition-all text-left text-lg">{props.title}</h2>
         <p className="italic text-neutral-500 dark:text-neutral-400 whitespace-normal text-base">{props.shortSum}</p>
-        <div className="flex flex-col items-start justify-start md:flex-row md:justify-between md:items-center">
+        <div className="flex flex-col items-start justify-start">
           <p className="text-neutral-500 dark:text-neutral-400 text-base">Publicado em: {formattedDate}</p>
           <p className="text-neutral-500 dark:text-neutral-400 underline text-base">{props.readTime}</p>
         </div>

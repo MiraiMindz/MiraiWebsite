@@ -9,7 +9,7 @@ export default async function Page() {
 
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-center items-start">
-      <article className="w-[40ch] md:w-[80ch]">
+      <article>
         <ul>
           {posts?.map(post => (
             <li className="my-2 md:my-4" key={post?.slug}>
@@ -20,7 +20,7 @@ export default async function Page() {
                 readTime={post?.readTime?.text}
                 date={post?.publishDate}
               />
-              <hr className="rounded-full h-1 w-[99%] bg-neutral-950 dark:bg-neutral-50"/>
+              <hr className="rounded-full h-0.5 w-[99%] bg-neutral-950 dark:bg-neutral-50"/>
             </li>
           ))}
         </ul>
