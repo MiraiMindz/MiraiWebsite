@@ -15,7 +15,7 @@ export function PostSide(props: PostSideProps) {
   return (
     <Link href={props.href}>
       <div className="postSideClass">
-        <h2 className="font-black text-base truncate transition-all text-left md:text-center">{props.title}</h2>
+        <h2 className="font-black text-base truncate transition-all text-left md:whitespace-normal">{props.title}</h2>
         <p className="italic text-neutral-500 text-sm text-wrap md:truncate">{props.shortSum}</p>
         <p className="text-neutral-500 text-sm truncate">Publicado em: {formattedDate}</p>
         <p className="text-neutral-500 text-sm underline truncate">{props.readTime}</p>
