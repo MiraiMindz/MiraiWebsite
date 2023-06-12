@@ -21,7 +21,7 @@ export default async function Page({ params }: any) {
 
   return (
     <section className="flex flex-row justify-center items-start flex-grow">
-      <aside className="fixed top-16 left-2 w-64">
+      <aside className="fixed top-16 left-2 w-64 hidden md:block">
         <div className="p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>
           <ul>
@@ -32,7 +32,7 @@ export default async function Page({ params }: any) {
       <article className="w-[40ch] md:w-[80ch] article">
         {content}
       </article>
-      <aside className="fixed top-16 right-2 w-64">
+      <aside className="fixed top-16 right-2 w-64 hidden md:block">
         <ul>
           {posts?.map(post => (
             <li className="my-2" key={post?.slug}>
@@ -46,7 +46,6 @@ export default async function Page({ params }: any) {
             </li>
           ))}
         </ul>
-
       </aside>
     </section>
   )
