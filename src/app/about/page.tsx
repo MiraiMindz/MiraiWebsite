@@ -8,9 +8,9 @@ export default function About() {
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl">Quem sou eu?</h1>
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-row justify-center items-center">
             <Image 
-              className="rounded-full border-2 border-neutral-950 dark:border-neutral-50"
+              className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4"
               src="https://raw.githubusercontent.com/MiraiMindz/MiraiMindz.github.io/main/public/assets/selfie.png"
               width={imgSize}
               height={imgSize}
