@@ -15,10 +15,12 @@ export function PostSide(props: PostSideProps) {
   return (
     <Link href={props.href}>
       <div className="postSideClass">
-        <h2 className="font-black text-base truncate transition-all text-left md:text-center">{props.title}</h2>
-        <p className="italic text-neutral-500 text-sm truncate md:whitespace-normal">{props.shortSum}</p>
-        <p className="text-neutral-500 text-sm truncate">Publicado em: {formattedDate}</p>
-        <p className="text-neutral-500 text-sm underline truncate">{props.readTime}</p>
+        <h2 className="font-black text-base truncate transition-all text-left md:text-center md:text-xl">{props.title}</h2>
+        <p className="italic text-neutral-500 dark:text-neutral-400 text-sm truncate md:whitespace-normal md:text-lg">{props.shortSum}</p>
+        <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm truncate md:text-lg">Publicado em: {formattedDate}</p>
+          <p className="text-neutral-500 dark:text-neutral-400 text-sm underline truncate md:text-lg">{props.readTime}</p>
+        </div>
       </div>
     </Link>
   );
