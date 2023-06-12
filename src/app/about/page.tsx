@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <main className="min-h-screen min-w-full flex-grow">
+    <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-lg">Quem sou eu?</h1>
+          <h1 className="font-black text-xl">Quem sou eu?</h1>
           <div className="flex flex-row justify-between items-center">
             <Image 
               className="rounded-full border-2 border-neutral-950 dark:border-neutral-50"
               src="https://raw.githubusercontent.com/MiraiMindz/MiraiMindz.github.io/main/public/assets/selfie.png"
-              width={500}
-              height={500}
+              width={64}
+              height={64}
               alt="Foto do autor"
             />
             <p>
@@ -21,7 +21,7 @@ export default function About() {
           </div>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-lg">Formações</h1>
+          <h1 className="font-black text-xl">Formações</h1>
           <div className="flex flex-row justify-between items-center">
             <p>
               (Formações Academicas)
@@ -29,7 +29,7 @@ export default function About() {
           </div>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-lg">Formas de Contato</h1>
+          <h1 className="font-black text-xl">Formas de Contato</h1>
           <div className="flex flex-row justify-between items-center">
             <p>
               (Formas de Contato)
