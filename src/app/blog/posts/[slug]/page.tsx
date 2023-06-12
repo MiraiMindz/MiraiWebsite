@@ -38,7 +38,7 @@ export default async function Page({ params }: any) {
   console.log(`prevPostSlug: ${prevPostSlug}`);
 
   return (
-    <section className="flex flex-col justify-start items-center md:flex-row md:justify-center md:items-start flex-grow">
+    <section className="flex md:flex-row md:justify-center md:items-start flex-grow">
       <aside className="fixed top-16 left-2 w-64 hidden md:block">
         <div className="p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>
@@ -47,9 +47,9 @@ export default async function Page({ params }: any) {
           </ul>
         </div>
       </aside>
-      <details className="block md:hidden">
-        <summary>Tabela de Conteudos</summary>
-        <ul>
+      <details className="block md:hidden truncate">
+        <summary className="truncate">Tabela de Conteudos</summary>
+        <ul className="truncate">
           {toc}
         </ul>
       </details>
@@ -71,10 +71,11 @@ export default async function Page({ params }: any) {
           ))}
         </ul>
       </aside>
-      <div className="md:hidden mt-4 flex justify-between w-[40ch]">
+      <div className="md:hidden mt-4 grid grid-cols-3 w-[40ch]">
         <Link className={prevPostSlug != null ? "block" : "hidden"} href={`/blog/posts/${prevPostSlug}`}>
           Previous Post
         </Link>
+        <div></div>
         <Link className={nextPostSlug != null ? "block" : "hidden"} href={`/blog/posts/${nextPostSlug}`}>
           Next Post
         </Link>
