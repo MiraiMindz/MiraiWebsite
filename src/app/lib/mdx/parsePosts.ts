@@ -64,6 +64,6 @@ export const getAllPostsMeta = async (rootDirectory: string) => {
     const { meta } = await getPostBySlug(file, rootDirectory);
     posts.push(meta);
   }
-
+  posts.sort((post1, post2) => (post1.publishDate > post2.publishDate ? -1 : 1));
   return posts;
 }
