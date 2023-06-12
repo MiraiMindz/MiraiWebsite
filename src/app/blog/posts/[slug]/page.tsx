@@ -1,6 +1,7 @@
 import path from "path";
 import { getPostBySlug, getAllPostsMeta } from "@/app/lib/mdx/parsePosts";
 import { PostSide } from "@/app/components/mdx/PostSide";
+import Link from "next/link";
 
 const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'content', 'posts');
 
@@ -17,13 +18,27 @@ export async function generateMetadata({ params }: any) {
 export default async function Page({ params }: any) {
   const { content, toc } = await getPageContent(params.slug);
   const posts = await getAllPostsMeta(postsDirectory);
-  posts?.map(post => {
-    console.log("--- Post ---")
-    console.log(post?.readTime?.text); 
-  });
+  let currentPostIndex = posts.findIndex((post) => post.slug === params.slug);
+  let nextPostSlug: any = undefined;
+  let prevPostSlug: any = undefined;
+  if (posts.length > 1) {
+    prevPostSlug = posts[currentPostIndex + 1]?.slug;
+  } else {
+    prevPostSlug = null;
+  }
+
+  if (currentPostIndex > 0) {
+    nextPostSlug = posts[currentPostIndex - 1]?.slug;
+  } else {
+    nextPostSlug = null;
+  }
+
+  console.log(`currentPostIndex: ${currentPostIndex}`);
+  console.log(`nextPostSlug: ${nextPostSlug}`);
+  console.log(`prevPostSlug: ${prevPostSlug}`);
 
   return (
-    <section className="flex flex-row justify-center items-start flex-grow">
+    <section className="flex flex-col justify-start items-center md:flex-row md:justify-center md:items-start flex-grow">
       <aside className="fixed top-16 left-2 w-64 hidden md:block">
         <div className="p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>
@@ -32,6 +47,12 @@ export default async function Page({ params }: any) {
           </ul>
         </div>
       </aside>
+      <details className="block md:hidden">
+        <summary>Tabela de Conteudos</summary>
+        <ul>
+          {toc}
+        </ul>
+      </details>
       <article className="w-[40ch] md:w-[80ch] article">
         {content}
       </article>
@@ -50,6 +71,14 @@ export default async function Page({ params }: any) {
           ))}
         </ul>
       </aside>
+      <div className="md:hidden mt-4 flex justify-between w-[40ch]">
+        <Link className={prevPostSlug != null ? "block" : "hidden"} href={`/blog/posts/${prevPostSlug}`}>
+          Previous Post
+        </Link>
+        <Link className={nextPostSlug != null ? "block" : "hidden"} href={`/blog/posts/${nextPostSlug}`}>
+          Next Post
+        </Link>
+      </div>
     </section>
   )
 }
