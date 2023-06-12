@@ -38,7 +38,7 @@ export default async function Page({ params }: any) {
   console.log(`prevPostSlug: ${prevPostSlug}`);
 
   return (
-    <section className="flex md:flex-row md:justify-center md:items-start flex-grow">
+    <section className="flex flex-col md:flex-row md:justify-center md:items-start flex-grow">
       <aside className="fixed top-16 left-2 w-64 hidden md:block">
         <div className="p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>

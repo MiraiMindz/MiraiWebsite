@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
+
 .nav-bar li:not(:last-child)::after {
   content: "|";
   @apply mx-1 md:mx-2;
@@ -260,6 +268,11 @@
   min-height: calc(100vh - 8rem);
 }
 
+/**
+ * 
+ * Scrollbar
+ *
+***/
 html::-webkit-scrollbar {
   display: none;
 }
