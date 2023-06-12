@@ -503,3 +503,11 @@ pre code.hljs {
   margin-right: 0.25rem;
 }
 
+details {
+  @apply transition-all;
+}
+
+details[open] {
+  @apply transition-all;
+}
+
