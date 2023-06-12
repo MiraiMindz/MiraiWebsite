@@ -53,7 +53,7 @@ export async function getHeadings(source: string) {
     const text = raw.replace(/^#*\s/, "");
     const headerLink = text.replace(/ /g, "-").toLowerCase();
     const level = countHashes(raw);
-    headersList.push(<li className="truncate transition-all ml-0 hover:ml-4 hover:text-violet-400 hover:dark:text-violet-600"><Link level={level} href={`#${headerLink}`}>{`> ${text}`}</Link></li>);
+    headersList.push(<li className="truncate list-none transition-all ml-0 hover:ml-4 hover:text-violet-400 hover:dark:text-violet-600"><Link level={level} href={`${headerLink}`}>{`> ${text}`}</Link></li>);
   });
 
   return headersList;

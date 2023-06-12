@@ -42,7 +42,7 @@ export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<P
   const filePath = path.join(rootDirectory, `${realSlug}.mdx`);
 
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
-  const tableOfContent = await getHeadings(fileContent)
+  const tableOfContent = await getHeadings(fileContent);
 
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     components: MDXCC.default,
