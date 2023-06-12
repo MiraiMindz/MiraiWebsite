@@ -26,17 +26,16 @@ type Post = {
 
 function formatReadingTime(readingTimeString: string) {
   const { text, minutes, time, words } = readingTime(readingTimeString);
-  //let formattedTime = '';
-  //if (minutes < 1) {
-  //  formattedTime = '< 1 min.';
-  //} else {
-  //  formattedTime = `${minutes} min.`;
-  //}
-  //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
-  //const formattedText = `Tempo estimado: ${formattedTime}`;
-  console.log({text, minutes, time, words})
+  let formattedTime = '';
+  if (minutes < 1) {
+    formattedTime = '< 1 min.';
+  } else {
+    formattedTime = `${minutes} min.`;
+  }
 
-  const formattedText = `Tempo estimado: ${minutes} min.`;
+  console.log({text, minutes, time, words});
+  //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
+  const formattedText = `Tempo estimado: ${formattedTime}`;
   return { text: formattedText, minutes, time, words };
 }
 
@@ -53,7 +52,7 @@ export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<P
     options: { parseFrontmatter: true }
   });
 
-  const readTime = formatReadingTime(frontmatter.publishDate);
+  const readTime = formatReadingTime(fileContent);
 
   return { meta: { ...frontmatter, slug: realSlug }, content, toc: tableOfContent, readTime: readTime.text };
 }
