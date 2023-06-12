@@ -72,10 +72,10 @@ export default async function Page({ params }: any) {
         </ul>
       </aside>
       <div className="md:hidden my-4 flex flex-row justify-between items-center w-[40ch]">
-        <Link className={(prevPostSlug != null ? "block" : "hidden") + " text-left"} href={`/blog/posts/${prevPostSlug}`}>
+        <Link className={(prevPostSlug != null ? "block" : "hidden") + " text-left w-full"} href={`/blog/posts/${prevPostSlug}`}>
           &lt; Previous Post
         </Link>
-        <Link className={(nextPostSlug != null ? "block" : "hidden") + " text-right"} href={`/blog/posts/${nextPostSlug}`}>
+        <Link className={(nextPostSlug != null ? "block" : "hidden") + " text-right w-full"} href={`/blog/posts/${nextPostSlug}`}>
           Next Post &gt;
         </Link>
       </div>
