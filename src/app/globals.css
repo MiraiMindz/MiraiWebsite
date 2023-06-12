@@ -482,7 +482,7 @@ pre code.hljs {
   @apply text-violet-500 transition-all;
 }
 
-.article:first-of-type(p) {
+.article p:first-of-type {
   font-size: 2rem;
   font-weight: 900;
   float: left;
