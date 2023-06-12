@@ -9,6 +9,7 @@ export default async function Page() {
 
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-center items-start">
+      <h1 className="text-2xl font-black">Blog</h1>
       <article>
         <ul className="w-full">
           {posts?.map(post => (
