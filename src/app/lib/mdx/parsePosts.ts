@@ -18,22 +18,28 @@ type Post = {
     title: string;
     publishDate: string;
     shortSum: string;
+    readTime: ReadTimeData;
   };
   content: ReactElement;
   toc: any;
-  readTime: string;
 };
 
-function formatReadingTime(readingTimeString: string) {
-  const { text, minutes, time, words } = readingTime(readingTimeString);
+type ReadTimeData = {
+  text: string;
+  minutes: number;
+  time: number;
+  words: number;
+}
+
+export function formatReadingTime(readingTimeString: string): ReadTimeData {
+  const { text, minutes, time, words }: ReadTimeData = readingTime(readingTimeString);
   let formattedTime = '';
   if (minutes < 1) {
     formattedTime = '< 1 min.';
   } else {
     formattedTime = `${minutes} min.`;
   }
-
-  console.log({text, minutes, time, words});
+ 
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
   const formattedText = `Tempo estimado: ${formattedTime}`;
   return { text: formattedText, minutes, time, words };
@@ -52,9 +58,9 @@ export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<P
     options: { parseFrontmatter: true }
   });
 
-  const readTime = formatReadingTime(fileContent);
+  const postReadTime:ReadTimeData = formatReadingTime(fileContent);
 
-  return { meta: { ...frontmatter, slug: realSlug }, content, toc: tableOfContent, readTime: readTime.text };
+  return { meta: { ...frontmatter, slug: realSlug, readTime: postReadTime }, content, toc: tableOfContent };
 }
 
 export const getAllPostsMeta = async (rootDirectory: string) => {

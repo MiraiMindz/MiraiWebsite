@@ -5,8 +5,8 @@ import { PostSide } from "@/app/components/mdx/PostSide";
 const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'content', 'posts');
 
 const getPageContent = async (slug: any) => {
-  const { meta, content, toc, readTime } = await getPostBySlug(slug, postsDirectory);
-  return { meta, content, toc, readTime }
+  const { meta, content, toc } = await getPostBySlug(slug, postsDirectory);
+  return { meta, content, toc }
 }
 
 export async function generateMetadata({ params }: any) {
@@ -15,9 +15,12 @@ export async function generateMetadata({ params }: any) {
 }
 
 export default async function Page({ params }: any) {
-  const { content, toc, readTime } = await getPageContent(params.slug);
+  const { content, toc } = await getPageContent(params.slug);
   const posts = await getAllPostsMeta(postsDirectory);
-
+  posts?.map(post => {
+    console.log("--- Post ---")
+    console.log(post?.readTime?.text); 
+  });
 
   return (
     <section className="flex flex-row justify-center items-start flex-grow">
@@ -40,7 +43,7 @@ export default async function Page({ params }: any) {
                 title={post?.title}
                 shortSum={post?.shortSum}
                 href={`/blog/posts/${post?.slug}`}
-                readTime={readTime}
+                readTime={post?.readTime?.text}
                 date={post?.publishDate}
               />
             </li>
