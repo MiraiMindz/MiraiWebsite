@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 export default function About() {
+  const imgSize: number = 128;
   return (
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <article className="w-[40ch] md:w-[80ch]">
@@ -11,8 +12,8 @@ export default function About() {
             <Image 
               className="rounded-full border-2 border-neutral-950 dark:border-neutral-50"
               src="https://raw.githubusercontent.com/MiraiMindz/MiraiMindz.github.io/main/public/assets/selfie.png"
-              width={64}
-              height={64}
+              width={imgSize}
+              height={imgSize}
               alt="Foto do autor"
             />
             <p>
