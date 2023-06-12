@@ -24,7 +24,7 @@ export default async function Page({ params }: any) {
       <aside className="fixed top-16 left-2 w-64">
         {toc}
       </aside>
-      <article className="w-[40ch] md:w-[80ch]">
+      <article className="w-[40ch] md:w-[80ch] article">
         {content}
       </article>
       <aside className="fixed top-16 right-2 w-64">

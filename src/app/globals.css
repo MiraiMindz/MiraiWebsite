@@ -475,9 +475,17 @@ pre code.hljs {
 }
 
 .postSideClass {
-  @apply p-5 rounded-lg border-2 border-neutral-950 dark:border-neutral-50 hover:border-violet-400 hover:dark:border-violet-600 transition-all;
+  @apply p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50 hover:border-violet-400 hover:dark:border-violet-600 transition-all;
 }
 
-.postSideClass > h2 {
-  @apply hover:text-violet-500 transition-all;
+.postSideClass:hover > h2 {
+  @apply text-violet-500 transition-all;
+}
+
+.article:first-of-type(p) {
+  font-size: 2rem;
+  font-weight: 900;
+  float: left;
+  line-height: 2rem;
+  margin-right: 0.5rem;
 }
