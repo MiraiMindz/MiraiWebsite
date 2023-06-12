@@ -511,3 +511,12 @@ details[open] {
   @apply transition-all;
 }
 
+@layer components {
+  .text-wrap {
+    overflow-wrap: break-word;
+    overflow: visible;
+    white-space: normal;
+    text-overflow: unset;
+  }
+}
+
