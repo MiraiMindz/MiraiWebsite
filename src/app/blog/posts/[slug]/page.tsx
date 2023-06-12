@@ -22,6 +22,7 @@ export default async function Page({ params }: any) {
   return (
     <section className="flex flex-row justify-center items-start flex-grow">
       <aside className="fixed top-16 left-2 w-64">
+        <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>
         {toc}
       </aside>
       <article className="w-[40ch] md:w-[80ch] article">
