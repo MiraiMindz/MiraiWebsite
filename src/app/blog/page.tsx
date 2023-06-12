@@ -12,7 +12,7 @@ export default async function Page() {
       <article className="w-[40ch] md:w-[80ch]">
         <ul>
           {posts?.map(post => (
-            <li className="my-2" key={post?.slug}>
+            <li className="my-2 md:my-4" key={post?.slug}>
               <PostCard 
                 title={post?.title}
                 shortSum={post?.shortSum}
