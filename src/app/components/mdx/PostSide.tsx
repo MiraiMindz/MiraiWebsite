@@ -1,7 +1,6 @@
 import Link from "next/link";
 import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
-import '../../globals.css';
 
 interface PostSideProps {
   title: string;

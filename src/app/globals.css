@@ -474,10 +474,10 @@ pre code.hljs {
   @apply text-cyan-700 dark:text-cyan-400;
 }
 
-.PostSideClass {
+.postSideClass {
   @apply p-5 rounded-lg border-2 border-neutral-950 dark:border-neutral-50 hover:border-violet-400 hover:dark:border-violet-800 transition-all;
 }
 
-.PostSideClass > h1 {
+.postSideClass > h1 {
   @apply hover:text-violet-500 transition-all;
 }
