@@ -8,10 +8,10 @@ export default async function Page() {
   const posts = await getAllPostsMeta(postsDirectory);
 
   return (
-    <main className="min-h-screen min-w-full flex-grow flex justify-center items-start">
-      <h1 className="text-2xl font-black">Blog</h1>
+    <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
+      <h1 className="text-2xl font-black text-center">Blog</h1>
       <article>
-        <ul className="w-full">
+        <ul className="min-w-full">
           {posts?.map(post => (
             <li className="my-2 md:my-4" key={post?.slug}>
               <PostCard 
