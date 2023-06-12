@@ -20,6 +20,7 @@ export default async function Page() {
                 readTime={post?.readTime?.text}
                 date={post?.publishDate}
               />
+              <hr className="rounded-full h-1 w-[99%] bg-neutral-950 dark:bg-neutral-50"/>
             </li>
           ))}
         </ul>
