@@ -1,6 +1,6 @@
 import path from "path";
 import { getAllPostsMeta } from "../lib/mdx/parsePosts";
-import { PostSide } from "../components/mdx/PostSide";
+import { PostCard } from "../components/mdx/PostSide";
 
 const postsDirectory = path.join(process.cwd(), 'src', 'app', 'blog', 'content', 'posts');
 
@@ -13,7 +13,7 @@ export default async function Page() {
         <ul>
           {posts?.map(post => (
             <li className="my-2" key={post?.slug}>
-              <PostSide 
+              <PostCard 
                 title={post?.title}
                 shortSum={post?.shortSum}
                 href={`/blog/posts/${post?.slug}`}
