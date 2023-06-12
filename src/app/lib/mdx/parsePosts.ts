@@ -34,6 +34,8 @@ function formatReadingTime(readingTimeString: string) {
   //}
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
   //const formattedText = `Tempo estimado: ${formattedTime}`;
+  console.log({text, minutes, time, words})
+
   const formattedText = `Tempo estimado: ${minutes} min.`;
   return { text: formattedText, minutes, time, words };
 }
