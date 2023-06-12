@@ -47,7 +47,7 @@ export default async function Page({ params }: any) {
           </ul>
         </div>
       </aside>
-      <details className="block md:hidden truncate w-[40ch]">
+      <details className={(toc.length > 0 ? "block md:hidden" : "hidden") + " truncate w-[40ch]"}>
         <summary className="truncate">Tabela de Conteudos</summary>
         <ul className="truncate">
           {toc}

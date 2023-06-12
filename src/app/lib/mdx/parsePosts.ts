@@ -21,7 +21,7 @@ type Post = {
     readTime: ReadTimeData;
   };
   content: ReactElement;
-  toc: any;
+  toc: ReactElement[];
 };
 
 type ReadTimeData = {
