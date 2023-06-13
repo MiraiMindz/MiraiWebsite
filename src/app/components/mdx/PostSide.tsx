@@ -10,6 +10,14 @@ interface PostSideProps {
   date: string;
 }
 
+interface ClassCardProps {
+  title: string;
+  href: string;
+  readTime: string;
+  shortSum: string;
+  chapter: string | number;
+}
+
 export function PostSide(props: PostSideProps) {
   const formattedDate = dayjs(props.date).locale('pt-br').format('D/MM/YYYY');
   return (
@@ -33,6 +41,20 @@ export function PostCard(props: PostSideProps) {
         <p className="italic text-neutral-500 dark:text-neutral-400 whitespace-normal text-base">{props.shortSum}</p>
         <div className="flex flex-col items-start justify-start">
           <p className="text-neutral-500 dark:text-neutral-400 text-base">Publicado em: {formattedDate}</p>
+          <p className="text-neutral-500 dark:text-neutral-400 underline text-base">{props.readTime}</p>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export function ClassCard(props: ClassCardProps) {
+  return (
+    <Link href={props.href} className="w-[40ch] md:w-[80ch]">
+      <div className="postCardClass">
+        <h2 className="font-black truncate transition-all text-left text-lg">{`${props.chapter} - ${props.title}`}</h2>
+        <p className="italic text-neutral-500 dark:text-neutral-400 whitespace-normal text-base">{props.shortSum}</p>
+        <div className="flex flex-col items-start justify-start">
           <p className="text-neutral-500 dark:text-neutral-400 underline text-base">{props.readTime}</p>
         </div>
       </div>
