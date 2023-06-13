@@ -476,17 +476,16 @@ veja o exemplo:
 raise TypeError("Tipo errado de dado")
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    /media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb Cell 11 in <cell line: 1>()
-    ----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb#X13sZmlsZQ%3D%3D?line=0'>1</a> raise TypeError("Tipo errado de dado")
-
-
-    TypeError: Tipo errado de dado
-
+```output
+---------------------------------------------------------------------------
+``````output
+TypeError                                 Traceback (most recent call last)
+``````output
+/media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb Cell 11 in <cell line: 1>()
+----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb#X13sZmlsZQ%3D%3D?line=0'>1</a> raise TypeError("Tipo errado de dado")
+``````output
+TypeError: Tipo errado de dado
+```
 
 ### Bloco `try-except`
 

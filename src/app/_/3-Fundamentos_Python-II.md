@@ -169,10 +169,9 @@ match pessoas:
     case _:
         print("Valor incorreto")
 ```
-
-    Mais que três itens: João, Mateus, Caio, e também: ['Nicolas', 'Ivan']
-
-
+```output
+Mais que três itens: João, Mateus, Caio, e também: ['Nicolas', 'Ivan']
+```
 > NOTA: Você pode tentar descomentar a linha 1 e comentar a linha 2 para testar outras combinações
 
 então qual a diferença entre cadeias de `elif` e `match-case`?
@@ -205,11 +204,10 @@ elif amigos[1] == "amigo88":
 else:
     print("Seu amigo tem nome?")
 ```
-
-    Você tem três amigos: amigo1, amigo2, e amigo3
-    O nome do seu segundo amigo é 'amigo2'
-
-
+```output
+Você tem três amigos: amigo1, amigo2, e amigo3
+O nome do seu segundo amigo é 'amigo2'
+```
 #### Repetitivo (Recursivo)
 
 Flows repetitivos, como o nome sugere servem para repetir linhas de código, em Python nós temos duas keywords para isto, `while` e `for`
@@ -300,10 +298,9 @@ def pure_while(n: int = 100000000) -> int:
 
 print(f"While Loop:\t{timeit(pure_while, number=1)} segundos")
 ```
-
-    While Loop:	12.82263323100051 segundos
-
-
+```output
+While Loop:	12.82263323100051 segundos
+```
 #### For Loops
 
 Usando `for` loops:
@@ -322,10 +319,9 @@ def pure_for(n: int = 100000000) -> int:
 
 print(f"For Loop:\t{timeit(pure_for, number=1)} segundos")
 ```
-
-    For Loop:	8.726445832999161 segundos
-
-
+```output
+For Loop:	8.726445832999161 segundos
+```
 como você pode perceber o `for` loop é consideravelmente mais rápido, isso se dá pelo fato das comparações serem executadas em C, a linguagem cujo a qual Python é baseado, enquanto no `while` as comparações são executadas diretamente em Python, que é substencialmente mais lento que C.
 
 de todo modo, recomendo que priorize `for` loops ao invés de `while` loops sempre que possivel, e só ultilize `while` quando estritamente necessário.
@@ -624,10 +620,9 @@ for i in range(1, 11):
 
 print(lista_dobrada)
 ```
-
-    [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-
-
+```output
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+```
 Porém podemos fazer o mesmo com compreensão de lista, mostrarei primeiro o exemplo e depois explicarei a sintaxe
 
 
@@ -635,10 +630,9 @@ Porém podemos fazer o mesmo com compreensão de lista, mostrarei primeiro o exe
 lista_dobrada = [i * 2 for i in range(1, 11)]
 print(lista_dobrada)
 ```
-
-    [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-
-
+```output
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+```
 Basicamente a lógica esta "ao contrário", no exemplo com `for` loops  estamos dizendo o seguinte:
 
 > _para cada item 'i' entre 1 e 11, multiplique por 2 e adicione a lista 'lista_dobrada'_
@@ -667,10 +661,9 @@ for i in range(1, 11):
 
 print(lista_de_pares)
 ```
-
-    [2, 4, 6, 8, 10]
-
-
+```output
+[2, 4, 6, 8, 10]
+```
 Porém podemos fazer o mesmo com compreensão de lista, mostrarei primeiro o exemplo e depois explicarei a sintaxe
 
 
@@ -678,10 +671,9 @@ Porém podemos fazer o mesmo com compreensão de lista, mostrarei primeiro o exe
 lista_de_pares = [i for i in range(1, 11) if i % 2 == 0]
 print(lista_de_pares)
 ```
-
-    [2, 4, 6, 8, 10]
-
-
+```output
+[2, 4, 6, 8, 10]
+```
 Basicamente a lógica esta "ao contrário", no exemplo com `for` loops e `if`s estamos dizendo o seguinte:
 
 > _para cada item 'i' entre 1 e 11, se o resto da divisão(modulo) por 2 for igual a 0 adicione a lista 'lista_de_pares'_
@@ -699,10 +691,9 @@ Basicamente a mesma coisa que as compreensões de lista, a unica diferença é q
 set_de_pares = {i for i in range(1, 11) if i % 2 == 0}
 print(set_de_pares)
 ```
-
-    {2, 4, 6, 8, 10}
-
-
+```output
+{2, 4, 6, 8, 10}
+```
 #### Dicionários
 
 Extendendo a lógica podemos gerar uma compreensão de dicionários.
@@ -721,10 +712,9 @@ for i in range(1, 10):
 
 print(res_dict)
 ```
-
-    {1: 1, 3: 27, 5: 125, 7: 343, 9: 729}
-
-
+```output
+{1: 1, 3: 27, 5: 125, 7: 343, 9: 729}
+```
 Agora a versão One Liner:
 
 
@@ -732,10 +722,9 @@ Agora a versão One Liner:
 comp_dict = {i: i**3 for i in range(1, 10) if i % 2 != 0}
 print(comp_dict)
 ```
-
-    {1: 1, 3: 27, 5: 125, 7: 343, 9: 729}
-
-
+```output
+{1: 1, 3: 27, 5: 125, 7: 343, 9: 729}
+```
 ### A função `zip()`
 
 A função `zip()` junta elementos de multiplos iteráveis em tuples.
@@ -750,10 +739,9 @@ lista_chars = ["a", "b", "c", "d", "e"]
 zip_dict = {k: v for (k, v) in zip(lista_nums, lista_chars)}
 print(zip_dict)
 ```
-
-    {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e'}
-
-
+```output
+{1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e'}
+```
 A diferença entre a função `zip()` e a função `enumerate()` é que a função `enumerate()` enumera um iterável, enquanto a função `zip()` junta multiplos iteráveis
 
 ### Funções
@@ -785,10 +773,9 @@ def apresentar():
 
 apresentar()  # Aqui chamamos a função
 ```
-
-    olá, eu sou a função apresentar()
-
-
+```output
+olá, eu sou a função apresentar()
+```
 #### Argumentos e Parametros
 
 Na função acima, nós apenas a chamamos, mas e se nós quisessemos que ela mostrasse algum nome?
@@ -803,10 +790,9 @@ def apresentar(nome):
 
 apresentar("Mirai")
 ```
-
-    Olá meu nome é Mirai
-
-
+```output
+Olá meu nome é Mirai
+```
 Nós definimos um argumento e passamos um parametro para esse argumento.
 
 Existe uma pequena confusão entre Argumentos e Parametros de uma função, iniciantes tendem a pensar que são a mesma coisa, mas estão enganados.
@@ -823,10 +809,9 @@ def apresentar(nome, idade):
 
 apresentar("Mirai", 17)
 ```
-
-    Olá meu nome é Mirai e eu tenho 17 anos
-
-
+```output
+Olá meu nome é Mirai e eu tenho 17 anos
+```
 A ordem em que passamos os argumentos deve condizer com os parametros.
 
 ##### Parametros Padrões (Valores Padrões)
@@ -846,11 +831,10 @@ def apresentar(nome="Python"):
 apresentar()  # Nenhum argumento passado
 apresentar("Mirai")
 ```
-
-    Olá meu nome é Python
-    Olá meu nome é Mirai
-
-
+```output
+Olá meu nome é Python
+Olá meu nome é Mirai
+```
 ##### Argumentos Chave (Nomeados)
 
 Argumentos Chave (ou nomeados) são usados ao chamar uma função, essencialmente, você especifica qual argumento irá usar qual parametro.
@@ -865,10 +849,9 @@ def apresentar(nome, idade):
 
 apresentar(idade=17, nome="Mirai")
 ```
-
-    Olá meu nome é Mirai e eu tenho 17 anos
-
-
+```output
+Olá meu nome é Mirai e eu tenho 17 anos
+```
 essa forma de associação permite que não sigamos a ordem de argumentos na definição da função, e tambem nos permite "pular" parametros (esse parametros devem ter valores padrões), veja um outro exemplo:
 
 
@@ -879,10 +862,9 @@ def apresentar(nome="cool_name", idade=99, local="place"):
 
 apresentar("Mirai", local="casa")
 ```
-
-    Olá meu nome é Mirai e eu tenho 99 anos e moro em casa
-
-
+```output
+Olá meu nome é Mirai e eu tenho 99 anos e moro em casa
+```
 ##### `*args`, `**kwargs`, `*` (Keyword Only Arguments) e `/` (Positional Only Arguments)
 
 esses são parametros especiais, os `*args` e `**kwargs`  nos permitem ter um numero indeterminado de argumentos.
@@ -898,14 +880,13 @@ def multi_print(*args):
 
 multi_print("ye", 20, "3", 4, [5])
 ```
-
-    ye
-    20
-    3
-    4
-    [5]
-
-
+```output
+ye
+20
+3
+4
+[5]
+```
 já o `**kwargs` nos permite pegar indeterminados parametros-chave.
 
 
@@ -917,12 +898,11 @@ def multi_key_print(**kwargs):
 
 multi_key_print(a="yee", b="bbb", c="cccc")
 ```
-
-    a, yee
-    b, bbb
-    c, cccc
-
-
+```output
+a, yee
+b, bbb
+c, cccc
+```
 Nós também podemos usar os dois juntos, pois eles são independentes entre si, a unica convenção é que definimos `*args` primeiro e depois `**kwargs`.
 
 
@@ -934,11 +914,10 @@ def funcao_legal(*args, **kwargs):
 
 funcao_legal("ye", 20, "3", 4, [5], a="yee", b="bbb", c="cccc")
 ```
-
-    valores: ('ye', 20, '3', 4, [5])
-    valores com chave: {'a': 'yee', 'b': 'bbb', 'c': 'cccc'}
-
-
+```output
+valores: ('ye', 20, '3', 4, [5])
+valores com chave: {'a': 'yee', 'b': 'bbb', 'c': 'cccc'}
+```
 O `/` (Positional Only Arguments) nos limita a ter apenas valores posicionais, isto é, aqueles que não são parametros-chave.
 
 
@@ -951,12 +930,11 @@ def funcao_posicional(parametro_1, parametro_2, parametro_3, /):
 
 funcao_posicional("Valor 1", "Valor 2", "Valor 3")
 ```
-
-    parametro_1: Valor 1
-    parametro_2: Valor 2
-    parametro_3: Valor 3
-
-
+```output
+parametro_1: Valor 1
+parametro_2: Valor 2
+parametro_3: Valor 3
+```
 se nós tentarmos associar algum parametro antes do separador `/` usando parametro-chave, teremos um erro, pois este separador especifica que todos os parametros antes dele devem ser posicionais.
 
 
@@ -969,13 +947,12 @@ def funcao_posicional(parametro_1, parametro_2, parametro_3, /):
 funcao_posicional(parametro_1='Valor 1', 'Valor 2', 'Valor 3') # Retornará um erro
 ```
 
-
-      Input In [21]
-        funcao_posicional(parametro_1='Valor 1', 'Valor 2', 'Valor 3') # Retornará um erro
-                                                                     ^
-    SyntaxError: positional argument follows keyword argument
-
-
+```output
+  Input In [21]
+    funcao_posicional(parametro_1='Valor 1', 'Valor 2', 'Valor 3') # Retornará um erro
+                                                                 ^
+SyntaxError: positional argument follows keyword argument
+```
 
 O `*` (Keyword Only Arguments) especifica que todos os argumentos após ele devem ser parametro-chave.
 
@@ -999,13 +976,12 @@ funcao_parametro_chave(
     parametro_3="Valor 3",
 )
 ```
-
-    parametro_obrigatorio: valor obrigatorio
-    parametro_1: Valor 1
-    parametro_2: Valor 2
-    parametro_3: Valor 3
-
-
+```output
+parametro_obrigatorio: valor obrigatorio
+parametro_1: Valor 1
+parametro_2: Valor 2
+parametro_3: Valor 3
+```
 se tentarmos passar apenas argumentos posicionais, teremos um erro
 
 
@@ -1024,19 +1000,18 @@ funcao_parametro_chave(
 )  # Retornará um erro
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    /media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb Cell 94 in <cell line: 7>()
-          <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=3'>4</a>     print(f"parametro_2: {parametro_2}")
-          <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=4'>5</a>     print(f"parametro_3: {parametro_3}")
-    ----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=6'>7</a> funcao_parametro_chave('valor obrigatorio', 'Valor 1', 'Valor 2', 'Valor 3')
-
-
-    TypeError: funcao_parametro_chave() takes 1 positional argument but 4 were given
-
+```output
+---------------------------------------------------------------------------
+``````output
+TypeError                                 Traceback (most recent call last)
+``````output
+/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb Cell 94 in <cell line: 7>()
+      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=3'>4</a>     print(f"parametro_2: {parametro_2}")
+      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=4'>5</a>     print(f"parametro_3: {parametro_3}")
+----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=6'>7</a> funcao_parametro_chave('valor obrigatorio', 'Valor 1', 'Valor 2', 'Valor 3')
+``````output
+TypeError: funcao_parametro_chave() takes 1 positional argument but 4 were given
+```
 
 Se existe uma precedencia, argumentos posicionais devem sempre vir antes de argumentos parametro-chave, caso contrário resultará em um erro, por isso definimos `*args, **kwargs` e não `**kwargs, *args`.
 
@@ -1058,11 +1033,10 @@ print(
     f'Apenas Parametros-Chave:\t{timeit("func_test(a=1, b=2, c=3)", number=10, globals={"func_test":func_test}):.8f} segundos'
 )
 ```
-
-    Apenas Posicionais:		0.00000229 segundos
-    Apenas Parametros-Chave:	0.00000446 segundos
-
-
+```output
+Apenas Posicionais:		0.00000229 segundos
+Apenas Parametros-Chave:	0.00000446 segundos
+```
 #### DocStrings
 
 Documentation Strings (Strings de Documentação), comumente abreviadas para DocStrings são strings especiais feitas para associar documentação ao codigo.
@@ -1084,12 +1058,11 @@ def funcao_legal(*args, **kwargs):
 funcao_legal("ye", 20, "3", 4, [5], a="yee", b="bbb", c="cccc")
 print(funcao_legal.__doc__)
 ```
-
-    valores: ('ye', 20, '3', 4, [5])
-    valores com chave: {'a': 'yee', 'b': 'bbb', 'c': 'cccc'}
-    Função legal que mostra valores legais
-
-
+```output
+valores: ('ye', 20, '3', 4, [5])
+valores com chave: {'a': 'yee', 'b': 'bbb', 'c': 'cccc'}
+Função legal que mostra valores legais
+```
 Em projetos, se é recomendado uma DocString no topo do projeto (se for o caso, abaixo do SheBang) descrevendo o propósito daquele arquivo/programa.
 
 Eis aqui um exemplo que eu fiz quando estava aprendendo Python.
@@ -1117,10 +1090,9 @@ def apresentar(nome="cool_name", idade=99, local="place"):
 texto = apresentar("Mirai", local="casa")
 print(texto)
 ```
-
-    Olá meu nome é Mirai e eu tenho 99 anos e moro em casa
-
-
+```output
+Olá meu nome é Mirai e eu tenho 99 anos e moro em casa
+```
 #### Funções lambda
 
 as funções lambda são funções em uma linha e também nos possibilitam fazer funções anonimas.
@@ -1148,11 +1120,10 @@ print(add_num(3, 4))
 add_num_ = lambda x, y: x + y
 print(add_num_(5, 6))
 ```
-
-    7
-    11
-
-
+```output
+7
+11
+```
 Funções anonimas são funções que não tem um indentificado ou um nome, são comumente executadas em sua declaração.
 
 veja a função anterior, porém anonima
@@ -1161,10 +1132,9 @@ veja a função anterior, porém anonima
 ```python
 print((lambda x, y: x + y)(2, 3))
 ```
-
-    5
-
-
+```output
+5
+```
 Eu sei que os exemplos aqui são bobos, mas em situações mais complexas, elas se fazem necessárias, tendo em vista que elas podem ir além do que simples operadores aritméticos.
 
 #### Funções de Primeira Classe e Alta Ordem em Python
@@ -1184,10 +1154,9 @@ def greeting(nome):
 gratificar = greeting
 print(gratificar("Mirai"))
 ```
-
-    Ola Mirai
-
-
+```output
+Ola Mirai
+```
 No exemplo acima nós associamos a uma variavel e passamos como argumento para a função `print()`
 
 Nós também podemos escrever uma função que recebe um argumento e passa-lo através de outra função, veja o exemplo:
@@ -1210,10 +1179,9 @@ print(
     func_sup(hello_name, "Mirai")
 )  # Passamos a função hello_name e o argumento "Mirai"
 ```
-
-    OLA MIRAI
-
-
+```output
+OLA MIRAI
+```
 ##### Funções de Alta Ordem
 
 As funções de alta ordem são bem parecidas com as de primeira classe, todavia, elas tem a especificidade de retornar uma função.
@@ -1236,10 +1204,9 @@ def h_name(name):
 
 print(uppr_func(h_name)("Mirai"))
 ```
-
-    OLA MIRAI
-
-
+```output
+OLA MIRAI
+```
 nós podemos usar funções lambda para termos funções de alta ordem, veja o exemplo:
 
 
@@ -1247,10 +1214,9 @@ nós podemos usar funções lambda para termos funções de alta ordem, veja o e
 func_alta_ord = lambda x, func: x + func(x)
 print(func_alta_ord(2, lambda x: x**2))
 ```
-
-    6
-
-
+```output
+6
+```
 para facilitar o entendimento eu irie formatar essas duas linhas (substitiuindo valores) de uma forma a representar a logica.
 
 
@@ -1309,13 +1275,12 @@ func_legal_var_global()  # Escopo Global
 alterar_global()
 print(x)  # Alteramos a variavel global
 ```
-
-    Escopo Global
-    Escopo Local
-    Escopo Global
-    Alteramos a variavel global
-
-
+```output
+Escopo Global
+Escopo Local
+Escopo Global
+Alteramos a variavel global
+```
 #### `nonlocal`
 
 Veja um exemplo:
@@ -1360,15 +1325,14 @@ func_extern1()
 func_extern2()
 func_extern3()
 ```
-
-    Func externa 1
-    Func interna 1
-    Func externa 2
-    Func externa 2
-    Func externa 2
-    Alteramos a variavel da Func Externa 3
-
-
+```output
+Func externa 1
+Func interna 1
+Func externa 2
+Func externa 2
+Func externa 2
+Alteramos a variavel da Func Externa 3
+```
 #### Sombra de variaveis (Variable Shadowing)
 
 *Variable Shadowing* ocorre quando uma variavel de um escopo interno tem o mesmo nome que uma variavel de um escopo externo, isso pode levar a erros e a comportamentos não esperados no código então deve ser evitado. O recomendado é declarar variaveis internas com outros nomes, ou melhor ainda, não usar variaveis globais.
@@ -1396,13 +1360,12 @@ def externa():
 externa()
 print("global:", x)
 ```
-
-    interna: 2
-    interna não associada: 1
-    externa: 1
-    global: 0
-
-
+```output
+interna: 2
+interna não associada: 1
+externa: 1
+global: 0
+```
 perceba que mesmo não especificando a variavel `x` ainda sim temos um resultado, pois a mesma usou a variavel de escopo externo
 
 #### Operadores
@@ -1437,11 +1400,10 @@ produto_das_matrizes = array(matriz_1) @ array(matriz_2)
 
 print(produto_das_matrizes)
 ```
-
-    [[19 22]
-     [43 50]]
-
-
+```output
+[[19 22]
+ [43 50]]
+```
 ele é o equivalente ao seguinte codigo em Python:
 
 
@@ -1465,10 +1427,9 @@ for i in range(N):
 
 print(result)
 ```
-
-    [[19, 22], [43, 50]]
-
-
+```output
+[[19, 22], [43, 50]]
+```
 ##### Lógicos
 
 Nós já vimos as funções de 3 dos 4 operadores lógicos (_sim eu omiti um operador no momento pois eu ainda não havia explicado conceitos necessários para seu entendimento_) eu estou falando do "Operador Ternário" (tambem chamado de operador condicional).
@@ -1492,10 +1453,9 @@ d = a if a > b else b  # d = b
 
 print("C: %d\tD: %d" % (c, d))
 ```
-
-    C: 1	D: 2
-
-
+```output
+C: 1	D: 2
+```
 ##### Comparativos
 
 os comparativos são bastante usados nas estruturas de controle de flow, eles são os seguintes:
@@ -1517,12 +1477,11 @@ for i in range(10):
     if i > 3 and i < 7:
         print(f"o valor de i é {i}")
 ```
-
-    o valor de i é 4
-    o valor de i é 5
-    o valor de i é 6
-
-
+```output
+o valor de i é 4
+o valor de i é 5
+o valor de i é 6
+```
 ##### Indentidade
 
 eles são simples, eles trabalham comparando o id na memória, util quando iniciarmos multi-threading.
@@ -1547,15 +1506,14 @@ print(f"A é diferente a B ? {a != b}")
 print(f"A não é B ? {a is not b}")
 print(f"A não é C ? {a is not c}")
 ```
-
-    A é igual a B ? True
-    A é B ? False
-    A é C ? True
-    A é diferente a B ? False
-    A não é B ? True
-    A não é C ? False
-
-
+```output
+A é igual a B ? True
+A é B ? False
+A é C ? True
+A é diferente a B ? False
+A não é B ? True
+A não é C ? False
+```
 A não é B, pois o endereço deles na memoria é diferente, porém seus conteudos são os mesmos então eles são iguais.
 
 para exemplificar, mostrarei o id dos objetos:
@@ -1570,12 +1528,11 @@ print(f"ID de A: {hex(id(a))}")
 print(f"ID de B: {hex(id(b))}")
 print(f"ID de C: {hex(id(c))}")
 ```
-
-    ID de A: 0x7faa296d72c0
-    ID de B: 0x7faa295bd000
-    ID de C: 0x7faa296d72c0
-
-
+```output
+ID de A: 0x7faa296d72c0
+ID de B: 0x7faa295bd000
+ID de C: 0x7faa296d72c0
+```
 Se você observar, os endereço de A e B são diferentes, já os endereços de A e C são identicos.
 
 ##### Membro
@@ -1596,11 +1553,10 @@ vejam alguns exemplos:
 print("h" in "abcdefghijklmnopqrstuvwxyz")
 print(12 not in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 ```
-
-    True
-    True
-
-
+```output
+True
+True
+```
 ##### Bitwise
 
 Esses operadores não são muito ultilizados mas suas aplicações são diversas.
@@ -1672,12 +1628,11 @@ print(f"A ({a}) = {bin(a)}")
 print(f"B ({b}) = {bin(b)}")
 print(f"A & B ({a & b}) = {bin(a & b)}")
 ```
-
-    A (156) = 0b10011100
-    B (52) = 0b110100
-    A & B (20) = 0b10100
-
-
+```output
+A (156) = 0b10011100
+B (52) = 0b110100
+A & B (20) = 0b10100
+```
 o prefixo `0b` é uma conveção em representação de bases em programação, usamos `0b` para binário, `0x` para hexadecimal e `0o` para octeto
 
 ##### OR
@@ -1704,12 +1659,11 @@ print(f"A ({a}) = {bin(a)}")
 print(f"B ({b}) = {bin(b)}")
 print(f"A | B ({a | b}) = {bin(a | b)}")
 ```
-
-    A (156) = 0b10011100
-    B (52) = 0b110100
-    A | B (188) = 0b10111100
-
-
+```output
+A (156) = 0b10011100
+B (52) = 0b110100
+A | B (188) = 0b10111100
+```
 ##### XOR
 
 O `XOR` performa a [Disjunção Exclusiva](https://pt.wikipedia.org/wiki/Ou_exclusivo), essencialmente, ele só retorna 1 se os bits forem opostos.
@@ -1734,12 +1688,11 @@ print(f"A ({a}) = {bin(a)}")
 print(f"B ({b}) = {bin(b)}")
 print(f"A ^ B ({a ^ b}) = {bin(a ^ b)}")
 ```
-
-    A (156) = 0b10011100
-    B (52) = 0b110100
-    A ^ B (168) = 0b10101000
-
-
+```output
+A (156) = 0b10011100
+B (52) = 0b110100
+A ^ B (168) = 0b10101000
+```
 ##### NOT
 
 O `NOT` performa a [Negação Lógica](https://pt.wikipedia.org/wiki/Negação), basiamente, ele inverte os bits, ele recebe só um argumento, tornando ele o unico operador unário.
@@ -1766,12 +1719,11 @@ print(f"A ({a}) = {bin(a)}")
 print(f"Com Bit de Sinal: A ~ ({~a}) = {bin(~a)}")
 print(f"Sem Bit de Sinal: A ~ ({~a & 255}) = {bin(~a & 255)}")
 ```
-
-    A (156) = 0b10011100
-    Com Bit de Sinal: A ~ (-157) = -0b10011101
-    Sem Bit de Sinal: A ~ (99) = 0b1100011
-
-
+```output
+A (156) = 0b10011100
+Com Bit de Sinal: A ~ (-157) = -0b10011101
+Sem Bit de Sinal: A ~ (99) = 0b1100011
+```
 ##### LeftShift
 
 o operador de `LeftShift` move/desvia os bits para a esquerda preenchendo o espaço restante com 0.
@@ -1797,12 +1749,11 @@ print(f"A ({a}) = {bin(a)}")
 print(f"A << 1 ({a << 1}) = {bin(a << 1)}")
 print(f"A << 2 ({a << 2}) = {bin(a << 2)}")
 ```
-
-    A (39) = 0b100111
-    A << (78) = 0b1001110
-    A << (156) = 0b10011100
-
-
+```output
+A (39) = 0b100111
+A << (78) = 0b1001110
+A << (156) = 0b10011100
+```
 ##### RightShift
 
 o operador de `RightShift` move/desvia os bits para a direita preenchendo o espaço restante com 0.
@@ -1830,13 +1781,12 @@ print(f"A >> 1 ({a >> 1}) = {bin(a >> 1)}")
 print(f"A >> 2 ({a >> 2}) = {bin(a >> 2)}")
 print(f"A >> 3 ({a >> 3}) = {bin(a >> 3)}")
 ```
-
-    A (156) = 0b10011100
-    A >> 1 (78) = 0b1001110
-    A >> 2 (39) = 0b100111
-    A >> 3 (19) = 0b10011
-
-
+```output
+A (156) = 0b10011100
+A >> 1 (78) = 0b1001110
+A >> 2 (39) = 0b100111
+A >> 3 (19) = 0b10011
+```
 ##### Bitwise Masking
 
 Masking consiste em mascarar os bits, para fazer operações especificas nesses bits, um exemplo seriam os Shifts Limitados a uma janela de bits.
@@ -1852,11 +1802,10 @@ A = 39
 print(f"A << 3 ({A << 3}): {bin(A << 3)}")
 print(f"(A << 3) & 255 ({(A << 3) & 255}): {bin((A << 3) & 255)}")
 ```
-
-    A << 3 (312): 0b100111000
-    (A << 3) & 255 (56): 0b111000
-
-
+```output
+A << 3 (312): 0b100111000
+(A << 3) & 255 (56): 0b111000
+```
 ##### Associativos
 
 Os associativos são bem simples, eles funcionam como abreviação dos outros operadores, eles servem para performar uma ação e reassocia a mesma variavel, pois sua ordem de operação é da direita pra esquerda.
@@ -1892,10 +1841,9 @@ v = True  # v é igual a True
 
 print(x, a, v)
 ```
-
-    3 ye True
-
-
+```output
+3 ye True
+```
 ##### Mais-Igual
 
 A lógica usada aqui se aplica aos demais (menos ao Walrus Operator).
@@ -1909,11 +1857,10 @@ print(x)
 x += 33
 print(x)
 ```
-
-    9
-    42
-
-
+```output
+9
+42
+```
 essencialmente, pegamos o valor inicial de `x`, somamos `33` e reassociamos o resultado a variavel novamente, exemplificando em etapas:
 
 - 1. `x = 9`
@@ -1936,9 +1883,9 @@ por exemplo, veja o seguinte codigo:
 
 
 
-
-    6
-
+```output
+6
+```
 
 
 ao rodarmos o codigo recebemos o numero 6, pois, expressões são codigos que retornam um valor, associações não. Contudo, podemos associar o valor resultante de uma expressão a uma variavel.
@@ -1957,10 +1904,9 @@ para vermos o valor, precisamos acessa-lo através de funções como a `print()`
 n = 2 + 5
 print(n)
 ```
-
-    7
-
-
+```output
+7
+```
 se nós tentarmos acessar o valor e executar a expressão ao mesmo erro teremos um erro.
 
 
@@ -1976,11 +1922,10 @@ O Walrus Operator nos permite fazer isso.
 print(n := 3 + 8)
 print(n)
 ```
-
-    11
-    11
-
-
+```output
+11
+11
+```
 Ele nos permite acessar o valor enquanto ele esta sendo associado, e mais a frente podemos acessar a variavel contendo o valor.
 
 ##### Precedencia de Operadores Geral

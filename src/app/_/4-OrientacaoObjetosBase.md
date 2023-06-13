@@ -35,10 +35,9 @@ estudante = {
 media = sum(estudante["Notas"]) / len(estudante["Notas"])
 print(f"O {estudante['Profissao']} {estudante['Nome']} tem média {media:.2f}")
 ```
-
-    O Estudante Mirai tem média 8.24
-
-
+```output
+O Estudante Mirai tem média 8.24
+```
 nós poderiamos representar este mesmo estudante usando uma classe.
 
 A sintaxe básica de uma classe é a seguinte:
@@ -88,10 +87,9 @@ print(
     f"O {estudante_mirai.profissao} {estudante_mirai.nome} tem a media {estudante_mirai.media}"
 )
 ```
-
-    O Estudante Mirai tem a media 8.24
-
-
+```output
+O Estudante Mirai tem a media 8.24
+```
 ## Classe, Objetos e Instancias
 
 em palavras simples: *Um Objeto é uma Instancia de uma Classe*.
@@ -172,10 +170,9 @@ estd = Estudante("Mirai", [1, 2, 3])
 
 print(estd.nome)
 ```
-
-    Mirai
-
-
+```output
+Mirai
+```
 ### `__call__()`
 
 Essencialmente esse metodo é executado quando uma classe é executada como função.
@@ -195,10 +192,9 @@ Estd_1 = Estudante("Mirai", [1, 2, 3])
 
 Estd_1()  # __call__ é executado
 ```
-
-    o estudante Mirai tem [1, 2, 3] notas
-
-
+```output
+o estudante Mirai tem [1, 2, 3] notas
+```
 ### `__name__`
 
 O `__name__` é usado quando queremos saber o nome da classe na qual o objeto foi instanciado, ou nome do módulo (mais a frente explicarei sobre).
@@ -218,11 +214,10 @@ class Estudante:
 print(Estudante)
 print(Estudante.__name__)
 ```
-
-    <class '__main__.Estudante'>
-    Estudante
-
-
+```output
+<class '__main__.Estudante'>
+Estudante
+```
 Veja que nós não precisamos inicializar um objeto, pois nós usamos o `__name__` nativo embutido em cada classe do Python.
 
 Definindo a função `__name__`:
@@ -242,10 +237,9 @@ Estd_2 = Estudante("Mirai", [1, 2, 3])
 
 print(Estd_2.__name__)
 ```
-
-    <bound method Estudante.__name__ of <__main__.Estudante object at 0x7f6c086d3ca0>>
-
-
+```output
+<bound method Estudante.__name__ of <__main__.Estudante object at 0x7f6c086d3ca0>>
+```
 Eu sei, é um pouco confuso mesmo, mas essencialmente ele está dizendo o que o `__main__` é:
 
 `<metodo associado Estudante.__name__ de <Objeto __main__.Estudante em {endereço na memória}>>`
@@ -276,10 +270,9 @@ Estd_2 = Estudante("Mirai", [1, 2, 3])
 
 print(repr(Estd_2))
 ```
-
-    <__main__.Estudante object at 0x7f6c084bdba0>
-
-
+```output
+<__main__.Estudante object at 0x7f6c084bdba0>
+```
 O `__repr__` retorna o endereço na memória de um objeto.
 
 Definindo o `__repr__`:
@@ -299,10 +292,9 @@ Estd_2 = Estudante("Mirai", [1, 2, 3])
 
 print(repr(Estd_2))
 ```
-
-    O Estudante Mirai é um objeto
-
-
+```output
+O Estudante Mirai é um objeto
+```
 ## Herança (básica)
 
 Finalmente chegamos a um importantissimo tópico em orientação a objetos, Herança (Inheritance).
@@ -361,13 +353,12 @@ print(EstudanteA.calcular_medias())  # Definida na classe 'Estudante'
 print(EstudanteB.apresentar())  # Herdou da classe 'Pessoa'
 print(EstudanteB.calcular_medias())  # Definida na classe 'Estudante'
 ```
-
-    Olá eu me chamo Mirai e tenho 17 anos
-    7.6
-    Olá eu me chamo Joaquim e tenho 16 anos
-    6.0
-
-
+```output
+Olá eu me chamo Mirai e tenho 17 anos
+7.6
+Olá eu me chamo Joaquim e tenho 16 anos
+6.0
+```
 Veja que não precisamos definir `self.nome = nome` e `self.idade = idade` na classe `Estudante` pois essas propriedades são herdadas da classe `Pessoa`, juntamente com o método `apresentar`
 
 a relação desses objetos é a seguinte:
@@ -411,16 +402,15 @@ class Exemplo(object):  # Herdamos a Classe base da hierarquia <object>
 
 Exemplo()
 ```
-
-    Criando Instancia (Instanciando)
-    Inicializando Instancia
-
-
-
+```output
+Criando Instancia (Instanciando)
+Inicializando Instancia
+```
 
 
-    <__main__.Exemplo at 0x7f6c08513430>
-
+```output
+<__main__.Exemplo at 0x7f6c08513430>
+```
 
 
 > NOTA: Novamente, eu nunca cheguei a precisar usar o `__new__` pessoalmente
@@ -467,10 +457,9 @@ EstudanteExemplo = Estudante("Mirai", [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 print(f"Media através do método: {EstudanteExemplo.media()}")
 ```
-
-    Media através do método: 5.0
-
-
+```output
+Media através do método: 5.0
+```
 Veja que devemos executar o método para termos acesso a média, usando o `@property` nós convertemos esse metodo para um atributo, veja:
 
 
@@ -491,10 +480,9 @@ print(
     f"Media através do atributo: {EstudanteExemplo.media}"
 )  # Omitimos a chamada da função
 ```
-
-    Media através do atributo: 5.0
-
-
+```output
+Media através do atributo: 5.0
+```
 Porque isso? Bom, se você lembra, metodos devem ser usados para representar ações do objeto, e não para adicionar atributos, exemplificando:
 
 _A média não é uma ação que nosso estudante faz, é um valor que ele possui, logo deve ser uma propriedade._
@@ -547,10 +535,9 @@ objeto = Foo()
 
 objeto.hi()
 ```
-
-    Foo
-
-
+```output
+Foo
+```
 #### `@staticmethod`
 
 o `@staticmethod` faz com que os metodos não precise de nenhum argumento, veja o exemplo:
@@ -567,6 +554,6 @@ objeto_bar = Bar()
 
 objeto_bar.apresentar()
 ```
-
-    eu sou um metodo com @staticmethod
-
+```output
+eu sou um metodo com @staticmethod
+```
