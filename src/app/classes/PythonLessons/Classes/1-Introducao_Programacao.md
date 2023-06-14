@@ -128,7 +128,7 @@ Uma pequena introdução aos conceitos mais comuns:
 
       - Exemplo de Estilo:
 
-      - ```
+      - ```plaintext
         string texto = "Esse aqui é um texto" # Linguagens Estaticas
         texto = "Esse aqui é um texto"        # Linguagens Dinâmicas
         ```
