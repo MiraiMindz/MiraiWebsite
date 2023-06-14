@@ -26,3 +26,13 @@ export function Code({className, ...props}: any) {
     return <code className={className} {...props} />
   }
 }
+
+interface InlineCodeProps {
+  children?: any;
+}
+
+export function InlineCode(props: InlineCodeProps) {
+  return (
+    <code className='border rounded-sm border-neutral-500 dark:border-neutral-600 p-1'>{props?.children}</code>
+  );
+}
