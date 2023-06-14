@@ -22,9 +22,9 @@ export function Code({className, ...props}: any) {
     if (!output) {
       return <div className='hljs-wrapper'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={true} language={match[1]} {...props} /></div>
     } else {
-      return <div className='rounded-lg bg-neutral-900/10 dark:bg-neutral-100/10 p-2 border-2 border-neutral-950 dark:border-neutral-50 w-[40ch] md:w-[80ch] my-1 overflow-x-auto'><h1 className='text-neutral-950 dark:text-neutral-50 text-center'>Saida</h1><hr className='h-0.5 rounded-full bg-neutral-950 dark:bg-neutral-50 my-2 w-[99%]'/> <div className={className + " text-left"} {...props}/> </div>
+      return <div className='rounded-lg bg-neutral-900/5 dark:bg-neutral-100/5 p-2 border-2 border-neutral-950 dark:border-neutral-50 w-[40ch] md:w-[80ch] my-1 overflow-x-auto'><h1 className='text-neutral-950 dark:text-neutral-50 text-center'>Saida</h1><hr className='h-0.5 rounded-full bg-neutral-950 dark:bg-neutral-50 my-2 w-[99%]'/> <div className={className + " text-left"} {...props}/> </div>
     }
   } else {
-    return <code className={className + " border rounded-md border-neutral-950 dark:border-neutral-50 p-0.5"} {...props} />
+    return <code className={className + " border rounded-md border-neutral-950 dark:border-neutral-50 p-0.5 bg-neutral-900/5 dark:bg-neutral-100/5"} {...props} />
   }
 }
