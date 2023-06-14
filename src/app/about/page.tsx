@@ -10,7 +10,7 @@ export default function About() {
           <h1 className="font-black text-xl">Quem sou eu?</h1>
           <div className="flex flex-row justify-center items-center">
             <Image 
-              className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4"
+              className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
               src="/Selfie.png"
               width={imgSize}
               height={imgSize}
