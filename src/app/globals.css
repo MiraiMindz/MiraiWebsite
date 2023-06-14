@@ -505,7 +505,7 @@ pre code.hljs {
 
 
 
-.article p:first-of-type::first-letter {
+article.article p:first-of-type::first-letter {
   font-size: 2rem;
   font-weight: 500;
   float: left;
