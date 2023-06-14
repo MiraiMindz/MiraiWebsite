@@ -520,7 +520,3 @@ details {
 details[open] {
   @apply transition-all;
 }
-
-ul > li > p, ol > li > p {
-  display: inline;
-}
