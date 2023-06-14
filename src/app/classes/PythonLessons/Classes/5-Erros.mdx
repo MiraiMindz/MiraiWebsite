@@ -1,3 +1,10 @@
+---
+title: 'Erros e Exceções'
+author: 'Mirai'
+chapter: '5'
+shortSum: 'Introdução a erros e exceções.'
+---
+
 # Erros e Exceções
 
 Erros e exceções são muito importantes no desenvolvimento de uma aplicação, pois eles dizem ao usuário se algo não saiu como esperado, ou para o desenvolvedor se algo está errado, nessa seção aprenderemos sobre *Stack Tracing ("Análise da Stack")*, conheceremos os erros nativos da linguagem, aprenderemos a criar nosso próprios erros e veremos sobre *depuração (debugging)*.
@@ -205,7 +212,7 @@ Irei explicar cada erro, se você não entender de cara, tudo bem, existem erros
 
 ## SystemExit
 
-Esta exceção é levantada pela função `sys.exit()`. Ele herda de `BaseException` em vez de `Exception` para que não seja acidentalmente capturado pelo código que captura `Exception`. Isso permite que a exceção se propague corretamente e faça com que o interpretador saia. Quando não é tratado, o interpretador Python sai e nenhum traceback é impresso. 
+Esta exceção é levantada pela função `sys.exit()`. Ele herda de `BaseException` em vez de `Exception` para que não seja acidentalmente capturado pelo código que captura `Exception`. Isso permite que a exceção se propague corretamente e faça com que o interpretador saia. Quando não é tratado, o interpretador Python sai e nenhum traceback é impresso.
 
 O construtor aceita o mesmo argumento opcional passado para `sys.exit()`. Se o valor for um inteiro, ele especifica o status de saída do sistema; se for `None`, o status de saída é 0; se tiver outro tipo (como uma string), o valor do objeto é exibido e o status de saída é 1.
 
@@ -327,7 +334,7 @@ Levantado quando tenta-se criar um diretorio ou arquivo existente.
 
 #### FileNotFoundError
 
-Levantado quando um diretorio ou arquivo requisitado não existe. 
+Levantado quando um diretorio ou arquivo requisitado não existe.
 
 #### InterruptedError
 
@@ -488,5 +495,3 @@ TypeError: Tipo errado de dado
 ```
 
 ### Bloco `try-except`
-
-

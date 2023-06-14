@@ -12,7 +12,7 @@ type Frontmatter = {
   shortSum: string;
 };
 
-type Post = {
+type Class = {
   meta: {
     slug: string;
     title: string;
@@ -39,15 +39,15 @@ export function formatReadingTime(readingTimeString: string): ReadTimeData {
   } else {
     formattedTime = `${minutes} min.`;
   }
- 
+
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
   const formattedText = `Tempo estimado: ${formattedTime}`;
   return { text: formattedText, minutes, time, words };
 }
 
-export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<Post> => {
-  const realSlug = slug.replace(/\.md$/, '');
-  const filePath = path.join(rootDirectory, `${realSlug}.md`);
+export const getClassBySlug = async (slug: any, rootDirectory: string): Promise<Class> => {
+  const realSlug = slug.replace(/\.mdx$/, '');
+  const filePath = path.join(rootDirectory, `${realSlug}.mdx`);
 
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
   const tableOfContent = await getHeadings(fileContent);
@@ -58,20 +58,20 @@ export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<P
     options: { parseFrontmatter: true }
   });
 
-  const postReadTime:ReadTimeData = formatReadingTime(fileContent);
+  const classReadTime:ReadTimeData = formatReadingTime(fileContent);
 
-  return { meta: { ...frontmatter, slug: realSlug, readTime: postReadTime }, content, toc: tableOfContent };
+  return { meta: { ...frontmatter, slug: realSlug, readTime: classReadTime }, content, toc: tableOfContent };
 }
 
-export const getAllPostsMeta = async (rootDirectory: string) => {
+export const getAllClassesMeta = async (rootDirectory: string) => {
   const files = fs.readdirSync(rootDirectory);
 
-  let posts = [];
+  let classes = [];
 
   for (const file of files) {
-    const { meta } = await getPostBySlug(file, rootDirectory);
-    posts.push(meta);
+    const { meta } = await getClassBySlug(file, rootDirectory);
+    classes.push(meta);
   }
-  posts.sort((post1, post2) => (post1.chapter > post2.chapter ? -1 : 1));
-  return posts;
+  classes.sort((class1, class2) => (class1.chapter < class2.chapter ? -1 : 1));
+  return classes;
 }

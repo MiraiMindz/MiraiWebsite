@@ -1,3 +1,10 @@
+---
+title: 'Fundamentos Python II'
+author: 'Mirai'
+chapter: '3'
+shortSum: 'Introdução aos fundamentos estruturais da linguagem.'
+---
+
 # Fundamentos Python II
 
 ## Tipos de Controle de Flow
@@ -139,7 +146,7 @@ match (variavel):
 
 `(variavel)` -> variavel usada na cadeia
 
-`case` -> keyword 
+`case` -> keyword
 
 `(opção)` -> valor esperado, podemos ter quantos `case (opção)` quisermos
 
@@ -459,7 +466,7 @@ for i in range(10):
         break
 ```
 
-o `continue` já exerce o oposto, ele dá prosseguimento ao loop 
+o `continue` já exerce o oposto, ele dá prosseguimento ao loop
 
 
 ```python
@@ -610,7 +617,7 @@ Compreensões de listas consiste em gerar uma nova lista de forma dinamica.
 
 Por exemplo, se você quisesse gerar uma lista com numeros dobrados?
 
-poderiamos usar `for` loops 
+poderiamos usar `for` loops
 
 
 ```python
@@ -780,7 +787,7 @@ olá, eu sou a função apresentar()
 
 Na função acima, nós apenas a chamamos, mas e se nós quisessemos que ela mostrasse algum nome?
 
-Bom, para isso nós usariamos argumentos e parametros, observe o exemplo: 
+Bom, para isso nós usariamos argumentos e parametros, observe o exemplo:
 
 
 ```python
@@ -1234,7 +1241,7 @@ para facilitar o entendimento eu irie formatar essas duas linhas (substitiuindo 
         func_alta_ord = lambda x:
                                 x + lambda x: x ** 2
      ```
-- 4. ```py    
+- 4. ```py
         print(func_alta_ord(2, lambda y: y ** 2))
 
         func_alta_ord = lambda x:
@@ -1617,7 +1624,7 @@ o `AND` performa a [conjunção lógica](https://pt.wikipedia.org/wiki/Conjunç�
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A & B   	|   0  	|   0  	|   0  	|   1  	|   0  	|   1  	|   0  	|   0  	|     20    	|
-  
+
 para exemplificar, veja este mesmo exemplo em Python:
 
 
@@ -1648,7 +1655,7 @@ o  `OR` performa a [disjunção lógica](https://pt.wikipedia.org/wiki/Disjunç�
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A \| B   	|   1  	|   0  	|   1  	|   1  	|   1  	|   1  	|   0  	|   0  	|    188    	|
-  
+
 para exemplificar, veja este mesmo exemplo em Python:
 
 
@@ -1677,7 +1684,7 @@ O `XOR` performa a [Disjunção Exclusiva](https://pt.wikipedia.org/wiki/Ou_excl
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A ^ B   	|   1  	|   0  	|   1  	|   0  	|   1  	|   0  	|   0  	|   0  	|    168    	|
-  
+
 para exemplificar, veja este mesmo exemplo em Python:
 
 
@@ -1737,8 +1744,8 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
 |  ======== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	|  ======== 	|
 |     A     	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|     39    	|
-|  A << 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
-|  A << 2    	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|     156    	|
+|  A &lt;&lt; 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
+|  A &lt;&lt; 2    	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|     156    	|
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1767,9 +1774,9 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
 |  ======== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	|  ======== 	|
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|     156    	|
-|  A >> 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
-|  A >> 2     	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|     39    	|
-|  A >> 3     	|   0  	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|     19    	|
+|  A &gt;&gt; 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
+|  A &gt;&gt; 2     	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|     39    	|
+|  A &gt;&gt; 3     	|   0  	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|     19    	|
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1934,22 +1941,22 @@ O Python segue uma precedencia de operadores especifica, eis aqui a lista:
 
 | Precedencia 	|                        Operador                       	|                                    Descrição                                    	|
 |:-----------:	|:-----------------------------------------------------:	|:-------------------------------------------------------------------------------:	|
-|      1      	|                      (), [] ou {}                     	|             Parenteses, Exibição de listas, dicionários e conjuntos             	|
-|      2      	| x[index], x[index:index] x(arguments...), x.attribute 	|                   atributos, fatiamentos e chamada de funções                   	|
-|      3      	|                         await                         	|                                 espera asycrona                                 	|
-|      4      	|                           **                          	|                                  exponenciação                                  	|
-|      5      	|                        +, -, ~                        	|                         Positivo, negativo e bitwise NOT                        	|
-|      6      	|                     *, @, /, //, %                    	| Multiplicação, multiplicação de matrizes, divisão, "divisão verdadeira", modulo 	|
-|      7      	|                          +, -                         	|                                 Soma e subtração                                	|
-|      8      	|                         <<, >>                        	|                                  Bitwise Shifts                                 	|
-|      9      	|                           &                           	|                                   Bitwise AND                                   	|
-|      10     	|                           ^                           	|                                   Bitwise XOR                                   	|
-|      11     	|                           \|                          	|                                    Bitwise OR                                   	|
-|      12     	|      in, not in, is, is not, <, <=, >, >=, !=, ==     	|                                   Comparadores                                  	|
-|      13     	|                         not x                         	|                                   NOT Booleano                                  	|
-|      14     	|                          and                          	|                                   AND Booleano                                  	|
-|      15     	|                           or                          	|                                   OR Booleano                                   	|
-|      16     	|                       if - else                       	|                              Expressão Condicional                              	|
-|      17     	|                         lambda                        	|                            Funções/Expressões Lambda                            	|
-|      18     	|                           :=                          	|                    Expressão de associação (Walrus Operator)                    	|
-
+|      {'1'}      	|                      {'(), [] ou {}'}                     	|             {'Parenteses, Exibição de listas, dicionários e conjuntos'}             	|
+|      {'2'}      	| {'x[index], x[index:index] x(arguments...), x.attribute'} 	|                   {'atributos, fatiamentos e chamada de funções'}                   	|
+|      {'3'}      	|                         {'await'}                         	|                                 {'espera asycrona'}                                 	|
+|      {'4'}      	|                           {'**'}                          	|                                  {'exponenciação'}                                  	|
+|      {'5'}      	|                        {'+, -, ~'}                        	|                         {'Positivo, negativo e bitwise NOT'}                        	|
+|      {'6'}      	|                     {'*, @, /, //, %'}                    	| {'Multiplicação, multiplicação de matrizes, divisão, "divisão verdadeira", modulo'} 	|
+|      {'7'}      	|                          {'+, -'}                         	|                                 {'Soma e subtração'}                                	|
+|      {'8'}      	|                         {'<<, >>'}                        	|                                  {'Bitwise Shifts'}                                 	|
+|      {'9'}      	|                           {'&'}                           	|                                   {'Bitwise AND'}                                   	|
+|      {'10'}     	|                           {'^'}                           	|                                   {'Bitwise XOR'}                                   	|
+|      {'11'}     	|                           {'|'}                          	|                                    {'Bitwise OR'}                                   	|
+|      {'12'}     	|      {'in, not in, is, is not, <, <=, >, >=, !=, =='}     	|                                   {'Comparadores'}                                  	|
+|      {'13'}     	|                         {'not x'}                         	|                                   {'NOT Booleano'}                                  	|
+|      {'14'}     	|                          {'and'}                          	|                                   {'AND Booleano'}                                  	|
+|      {'15'}     	|                           {'or'}                          	|                                   {'OR Booleano'}                                   	|
+|      {'16'}     	|                       {'if - else'}                       	|                              {'Expressão Condicional'}                              	|
+|      {'17'}     	|                         {'lambda'}                        	|                            {'Funções/Expressões Lambda'}                            	|
+|      {'18'}     	|                           {':='}                          	|                    {'Expressão de associação (Walrus Operator)'}                    	|
+Operator)                    	|

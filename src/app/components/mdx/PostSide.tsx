@@ -61,3 +61,15 @@ export function ClassCard(props: ClassCardProps) {
     </Link>
   );
 }
+
+export function ClassSide(props: ClassCardProps) {
+  return (
+    <Link href={props.href}>
+      <div className="postSideClass">
+        <h2 className="font-black text-base truncate transition-all text-left">{`${props.chapter} - ${props.title}`}</h2>
+        <p className="italic text-neutral-500 dark:text-neutral-400 text-sm truncate">{props.shortSum}</p>
+        <p className="text-neutral-500 dark:text-neutral-400 text-sm underline truncate">{props.readTime}</p>
+      </div>
+    </Link>
+  );
+}
