@@ -1,8 +1,6 @@
 "use client";
-//import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import syntaxHighlighterTheme from './SyntaxHighlighterTheme/syntaxHighlighterTheme.ts';
-//import { nord } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import sh from 'react-syntax-highlighter/dist/esm/languages/hljs/bash';
 import go from 'react-syntax-highlighter/dist/esm/languages/hljs/go';
 import java from 'react-syntax-highlighter/dist/esm/languages/hljs/java';
@@ -18,22 +16,15 @@ SyntaxHighlighter.registerLanguage('java', java);
 SyntaxHighlighter.registerLanguage('plaintext', ptext);
 
 export function Code({className, ...props}: any) {
-  console.log(syntaxHighlighterTheme);
   const match = /language-(\w+)/.exec(className || '');
+  const output = /language-output/.exec(className || '');
   if (match) {
-    return <div className='hljs-wrapper'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={true} language={match[1]} {...props} /></div>
+    if (!output) {
+      return <div className='hljs-wrapper'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={true} language={match[1]} {...props} /></div>
+    } else {
+      return <div className='rounded-lg bg-neutral-100 dark:bg-neutral-900 p-2 flex flex-col justify-center items-start'><h1 className='text-neutral-950 dark:text-neutral-50 text-center'>Saida</h1><hr className='h-0.5 rounded-full bg-neutral-900 dark:bg-neutral-100 w-[99%] my-1 border-neutral-950 dark:border-neutral-50'/> <div {...props}/> </div>
+    }
   } else {
-    // return <code className={className} {...props} />
-    <code className='border rounded-sm border-neutral-500 dark:border-neutral-600 p-1' {...props} />
+    return <code className={className + " border rounded-md border-neutral-950 dark:border-neutral-50 p-0.5"} {...props} />
   }
-}
-
-interface InlineCodeProps {
-  children?: any;
-}
-
-export function InlineCode(props: InlineCodeProps) {
-  return (
-    <code className='border rounded-sm border-neutral-500 dark:border-neutral-600 p-1'>{props?.children}</code>
-  );
 }

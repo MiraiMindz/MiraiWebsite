@@ -1,5 +1,6 @@
 import * as Headers from './headers';
-import { Code, InlineCode } from './Code';
+import { Code } from './Code';
+import { Paragraph } from './Paragraph';
 
 const MDXCustomComponents = {
   h1: Headers.H1,
@@ -8,8 +9,8 @@ const MDXCustomComponents = {
   h4: Headers.H4,
   h5: Headers.H5,
   h6: Headers.H6,
-  pre: Code,
-  code: InlineCode,
+  code: Code,
+  p: Paragraph
 }
 
 export default MDXCustomComponents;
