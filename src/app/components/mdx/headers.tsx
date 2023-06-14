@@ -1,7 +1,5 @@
-import { ReactElement } from "react";
-
 interface HeadersProps {
-  children: string;
+  children?: any;
 }
 
 export function H1(props: HeadersProps) {
