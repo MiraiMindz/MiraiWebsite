@@ -52,6 +52,7 @@ Uma pequena introdução aos conceitos mais comuns:
   * Programação (Logica): As linguagens de Programação são marcadas por funções e comandos, elas trabalham a logica de maquina, alguns exemplos são, Python e BASH.
   * Marcação (Documentação): As Linguagens de Marcação são marcada pelo uso de marcadores de texto (ex: itálico, negrito, cabeçalhos, etc...), elas são mais usadas na criação de documentos, exemplos seriam MarkDown e HTML (HyperTextMarkupLanguage)
   * Estilo (Design): As Linguagens de Estilo são marcadas pelo o uso de propriedades de aparência (ex: background-color, shadow, etc...), elas são usadas na estilização de sites e aplicativos, exemplos seriam CSS e SASS
+
 * Paradigma:
   * O paradigma de uma linguagem de programação define sua funcionalidade, especificidade, ou orientação, informalmente dizendo, o paradigma de uma linguagem é o equivalente a "uma serie de métodos, dogmas, regras e conceitos que guiam o código fonte"
   * os 3 paradigmas mais comuns são:
@@ -93,6 +94,7 @@ Uma pequena introdução aos conceitos mais comuns:
            }
         }
         ```
+
 * Tipagem: ela define a estrutura de tipos, ela essencialmente define a "praticidade" e o "controle" que o programador tem com a linguagem de programação
   * Força: Define a volatilidade da variável na memória, pode ser divida em Fraca ou Forte:
     * Fraca: Linguagens Fracamente Tipadas tem o tipo de suas variáveis mudadas na memória de acordo com a situação
@@ -105,6 +107,7 @@ Uma pequena introdução aos conceitos mais comuns:
         string texto = "Esse aqui é um texto" # Linguagens Estaticas
         texto = "Esse aqui é um texto"        # Linguagens Dinâmicas
         ```
+
 * Execução: a execução define a forma como o programa é executado, basicamente ela define se podemos executar diretamente o código ou se devemos converter para um executavel, ela é dividida em Interpretadas e Compiladas
   * Linguagens Interpretadas: As linguagens interpretadas tem seu codigo executado em tempo real através do interpretador, essencialmente, basta apenas escrever o codigo e executar, Um exemplo seria a linguagem Python
   * Linguagens Compiladas: As linguagens compiladas tem seu codigo executado após a conversão para um executavel através do compilador, essencialmente após escrevermos o codigo devemos compilar (converter) para um executável (tambem chamado de binário) e enfim executar o programa, um exemplo seria a linguagem C
