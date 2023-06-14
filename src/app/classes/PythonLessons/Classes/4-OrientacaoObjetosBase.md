@@ -12,14 +12,14 @@ A [programação orientada a objetos](https://pt.wikipedia.org/wiki/Programaçã
 Esses blocos são chamados de ***objetos*** e esses objetos contém *propriedades* (Atributos) e *metodos*, as propriedades consistem em valores (variaveis) pertinentes ao objeto principal, já os metodos consistem em funções que performam ações no objeto principal. *Os metodos podem ou não usar as propriedades em sua execução*.
 
 Por exemplo, se fossemos representar uma pessoa, ela teria propriedades como:
-- nome
-- idade
-- residencia
+* nome
+* idade
+* residencia
 
 e teria metodos como:
-- andar
-- correr
-- falar
+* andar
+* correr
+* falar
 
 para facilitar o entendimento, iremos fazer um simples estudante.
 
@@ -151,11 +151,11 @@ Esses metodos também são chamados de "Metodos Especiais (Special Methods)" e "
 Os Dunder Methods começam com dois `_` ()underscore) e terminam com 2 também, ex: `__init__`
 
 aqui uma lista dos mais comumns:
-- `__init__()` -> Executado assim que um novo objeto é instanciado.
-- `__new__()` -> Executado para criar uma nova instancia de uma classe.
-- `__call__()` -> Executado quando uma instancia é chamada como função.
-- `__name__()` -> Retorna o nome da classe cujo o objeto foi instanciado.
-- `__repr__()` -> Retorna uma string de representação da classe.
+* `__init__()` -> Executado assim que um novo objeto é instanciado.
+* `__new__()` -> Executado para criar uma nova instancia de uma classe.
+* `__call__()` -> Executado quando uma instancia é chamada como função.
+* `__name__()` -> Retorna o nome da classe cujo o objeto foi instanciado.
+* `__repr__()` -> Retorna uma string de representação da classe.
 
 irei ressaltar todos exceto o `__new__()`, deixarei ele para quando aprendermos sobre `super()`
 
@@ -437,9 +437,9 @@ e ele deve ser posto acima da função que deseja alterar.
 > NOTA: Não irei me aprofundar muito, pois existe uma seção especifica para eles mais a frente.
 
 Existem varios decoradores, mas irei ressaltar 3
-- `@property`
-- `@classmethod`
-- `@staticmethod`
+* `@property`
+* `@classmethod`
+* `@staticmethod`
 
 ### `@property`
 

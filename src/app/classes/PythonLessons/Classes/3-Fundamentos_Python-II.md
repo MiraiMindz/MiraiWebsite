@@ -12,14 +12,10 @@ shortSum: 'Introdução aos fundamentos estruturais da linguagem.'
 ### Controle de Fluxo (Control Flow) e Escopo
 
 o Controle de Fluxo (Control Flow) de um programa determina a forma como o código será executado, existem 4 tipos essenciais, isto é, destes quatro surgem variações
-
-- Sequencial: o código é executado de forma sequencial, cima a baixo
-
-- Decisivo: o código é executado baseado em uma decisão, `if` statements
-
-- Repetitivo: o código é executado em loop, `while` e `for` loops
-
-- Funcional: o código é dividido e executado em forma de funções (veremos mais a frente)
+* Sequencial: o código é executado de forma sequencial, cima a baixo
+* Decisivo: o código é executado baseado em uma decisão, `if` statements
+* Repetitivo: o código é executado em loop, `while` e `for` loops
+* Funcional: o código é dividido e executado em forma de funções (veremos mais a frente)
 
 #### Sequencial
 
@@ -350,10 +346,10 @@ A {
 ```
 
 Aqui nós temos 4 escopos:
-- 1. Global
-- 2. A
-- 3. B
-- 4. C
+1. Global
+2. A
+3. B
+4. C
 
 O escopo global é o escopo do arquivo, sem delimitações.
 
@@ -538,9 +534,9 @@ else:
 Existe um jogo que se tornou desafio de programação, o nome é FizzBuzz
 
 ele consiste no seguinte:
-- Se um numero for divisivel por 3, diga Fizz
-- Se um numero for divisivel por 5, diga Buzz
-- Se um numero for divisivel por 3 e 5, diga FizzBuzz
+* Se um numero for divisivel por 3, diga Fizz
+* Se um numero for divisivel por 5, diga Buzz
+* Se um numero for divisivel por 3 e 5, diga FizzBuzz
 
 podemos usar `for` loops para isso
 
@@ -601,15 +597,15 @@ Compreensões consistem em gerar um novo elemento com base em um tipo de dado co
 
 Seguimos o seguinte esquema para as compreensões:
 
-- Listas
-    - Base: `lista_resultado = ['expr_saida' for 'var' in 'iteravel']`
-    - Condicional: `lista_resultado = ['expr_saida' for 'var' in 'iteravel' if (condição)]`
-- Sets
-    - Base: `set_resultado = {'expr_saida' for 'var' in 'iteravel'}`
-    - Condicional: `set_resultado = {'expr_saida' for 'var' in 'iteravel' if (condição)}`
-- Dicionários
-    - Base: `dict_resultado = {'chave':'valor' for '(chave, valor)' in 'iteravel'}`
-    - Condicional: `dict_resultado = {'chave':'valor' for '(chave, valor)' in 'iteravel' if ('chave' satisfaz condição)}`
+* Listas
+    * Base: `lista_resultado = ['expr_saida' for 'var' in 'iteravel']`
+    * Condicional: `lista_resultado = ['expr_saida' for 'var' in 'iteravel' if (condição)]`
+* Sets
+    * Base: `set_resultado = {'expr_saida' for 'var' in 'iteravel'}`
+    * Condicional: `set_resultado = {'expr_saida' for 'var' in 'iteravel' if (condição)}`
+* Dicionários
+    * Base: `dict_resultado = {'chave':'valor' for '(chave, valor)' in 'iteravel'}`
+    * Condicional: `dict_resultado = {'chave':'valor' for '(chave, valor)' in 'iteravel' if ('chave' satisfaz condição)}`
 
 #### Listas
 
@@ -642,11 +638,11 @@ print(lista_dobrada)
 ```
 Basicamente a lógica esta "ao contrário", no exemplo com `for` loops  estamos dizendo o seguinte:
 
-> _para cada item 'i' entre 1 e 11, multiplique por 2 e adicione a lista 'lista_dobrada'_
+> *para cada item 'i' entre 1 e 11, multiplique por 2 e adicione a lista 'lista_dobrada'*
 
 e no exemplo de compreensão de lista estamos dizendo:
 
-> _multiplique 'i' por 2 e adicione a lista 'lista_dobrada' em um raio entre 1 e  11_
+> *multiplique 'i' por 2 e adicione a lista 'lista_dobrada' em um raio entre 1 e  11*
 
 e tambem tornamos a lógica em uma unica linha, compactando ela, essa prática de tornar o codigo em uma linha se chama _'One Liner'_, além é claro de termos eliminado a necessidade de inicialização de uma lista vazia.
 
@@ -683,11 +679,11 @@ print(lista_de_pares)
 ```
 Basicamente a lógica esta "ao contrário", no exemplo com `for` loops e `if`s estamos dizendo o seguinte:
 
-> _para cada item 'i' entre 1 e 11, se o resto da divisão(modulo) por 2 for igual a 0 adicione a lista 'lista_de_pares'_
+> *para cada item 'i' entre 1 e 11, se o resto da divisão(modulo) por 2 for igual a 0 adicione a lista 'lista_de_pares'*
 
 e no exemplo de compreensão de lista estamos dizendo:
 
-> _adicione 'i' para a lista 'lista_de_pares' caso o resto da divisão(modulo) por 2 for igual a 0 em um raio entre 1 e  11_
+> *adicione 'i' para a lista 'lista_de_pares' caso o resto da divisão(modulo) por 2 for igual a 0 em um raio entre 1 e  11*
 
 #### Sets
 
@@ -1012,10 +1008,10 @@ funcao_parametro_chave(
 ``````output
 TypeError                                 Traceback (most recent call last)
 ``````output
-/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb Cell 94 in <cell line: 7>()
-      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=3'>4</a>     print(f"parametro_2: {parametro_2}")
-      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=4'>5</a>     print(f"parametro_3: {parametro_3}")
-----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessions/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=6'>7</a> funcao_parametro_chave('valor obrigatorio', 'Valor 1', 'Valor 2', 'Valor 3')
+/media/Arquivos/Programming/Lessons/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb Cell 94 in <cell line: 7>()
+      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=3'>4</a>     print(f"parametro_2: {parametro_2}")
+      <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=4'>5</a>     print(f"parametro_3: {parametro_3}")
+----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessions/Classes/3-Fundamentos_Python-II.ipynb#Y321sZmlsZQ%3D%3D?line=6'>7</a> funcao_parametro_chave('valor obrigatorio', 'Valor 1', 'Valor 2', 'Valor 3')
 ``````output
 TypeError: funcao_parametro_chave() takes 1 positional argument but 4 were given
 ```
@@ -1227,21 +1223,21 @@ print(func_alta_ord(2, lambda x: x**2))
 para facilitar o entendimento eu irie formatar essas duas linhas (substitiuindo valores) de uma forma a representar a logica.
 
 
-- 1. ```py
+1. ```py
         func_alta_ord = lambda x, func: x + func(x)
         print(func_alta_ord(2, lambda y: y ** 2))
      ```
-- 2. ```py
+2. ```py
         func_alta_ord = lambda x, func: x + func(x)
         func_alta_ord = lambda x,
                         lambda y: y ** 2:
                                         x + func(x)
      ```
-- 3. ```py
+3. ```py
         func_alta_ord = lambda x:
                                 x + lambda x: x ** 2
      ```
-- 4. ```py
+4. ```py
         print(func_alta_ord(2, lambda y: y ** 2))
 
         func_alta_ord = lambda x:
@@ -1381,13 +1377,13 @@ Em Python, operadores são simbolos (ou "sintaxes") especiais que informam que u
 
 Nesse tópico eu irei dar uma visão mais detalhada dos operadores, já vimos alguns como os aritméticos e os lógicos (apenas as keywords), eis aqui uma lista com os grupos de operadores:
 
-- Aritméticos (irei mostrar o ultimo)
-- Lógicos (irei mostrar o ultimo)
-- Comparativos
-- Bitwise
-- Associativos
-- Identidade
-- Membros
+* Aritméticos (irei mostrar o ultimo)
+* Lógicos (irei mostrar o ultimo)
+* Comparativos
+* Bitwise
+* Associativos
+* Identidade
+* Membros
 
 ##### Aritméticos
 
@@ -1467,12 +1463,12 @@ C: 1	D: 2
 
 os comparativos são bastante usados nas estruturas de controle de flow, eles são os seguintes:
 
-- maior que `>`
-- menor que `<`
-- é igual `==`
-- diferente `!=`
-- maior ou igual a `>=`
-- menor ou igual a `<=`
+* maior que `>`
+* menor que `<`
+* é igual `==`
+* diferente `!=`
+* maior ou igual a `>=`
+* menor ou igual a `<=`
 
 Seus nomes são auto-explicativos, então irei exemplificar apenas casos complexos.
 
@@ -1494,8 +1490,8 @@ o valor de i é 6
 eles são simples, eles trabalham comparando o id na memória, util quando iniciarmos multi-threading.
 
 são apenas 2:
-- `is`
-- `is not`
+* `is`
+* `is not`
 
 veja a diferença entre eles e os operadores comparativos `==` e `!=`:
 
@@ -1548,8 +1544,8 @@ esses operadores são um pouco simples, eles apenas chegam se `x` está ou não 
 
 são 2:
 
-- `in`
-- `not in`
+* `in`
+* `not in`
 
 eles funcionam em iteráveis.
 
@@ -1574,12 +1570,12 @@ De forma muito simplificada, um computador funciona atráves de uma sequencia de
 
 eis aqui a lista:
 
-- `AND (&)`
-- `OR (|)`
-- `NOT (~)`
-- `XOR (^)` (exclusive or)
-- `RightShift (>>)`
-- `LeftShift (<<)`
+* `AND (&)`
+* `OR (|)`
+* `NOT (~)`
+* `XOR (^)` (exclusive or)
+* `RightShift (>>)`
+* `LeftShift (<<)`
 
 antes de irmos aos exemplos eu irei explicar como binário funciona.
 
@@ -1587,11 +1583,11 @@ Se você lembra das aulas de algebra na escola certamente sabe que nós usamos s
 
 Atualmente nós usamos um sistema de base 10, usamos 10 algarismos na composição de nossos numeros e ao avançarmos uma casa significa o mesmo que multiplicar por 10.
 
-_1 = 1 x 10⁰, 10 = 1 x 10¹, 100 = 1 x 10²..._ e por ai vai.
+*1 = 1 x 10⁰, 10 = 1 x 10¹, 100 = 1 x 10²...* e por ai vai.
 
 Os computadores contudo, operam em base 2, ou seja, contém apenas dois algarismos, 0 e 1, ou seja, as casas representam potencias de 2.
 
-_1 = 1 x 2⁰, 2 = 1 x 2¹, 4 = 1 x 2²..._ e por ai vai.
+*1 = 1 x 2⁰, 2 = 1 x 2¹, 4 = 1 x 2²...* e por ai vai.
 
 em notação binária, 1 significa que estamos usando o valor daquela 'casa' e 0 não (da mesma forma que se escrevermos 404, não estamos usando as dezenas)
 
@@ -1607,7 +1603,7 @@ irei dispor de uma tabela com algumas casas e seus valores para facilitar o ente
 |   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|          0          	|
 |   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|         255         	|
 
-Os numeros binários crescem da direita para a esquerda, começando pelo _**bit menos significante**_
+Os numeros binários crescem da direita para a esquerda, começando pelo ***bit menos significante***
 
 Espero que tenha ficado minimamente claro, e que agora você tenha uma noção básica de binário vamos aos operadores.
 
@@ -1819,20 +1815,20 @@ Os associativos são bem simples, eles funcionam como abreviação dos outros op
 
 eles são os seguntes:
 
-- Igual `=`
-- Mais-Igual `+=`
-- Menos-Igual `-=`
-- Multiplicação-Igual `*=`
-- Divisão-Igual `/=`
-- Modulo-Igual `%=`
-- Potencia-Igual `**=`
-- TrueDiv-Igual `//=`
-- AND-Igual `&=` (Bitwise)
-- OR-Igual `|=` (Bitwise)
-- XOR-Igual `^=` (Bitwise)
-- RightShift-Igual `>>=` (Bitwise)
-- LeftShift-Igual `<<=` (Bitwise)
-- Associação de expressão (Walrus Operator) `:=`
+* Igual `=`
+* Mais-Igual `+=`
+* Menos-Igual `-=`
+* Multiplicação-Igual `*=`
+* Divisão-Igual `/=`
+* Modulo-Igual `%=`
+* Potencia-Igual `**=`
+* TrueDiv-Igual `//=`
+* AND-Igual `&=` (Bitwise)
+* OR-Igual `|=` (Bitwise)
+* XOR-Igual `^=` (Bitwise)
+* RightShift-Igual `>>=` (Bitwise)
+* LeftShift-Igual `<<=` (Bitwise)
+* Associação de expressão (Walrus Operator) `:=`
 
 eu vou explicar apenas 3 operadores, entendendo eles você entende o resto.
 

@@ -1,6 +1,7 @@
 import * as Headers from './headers';
 import * as TextElements from './TextElements';
 import { Code } from './Code';
+import { CImage } from './Image';
 
 const MDXCustomComponents = {
   h1: Headers.H1,
@@ -18,6 +19,7 @@ const MDXCustomComponents = {
   strong: TextElements.Strong,
   ul: TextElements.UL,
   a: TextElements.CLink,
+  img: CImage
 }
 
 export default MDXCustomComponents;

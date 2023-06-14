@@ -61,7 +61,7 @@ nome = "Mirai"  # Os comentários não precisam estar no inicio da linha, mas pe
 
 Uma das ultilidades dos comentários é, além de comentar e adicionar informações ao codigo, a de "salvar" um codigo, frequentemente você irá se deparar com a seguinte situação:
 
-_"Preciso que este pedaço de codigo não execute, mas não posso apaga-lo pois certamente irei perde-lo, o que devo fazer?"_
+*"Preciso que este pedaço de codigo não execute, mas não posso apaga-lo pois certamente irei perde-lo, o que devo fazer?"*
 
 A resposta é simples, comente o codigo, isso mesmo, adicione `#` no inicio das linhas, assim o codigo não irá ser executado e você ainda o terá
 
