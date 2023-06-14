@@ -1,9 +1,11 @@
 import nextMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
+import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
+
 
 const withMDX = nextMDX({
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, flattenListItemParagraphs],
     providerImportSource: '@mdx-js/react',
   },
 });
