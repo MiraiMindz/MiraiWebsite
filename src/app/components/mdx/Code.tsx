@@ -23,7 +23,8 @@ export function Code({className, ...props}: any) {
   if (match) {
     return <div className='hljs-wrapper'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={true} language={match[1]} {...props} /></div>
   } else {
-    return <code className={className} {...props} />
+    // return <code className={className} {...props} />
+    <code className='border rounded-sm border-neutral-500 dark:border-neutral-600 p-1' {...props} />
   }
 }
 
