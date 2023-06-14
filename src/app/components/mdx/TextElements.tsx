@@ -32,13 +32,13 @@ export function HR({className, ...props}: any) {
 
 export function OL({className, ...props}: any) {
     return (
-        <ol className={className + " list-decimal list-inside"} {...props} />
+        <ol className={className + " list-decimal list-inside ml-2"} {...props} />
     );
 }
 
 export function UL({className, ...props}: any) {
     return (
-        <ul className={className + " list-disc list-inside"} {...props} />
+        <ul className={className + " list-disc list-inside ml-2"} {...props} />
     );
 }
 
