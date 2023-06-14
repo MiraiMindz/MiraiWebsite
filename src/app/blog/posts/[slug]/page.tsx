@@ -33,14 +33,10 @@ export default async function Page({ params }: any) {
     nextPostSlug = null;
   }
 
-  console.log(`currentPostIndex: ${currentPostIndex}`);
-  console.log(`nextPostSlug: ${nextPostSlug}`);
-  console.log(`prevPostSlug: ${prevPostSlug}`);
-
   return (
     <section className="flex flex-col items-center md:flex-row md:justify-center md:items-start flex-grow">
-      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " fixed top-16 left-2 w-64"}>
-        <div className="p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50 max-h-[90%] overflow-y-auto">
+      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " fixed top-16 left-2 w-64 max-h-[90%] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
+        <div>
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600">Tabela de Conteúdos</h1>
           <ul>
             {toc}
@@ -56,11 +52,11 @@ export default async function Page({ params }: any) {
       <article className="w-[40ch] md:w-[80ch] article">
         {content}
       </article>
-      <aside className="fixed top-16 right-2 w-64 hidden md:block">
+      <aside className="fixed top-16 right-2 w-64 hidden md:block max-h-[90%] overflow-y-auto">
         <ul>
           {posts?.map(post => (
             <li className="my-2" key={post?.slug}>
-              <PostSide 
+              <PostSide
                 title={post?.title}
                 shortSum={post?.shortSum}
                 href={`/blog/posts/${post?.slug}`}

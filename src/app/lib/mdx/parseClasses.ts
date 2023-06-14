@@ -46,8 +46,8 @@ export function formatReadingTime(readingTimeString: string): ReadTimeData {
 }
 
 export const getClassBySlug = async (slug: any, rootDirectory: string): Promise<Class> => {
-  const realSlug = slug.replace(/\.mdx$/, '');
-  const filePath = path.join(rootDirectory, `${realSlug}.mdx`);
+  const realSlug = slug.replace(/\.md$/, '');
+  const filePath = path.join(rootDirectory, `${realSlug}.md`);
 
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
   const tableOfContent = await getHeadings(fileContent);
