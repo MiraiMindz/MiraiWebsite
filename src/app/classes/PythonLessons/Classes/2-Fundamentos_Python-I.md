@@ -667,8 +667,8 @@ Opções de Alinhamento:
 
 | Sinal 	|                                                              Significado                                                             	|
 |:-----:	|:------------------------------------------------------------------------------------------------------------------------------------:	|
-|   >   	|                                  define que o campo deve estar alinhado a esquerda do espaço provido                                 	|
-|   <   	|                                  define que o campo deve estar alinhado a direita do espaço provido                                  	|
+|   &gt;   	|                                  define que o campo deve estar alinhado a esquerda do espaço provido                                 	|
+|   &lt;   	|                                  define que o campo deve estar alinhado a direita do espaço provido                                  	|
 |   =   	| define que o alinhamento deve estar entre o sinal (se houver) e o digito, essa opção de alinhamento só é valida para tipos numericos 	|
 |   ^   	|                                  define que o campo deve estar alinhado ao centro do espaço provido                                  	|
 
