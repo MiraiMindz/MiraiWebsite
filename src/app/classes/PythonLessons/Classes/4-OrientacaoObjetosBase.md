@@ -144,7 +144,7 @@ o `self` se refere a classe `Estudante` em si, ou seja, quando fazemos `self.not
 
 ## Metodos Mágicos (Magic Methods/Dunder Methods)
 
-![MeetTheDunders](./images/MeetTheDunders2.jpeg)
+![MeetTheDunders](/Classes_Assets/Images/MeetTheDunders2.jpeg)
 
 Esses metodos também são chamados de "Metodos Especiais (Special Methods)" e "Dunder Methods"
 
@@ -370,7 +370,7 @@ Veja que não precisamos definir `self.nome = nome` e `self.idade = idade` na cl
 
 a relação desses objetos é a seguinte:
 
-![OOP_Relations](./images/OOPHierarquiaBase.png)
+![OOP_Relations](/Classes_Assets/Images/OOPHierarquiaBase.png)
 
 Todas as instancias da classe `Estudante` são irmãs entre si (pois tem a mesma classe pai).
 

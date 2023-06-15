@@ -1611,7 +1611,7 @@ Espero que tenha ficado minimamente claro, e que agora você tenha uma noção b
 
 o `AND` performa a [conjunção lógica](https://pt.wikipedia.org/wiki/Conjunção_lógica), basicamente ele só retorna 1 se ambos os bits forem 1.
 
-![AND_GIF](./images/AND.gif)
+![AND_GIF](/Classes_Assets/Images/AND.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1642,7 +1642,7 @@ o prefixo `0b` é uma conveção em representação de bases em programação, u
 
 o  `OR` performa a [disjunção lógica](https://pt.wikipedia.org/wiki/Disjunção_lógica), basicamente ele retorna 1 caso um ou todos os bits sejam 1 (ou se preferir, só retorna 0 se ambos forem iguais, essencialmente o oposto do `AND`)
 
-![OR](./images/OR.gif)
+![OR](/Classes_Assets/Images/OR.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1671,7 +1671,7 @@ A | B (188) = 0b10111100
 
 O `XOR` performa a [Disjunção Exclusiva](https://pt.wikipedia.org/wiki/Ou_exclusivo), essencialmente, ele só retorna 1 se os bits forem opostos.
 
-![XOR_GIF](./images/XOR.gif)
+![XOR_GIF](/Classes_Assets/Images/XOR.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1700,7 +1700,7 @@ A ^ B (168) = 0b10101000
 
 O `NOT` performa a [Negação Lógica](https://pt.wikipedia.org/wiki/Negação), basiamente, ele inverte os bits, ele recebe só um argumento, tornando ele o unico operador unário.
 
-![NOT_GIF](./images/NOT.gif)
+![NOT_GIF](/Classes_Assets/Images/NOT.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1733,7 +1733,7 @@ o operador de `LeftShift` move/desvia os bits para a esquerda preenchendo o espa
 
 você especifica o numero de casas para desviar a esquerda do operador, e desviar por 1 casa é o equivalente a multiplicar por uma potencia de 2 equivalente ao numero de casas movidas.
 
-![LEFT_SHIFT](./images/LEFT_SHIFT.gif)
+![LEFT_SHIFT](/Classes_Assets/Images/LEFT_SHIFT.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1763,7 +1763,7 @@ o operador de `RightShift` move/desvia os bits para a direita preenchendo o espa
 
 você especifica o numero de casas para desviar a esquerda do operador, e desviar por 1 casa é o equivalente a dividir por uma potencia de 2 equivalente ao numero de casas movidas.
 
-![RIGHT_SHIFT](./images/RIGHT_SHIFT.gif)
+![RIGHT_SHIFT](/Classes_Assets/Images/RIGHT_SHIFT.gif)
 
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
@@ -1794,8 +1794,8 @@ A >> 3 (19) = 0b10011
 
 Masking consiste em mascarar os bits, para fazer operações especificas nesses bits, um exemplo seriam os Shifts Limitados a uma janela de bits.
 
-![BITMASKED_LEFT_SHIFT](./images/BITMASKED_LEFT_SHIFT.gif)
-![BITMASKED_RIGHT_SHIFT](./images/BITMASKED_RIGHT_SHIFT.gif)
+![BITMASKED_LEFT_SHIFT](/Classes_Assets/Images/BITMASKED_LEFT_SHIFT.gif)
+![BITMASKED_RIGHT_SHIFT](/Classes_Assets/Images/BITMASKED_RIGHT_SHIFT.gif)
 
 você usa o `AND` com o comprimento em bits da janela
 
