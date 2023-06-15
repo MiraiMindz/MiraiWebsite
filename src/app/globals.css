@@ -526,9 +526,13 @@ table {
 }
 
 th {
-  @apply border bg-neutral-200/10 dark:bg-neutral-800/10
+  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 table-auto overflow-x-auto
 }
 
 td {
-  @apply border bg-neutral-100/10 dark:bg-neutral-900/10
+  @apply border bg-neutral-100/10 dark:bg-neutral-900/10 table-auto overflow-x-auto
+}
+
+tr {
+  @apply overflow-x-auto table-auto
 }
