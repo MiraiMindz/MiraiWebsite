@@ -520,3 +520,15 @@ details {
 details[open] {
   @apply transition-all;
 }
+
+table {
+  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto
+}
+
+th {
+  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 flex
+}
+
+td {
+  @apply border bg-neutral-100/10 dark:bg-neutral-900/10 flex
+}
