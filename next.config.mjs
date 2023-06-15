@@ -4,6 +4,7 @@ import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
 
 
 const withMDX = nextMDX({
+  extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: [remarkGfm, flattenListItemParagraphs],
     providerImportSource: '@mdx-js/react',
