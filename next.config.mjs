@@ -1,15 +1,14 @@
-import nextMDX from "@next/mdx";
+import withMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
 
-
-const withMDX = nextMDX({
-  extension: /\.(md|mdx)$/,
+const mdxConfig = {
+  //extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: [remarkGfm, flattenListItemParagraphs],
     providerImportSource: '@mdx-js/react',
   },
-});
+};
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -18,6 +17,7 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "mdx", "md"],
   experimental: {
     appDir: true,
+    mdxRs: false,
   },
   webpack: (config) => {
     config.resolve.fallback = {
@@ -29,4 +29,8 @@ const nextConfig = {
   },
 }
 
-export default withMDX(nextConfig);
+export default withMDX(mdxConfig)(nextConfig);
+
+
+// https://stackoverflow.com/questions/68814616/nextjs-render-markdown-with-table
+// https://github.com/vercel/next.js/issues?q=remark-gfm
