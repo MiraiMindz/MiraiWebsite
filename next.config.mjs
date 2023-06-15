@@ -15,7 +15,7 @@ const withMDX = nextMDX({
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
-  pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
+  pageExtensions: ["ts", "tsx", "js", "jsx", "mdx", "md"],
   experimental: {
     appDir: true,
     mdxRs: false,
