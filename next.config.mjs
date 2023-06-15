@@ -18,7 +18,6 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "mdx", "md"],
   experimental: {
     appDir: true,
-    mdxRs: false,
   },
   webpack: (config) => {
     config.resolve.fallback = {
