@@ -522,17 +522,17 @@ details[open] {
 }
 
 table {
-  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto w-[40ch] md:w-[80ch]
+  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto max-w-[40ch] md:max-w-[80ch]
+}
+
+thead, tbody, tr {
+  @apply overflow-x-auto
 }
 
 th {
-  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 table-auto overflow-x-auto
+  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 overflow-x-auto
 }
 
 td {
-  @apply border bg-neutral-100/10 dark:bg-neutral-900/10 table-auto overflow-x-auto
-}
-
-tr {
-  @apply overflow-x-auto table-auto
+  @apply border bg-neutral-100/10 dark:bg-neutral-900/10 overflow-x-auto
 }
