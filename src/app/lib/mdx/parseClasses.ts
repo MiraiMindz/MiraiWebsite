@@ -5,6 +5,8 @@ import { ReactElement } from 'react';
 import * as MDXCC from '../../components/mdx/components';
 import { getHeadings } from './extractToC';
 import readingTime from 'reading-time';
+import remarkGfm from "remark-gfm";
+import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
 
 type Frontmatter = {
   title: string;
@@ -55,7 +57,12 @@ export const getClassBySlug = async (slug: any, rootDirectory: string): Promise<
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     components: MDXCC.default,
     source: fileContent,
-    options: { parseFrontmatter: true }
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, flattenListItemParagraphs],
+      },
+    }
   });
 
   const classReadTime:ReadTimeData = formatReadingTime(fileContent);
