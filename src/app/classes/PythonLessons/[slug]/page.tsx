@@ -28,7 +28,7 @@ export default async function Page({ params }: any) {
     prevClassSlug = null;
   }
 
-  if (currentClassIndex > 1) {
+  if (currentClassIndex > 0) {
     nextClassSlug = classes[currentClassIndex + 1]?.slug;
   } else {
     nextClassSlug = null;
@@ -70,10 +70,10 @@ export default async function Page({ params }: any) {
         </ul>
       </aside>
       <div className="md:hidden my-4 flex flex-row justify-between items-center w-[40ch]">
-        <Link className={(prevClassSlug != null ? "block" : "hidden") + " text-left w-full"} href={`/blog/posts/${prevClassSlug}`}>
+        <Link className={(prevClassSlug != null ? "block" : "hidden") + " text-left w-full"} href={`/classes/PythonLessons/${prevClassSlug}`}>
           &lt; Previous Chapter
         </Link>
-        <Link className={(nextClassSlug != null ? "block" : "hidden") + " text-right w-full"} href={`/blog/posts/${nextClassSlug}`}>
+        <Link className={(nextClassSlug != null ? "block" : "hidden") + " text-right w-full"} href={`/classes/PythonLessons/${nextClassSlug}`}>
           Next Chapter &gt;
         </Link>
       </div>
