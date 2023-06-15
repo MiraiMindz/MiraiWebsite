@@ -5,6 +5,8 @@ import { ReactElement } from 'react';
 import * as MDXCC from '../../components/mdx/components';
 import { getHeadings } from './extractToC';
 import readingTime from 'reading-time';
+import remarkGfm from "remark-gfm";
+import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
 
 type Frontmatter = {
   title: string;
@@ -39,7 +41,7 @@ export function formatReadingTime(readingTimeString: string): ReadTimeData {
   } else {
     formattedTime = `${minutes} min.`;
   }
- 
+
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
   const formattedText = `Tempo estimado: ${formattedTime}`;
   return { text: formattedText, minutes, time, words };
@@ -55,7 +57,12 @@ export const getPostBySlug = async (slug: any, rootDirectory: string): Promise<P
   const { frontmatter, content } = await compileMDX<Frontmatter>({
     components: MDXCC.default,
     source: fileContent,
-    options: { parseFrontmatter: true }
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm, flattenListItemParagraphs],
+      },
+    }
   });
 
   const postReadTime:ReadTimeData = formatReadingTime(fileContent);
