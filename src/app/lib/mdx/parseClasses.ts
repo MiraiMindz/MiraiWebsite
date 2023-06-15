@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import * as MDXCC from '../../components/mdx/components';
 import { getHeadings } from './extractToC';
 import readingTime from 'reading-time';
-import remarkGfm from "remark-gfm";
+import remarkGfm from 'remark-gfm';
 import flattenListItemParagraphs from "mdast-flatten-listitem-paragraphs";
 
 type Frontmatter = {
@@ -60,8 +60,8 @@ export const getClassBySlug = async (slug: any, rootDirectory: string): Promise<
     options: {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGfm, flattenListItemParagraphs],
-      },
+        remarkPlugins: [remarkGfm, flattenListItemParagraphs]
+      }
     }
   });
 
