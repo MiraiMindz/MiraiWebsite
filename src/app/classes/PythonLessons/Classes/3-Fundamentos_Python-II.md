@@ -1947,7 +1947,7 @@ O Python segue uma precedencia de operadores especifica, eis aqui a lista:
 |      {'8'}      	|                         {'<<, >>'}                        	|                                  {'Bitwise Shifts'}                                 	|
 |      {'9'}      	|                           {'&'}                           	|                                   {'Bitwise AND'}                                   	|
 |      {'10'}     	|                           {'^'}                           	|                                   {'Bitwise XOR'}                                   	|
-|      {'11'}     	|                           {'|'}                          	|                                    {'Bitwise OR'}                                   	|
+|      {'11'}     	|                           {'\|'}                          	|                                    {'Bitwise OR'}                                   	|
 |      {'12'}     	|      {'in, not in, is, is not, <, <=, >, >=, !=, =='}     	|                                   {'Comparadores'}                                  	|
 |      {'13'}     	|                         {'not x'}                         	|                                   {'NOT Booleano'}                                  	|
 |      {'14'}     	|                          {'and'}                          	|                                   {'AND Booleano'}                                  	|
