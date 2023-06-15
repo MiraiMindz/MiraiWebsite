@@ -522,7 +522,7 @@ details[open] {
 }
 
 table {
-  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto
+  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto w-[40ch] md:w-[80ch]
 }
 
 th {
