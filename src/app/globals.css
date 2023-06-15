@@ -522,13 +522,13 @@ details[open] {
 }
 
 table {
-  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto
+  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto
 }
 
 th {
-  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 flex
+  @apply border bg-neutral-200/10 dark:bg-neutral-800/10
 }
 
 td {
-  @apply border bg-neutral-100/10 dark:bg-neutral-900/10 flex
+  @apply border bg-neutral-100/10 dark:bg-neutral-900/10
 }
