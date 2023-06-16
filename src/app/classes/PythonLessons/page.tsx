@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center">PythonLessons</h1>
-      <article>
+      <article className="min-w-full">
         <ul className="min-w-full">
           {classes?.map(classItem => (
             <li className="my-2 md:my-4" key={classItem?.slug}>
