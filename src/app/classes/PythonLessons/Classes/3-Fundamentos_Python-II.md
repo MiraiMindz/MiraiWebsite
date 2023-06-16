@@ -1970,5 +1970,5 @@ O Python segue uma precedencia de operadores especifica, eis aqui a lista:
 |      {'16'}     	|                       {'if - else'}                       	|                              {'Expressão Condicional'}                              	|
 |      {'17'}     	|                         {'lambda'}                        	|                            {'Funções/Expressões Lambda'}                            	|
 |      {'18'}     	|                           {':='}                          	|                    {'Expressão de associação (Walrus Operator)'}                    	|
-Operator)                    	|
+
 </div>
