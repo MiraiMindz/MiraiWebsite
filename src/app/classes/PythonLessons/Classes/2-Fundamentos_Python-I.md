@@ -654,12 +654,12 @@ a o padrão de formatação geral é o seguinte:
 
 ```plaintext
 especificação   ::=  [[preenchimento]alinhamento][sinal][#][0][largura][agrupamento][.precisão][tipo]
-preenchimento   ::=  <any character>
+preenchimento   ::=  <qualquer caractere>
 alinhamento     ::=  "<" | ">" | "=" | "^"
 sinal           ::=  "+" | "-" | " "
-largura         ::=  digit+
+largura         ::=  digito+
 agrupamento     ::=  "_" | ","
-precisão        ::=  digit+
+precisão        ::=  digito+
 tipo            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
 ```
 
