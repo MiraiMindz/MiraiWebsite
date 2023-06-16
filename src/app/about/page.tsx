@@ -9,7 +9,7 @@ export default function About() {
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl">Quem sou eu?</h1>
+          <h1 className="font-black text-xl mb-2">Quem sou eu?</h1>
           <div className="flex flex-row justify-center items-center">
             <Image 
               className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
@@ -24,7 +24,7 @@ export default function About() {
           </div>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl">Porquê você se chama Mirai?</h1>
+          <h1 className="font-black text-xl mb-2">Porquê você se chama Mirai?</h1>
           <div className="flex flex-row justify-between items-center">
             <p>
               Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que &quot;sou o futuro&quot;, foi durante a produção de uma música com temática japonêsa e significa &quot;Futuro&quot;.
@@ -32,27 +32,27 @@ export default function About() {
           </div>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl">Formações</h1>
+          <h1 className="font-black text-xl mb-2">Formações</h1>
           <div className="flex flex-row justify-between items-center">
-            <div>
-              <p>UERJ -Tec. Análise e Desenvolvimento de Sistemas</p>
-              <p>{`(2023 - ${currentYear == endingYear ? "Atualidade" : endingYear.toString()})`}</p>
+            <div className="flex flex-row justify-between items-center">
+              <p>UERJ: Tec. Análise e Desenvolvimento de Sistemas</p>
+              <p className="text-sm text-neutral-200 dark:neutral-800">{`(2023 - ${currentYear == endingYear ? "Atualidade" : endingYear.toString()})`}</p>
             </div>
-            <div>
+            <div className="flex flex-row justify-between items-center">
               <p>Colégio Estadual Círculo Operário</p>
-              <p>(2021 - 2022)</p>
+              <p className="text-sm text-neutral-200 dark:neutral-800">(2021 - 2022)</p>
             </div>
-            <div>
+            <div className="flex flex-row justify-between items-center">
               <p>Centro de Formação Nogueira Mineiro</p>
-              <p>(2020)</p>
+              <p className="text-sm text-neutral-200 dark:neutral-800">(2020)</p>
             </div>
-            <div>
+            <div className="flex flex-row justify-between items-center">
               <p>Instituto PROA</p>
-              <p>(08/2022  - 11/2022)</p>
+              <p className="text-sm text-neutral-200 dark:neutral-800">(08/2022  - 11/2022)</p>
             </div>
-            <div>
+            <div className="flex flex-row justify-between items-center">
               <p>RocketSeat Discover</p>
-              <p>09/2022</p>
+              <p className="text-sm text-neutral-200 dark:neutral-800">09/2022</p>
             </div>
           </div>
         </section>
