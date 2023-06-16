@@ -1880,10 +1880,10 @@ print(x)
 ```
 essencialmente, pegamos o valor inicial de `x`, somamos `33` e reassociamos o resultado a variavel novamente, exemplificando em etapas:
 
-- 1. `x = 9`
-- 2. `x = x + 33`
-- 3. `x = 9 + 33`
-- 4. `x = 42`
+1. `x = 9`
+2. `x = x + 33`
+3. `x = 9 + 33`
+4. `x = 42`
 
 ##### Associação de expressão (Walrus Operator)
 

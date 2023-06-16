@@ -312,7 +312,7 @@ html {
 
 
 .hljs-wrapper {
-  @apply h-fit w-[40ch] md:w-[80ch] p-2 my-2 overflow-x-auto border-2 border-neutral-950 dark:border-neutral-50 rounded-lg;
+  @apply h-fit w-full p-2 my-2 overflow-x-auto border-2 border-neutral-950 dark:border-neutral-50 rounded-lg;
 }
 
 pre code.hljs {
