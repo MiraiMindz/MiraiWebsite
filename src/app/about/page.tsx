@@ -27,7 +27,7 @@ export default function About() {
           <h1 className="font-black text-xl">Porquê você se chama Mirai?</h1>
           <div className="flex flex-row justify-between items-center">
             <p>
-              Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que "sou o futuro", foi durante a produção de uma música com temática japonêsa e significa "Futuro".
+              Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que &quot;sou o futuro&quot;, foi durante a produção de uma música com temática japonêsa e significa &quot;Futuro&quot;.
             </p>
           </div>
         </section>
