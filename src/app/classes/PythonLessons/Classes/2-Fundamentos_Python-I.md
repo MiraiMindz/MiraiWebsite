@@ -652,7 +652,7 @@ O Python contém uma mini-linguagem de formatação de strings, ela nos permite 
 
 a o padrão de formatação geral é o seguinte:
 
-```
+```plaintext
 especificação   ::=  [[preenchimento]alinhamento][sinal][#][0][largura][agrupamento][.precisão][tipo]
 preenchimento   ::=  <any character>
 alinhamento     ::=  "<" | ">" | "=" | "^"
