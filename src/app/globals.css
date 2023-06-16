@@ -522,7 +522,7 @@ details[open] {
 }
 
 table {
-  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto max-w-[40ch] md:max-w-[80ch]
+  @apply border-collapse border border-neutral-950 dark:border-neutral-950 rounded-md table-auto overflow-x-auto
 }
 
 thead, tbody, tr {
@@ -530,9 +530,13 @@ thead, tbody, tr {
 }
 
 th {
-  @apply border bg-neutral-200/10 dark:bg-neutral-800/10 overflow-x-auto
+  @apply border bg-neutral-200/10 dark:bg-neutral-800/10
 }
 
 td {
   @apply border bg-neutral-100/10 dark:bg-neutral-900/10 overflow-x-auto
+}
+
+div.table-container {
+  @apply overflow-x-auto w-[40ch] md:w-[80ch]
 }

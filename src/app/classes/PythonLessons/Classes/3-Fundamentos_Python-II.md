@@ -1593,6 +1593,7 @@ em notação binária, 1 significa que estamos usando o valor daquela 'casa' e 0
 
 irei dispor de uma tabela com algumas casas e seus valores para facilitar o entendimento.
 
+<div class="table-container">
 |  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	|      Resultado      	|
 |:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------------------:	|
 |  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|       Decimal       	|
@@ -1602,6 +1603,7 @@ irei dispor de uma tabela com algumas casas e seus valores para facilitar o ente
 |   0  	|   1  	|   0  	|   0  	|   0  	|   0  	|   1  	|   1  	|          67         	|
 |   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|   0  	|          0          	|
 |   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|   1  	|         255         	|
+</div>
 
 Os numeros binários crescem da direita para a esquerda, começando pelo ***bit menos significante***
 
@@ -1613,6 +1615,7 @@ o `AND` performa a [conjunção lógica](https://pt.wikipedia.org/wiki/Conjunç�
 
 ![AND_GIF](/Classes_Assets/Images/AND.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
@@ -1620,6 +1623,7 @@ o `AND` performa a [conjunção lógica](https://pt.wikipedia.org/wiki/Conjunç�
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A & B   	|   0  	|   0  	|   0  	|   1  	|   0  	|   1  	|   0  	|   0  	|     20    	|
+</div>
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1644,6 +1648,7 @@ o  `OR` performa a [disjunção lógica](https://pt.wikipedia.org/wiki/Disjunç�
 
 ![OR](/Classes_Assets/Images/OR.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
@@ -1651,6 +1656,7 @@ o  `OR` performa a [disjunção lógica](https://pt.wikipedia.org/wiki/Disjunç�
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A \| B   	|   1  	|   0  	|   1  	|   1  	|   1  	|   1  	|   0  	|   0  	|    188    	|
+</div>
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1673,6 +1679,7 @@ O `XOR` performa a [Disjunção Exclusiva](https://pt.wikipedia.org/wiki/Ou_excl
 
 ![XOR_GIF](/Classes_Assets/Images/XOR.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
@@ -1680,6 +1687,7 @@ O `XOR` performa a [Disjunção Exclusiva](https://pt.wikipedia.org/wiki/Ou_excl
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |     B     	|   0  	|   0  	|   1  	|   1  	|   0  	|   1  	|   0  	|   0  	|     52    	|
 |   A ^ B   	|   1  	|   0  	|   1  	|   0  	|   1  	|   0  	|   0  	|   0  	|    168    	|
+</div>
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1702,12 +1710,14 @@ O `NOT` performa a [Negação Lógica](https://pt.wikipedia.org/wiki/Negação),
 
 ![NOT_GIF](/Classes_Assets/Images/NOT.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
 |  ======== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	| ==== 	|  ======== 	|
 |     A     	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|    156    	|
 |    ~ A    	|   0  	|   1  	|   1  	|   0  	|   0  	|   0  	|   1  	|   1  	|     99    	|
+</div>
 
 Esses exemplos levam em conta que você está trabalhando com numeros sem bit de sinal, infelizmente o Python não suporta eles de forma nativa, ou seja, `~156` é o equivalente a `-157` e não a `99` pois o ultimo (o mais a esquerda) bit é o bit de sinal.
 
@@ -1735,6 +1745,7 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 
 ![LEFT_SHIFT](/Classes_Assets/Images/LEFT_SHIFT.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
@@ -1742,6 +1753,7 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 |     A     	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|     39    	|
 |  A &lt;&lt; 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
 |  A &lt;&lt; 2    	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|   0  	|     156    	|
+</div>
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1765,6 +1777,7 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 
 ![RIGHT_SHIFT](/Classes_Assets/Images/RIGHT_SHIFT.gif)
 
+<div class="table-container">
 | Variaveis 	|  2⁷  	|  2⁶  	|  2⁵  	|  2⁴  	|  2³  	|  2²  	|  2¹  	|  2⁰  	| Resultado 	|
 |:---------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:---------:	|
 |           	|  128 	|  64  	|  32  	|  16  	|   8  	|   4  	|   2  	|   1  	|  Decimal  	|
@@ -1773,6 +1786,7 @@ você especifica o numero de casas para desviar a esquerda do operador, e desvia
 |  A &gt;&gt; 1    	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|   0  	|     78    	|
 |  A &gt;&gt; 2     	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|   1  	|     39    	|
 |  A &gt;&gt; 3     	|   0  	|   0  	|   0  	|   1  	|   0  	|   0  	|   1  	|   1  	|     19    	|
+</div>
 
 para exemplificar, veja este mesmo exemplo em Python:
 
@@ -1935,6 +1949,7 @@ Ele nos permite acessar o valor enquanto ele esta sendo associado, e mais a fren
 
 O Python segue uma precedencia de operadores especifica, eis aqui a lista:
 
+<div class="table-container">
 | Precedencia 	|                        Operador                       	|                                    Descrição                                    	|
 |:-----------:	|:-----------------------------------------------------:	|:-------------------------------------------------------------------------------:	|
 |      {'1'}      	|                      {'(), [] ou {}'}                     	|             {'Parenteses, Exibição de listas, dicionários e conjuntos'}             	|
@@ -1956,3 +1971,4 @@ O Python segue uma precedencia de operadores especifica, eis aqui a lista:
 |      {'17'}     	|                         {'lambda'}                        	|                            {'Funções/Expressões Lambda'}                            	|
 |      {'18'}     	|                           {':='}                          	|                    {'Expressão de associação (Walrus Operator)'}                    	|
 Operator)                    	|
+</div>

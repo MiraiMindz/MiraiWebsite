@@ -577,6 +577,7 @@ print(raw_format_string)
 
 caso não seja uma rString, esses são os caracteres de escape permitidos:
 
+<div class="table-container">
 | Sequencia de Escapagem 	|              Significado             	|
 |:----------------------:	|:------------------------------------:	|
 |           \\           	|             Backslash (\)            	|
@@ -592,6 +593,7 @@ caso não seja uma rString, esses são os caracteres de escape permitidos:
 |          \ooo          	|    Caractere com o valor octal OOO   	|
 |          \xhh          	| Caractere com o valor hexadecimal HH 	|
 |         \uXXXX         	|  Caractere Unicode com o valor XXXX  	|
+</div>
 
 > NOTA: o \uXXXX só funciona caso seja uma uString
 
@@ -665,20 +667,24 @@ eles começam com `:`, eis aqui uma lista:
 
 Opções de Alinhamento:
 
+<div class="table-container">
 | Sinal 	|                                                              Significado                                                             	|
 |:-----:	|:------------------------------------------------------------------------------------------------------------------------------------:	|
 |   &gt;   	|                                  define que o campo deve estar alinhado a esquerda do espaço provido                                 	|
 |   &lt;   	|                                  define que o campo deve estar alinhado a direita do espaço provido                                  	|
 |   =   	| define que o alinhamento deve estar entre o sinal (se houver) e o digito, essa opção de alinhamento só é valida para tipos numericos 	|
 |   ^   	|                                  define que o campo deve estar alinhado ao centro do espaço provido                                  	|
+</div>
 
 Opções de Sinalização:
 
+<div class="table-container">
 |     Sinal    	|                                                      Significado                                                      	|
 |:------------:	|:---------------------------------------------------------------------------------------------------------------------:	|
 |       +      	|                    indica que o sinal deve ser usado tanto para numeros positivos quanto negativos                    	|
 |       -      	|                          indica que o sinal só deve ser usado para numeros negativos (padrão)                         	|
 | ' ' (espaço) 	| indica que espaços no inicio devem ser usados para numeros positivos e o sinal de menos deve ser usado para negativos 	|
+</div>
 
 Alternadores e Separadores:
 
@@ -688,20 +694,25 @@ para ints que usam as formatações hexadecimal, binária ou octal os prefixos `
 
 para floats e numeros complexos, o alternador especifica que a conversão sempre deve conter as casas decimais, em adição ao 'g' e 'G', zeros insignificantes não são removidos.
 
+<div class="table-container">
 | Separador 	|                                                          Significado                                                          	|
 |:---------:	|:-----------------------------------------------------------------------------------------------------------------------------:	|
 |     ,     	|                                                separador para casa dos milhares                                               	|
 |     _     	| separador para a casa dos milhares, para as representações 'b', 'o', 'x' e 'X' esse separador será inserido a cada 4 espaços. 	|
+</div>
 
 Representações de Strings:
 
+<div class="table-container">
 |       Tipo 	    |               Significado              	|
 |:-------------:	|:--------------------------------------:	|
 |  's' 	            | Converte para String, pode ser omitido 	|
 | None (Nenhum) 	|             O mesmo que 's'            	|
+</div>
 
 Representações de Ints:
 
+<div class="table-container">
 |      Tipo     	|                                                   Significado                                                   	|
 |:-------------:	|:---------------------------------------------------------------------------------------------------------------:	|
 |      'b'      	|                                          Converte para binario, base 2                                          	|
@@ -712,9 +723,11 @@ Representações de Ints:
 |      'X'      	|                                Numero hexadecimal, base 16, usa letras maiusculas                               	|
 |      'n'      	| o mesmo que 'd', exceto que usa a configuração atual de localidade para definir o separador de numeros correto. 	|
 | None (Nenhum) 	|                                                 O mesmo que 'd'                                                 	|
+</div>
 
 Representações de Floats:
 
+<div class="table-container">
 |      Tipo     	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Significado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 	|
 |:-------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
 |      'e'      	|                                                                                                                                                                                                                                                                                                                                                                                                                                                          Notação Cientifica para uma dada precisão `p`, formata o numero em notação cientifica com a letra `e`, separando o coeficiente do expoente, o coeficiente tem 1 digito antes e `p` digitos decimais após o `e`, para um total de `p + 1` digitos significativos. Sem nenhuma precisão dada, se é usado uma precisão de 6 digitos para numeros decimais (floats) e usa uma precisão grande o bastante para mostrar todos os digitos do coeficiente para numeros inteiros/decimais. Se não existir nenhuma casa decimal, as casas decimais são removidas a menos que a opção `#` seja usada.                                                                                                                                                                                                                                                                                                                                                                                                                                                         	|
@@ -726,7 +739,7 @@ Representações de Floats:
 |      'n'      	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Numero. O mesmo que 'g' exceto que usa a configuração de localização local para definir os separadores de numero.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              	|
 |      '%'      	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Porcentagem. Multiplica um numero por 100 e exibe ele com formato fixo 'f' seguido pelo sinal de porcentagem.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	|
 | None (Nenhum) 	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Para decimais (floats) é o mesmo que 'g', exceto que quando a notação de pontos fixos é usada para formatar o resultado, sempre inclui ao menos um digito as casas decimais. A precisão usada é tão larga quanto necessária para representar o numero de forma fidedigna.  Para Inteiros (Ints) é mesmo que 'g' ou 'G' dependendo do contexto de maiusculas usado.  O efeito geral é tentar representar a saida de `str()` como se alterado por outros modificadores de formato.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              	|
-
+</div>
 
 ```python
 int_num = 78
@@ -783,6 +796,7 @@ verdade_universal =42
 ```
 o padrão printf de formatação nos permite fazer fStrings como em C, os tipos devem ser precedidas de `%`, e nós devemos modular por uma tuple contendo as variaveis, você verá mais sobre tuples a frente, aqui vai a lista:
 
+<div class="table-container">
 |  Tipos  	|                                                             Significado                                                             	|
 |:-------:	|:-----------------------------------------------------------------------------------------------------------------------------------:	|
 |    %d   	|                                                       Numero inteiro com sinal                                                      	|
@@ -801,9 +815,11 @@ o padrão printf de formatação nos permite fazer fStrings como em C, os tipos 
 |    %s   	|                                                converte para o equivalente ao `str()`                                               	|
 |    %a   	|                                               converte para o equivalente ao `ascii()`                                              	|
 |    %%   	|                                                         uma % (porcentagem)                                                         	|
+</div>
 
 modificadores:
 
+<div class="table-container">
 |  Modificador 	|                                     Significado                                    	|
 |:------------:	|:----------------------------------------------------------------------------------:	|
 |       #      	|                             define a forma alternativa                             	|
@@ -811,7 +827,7 @@ modificadores:
 |       -      	|                        a conversão será alinhada a esquerda                        	|
 | ' ' (espaço) 	| um espaço a frente de numeros positivos, e o sinal de menos para numeros negativos 	|
 |       +      	|                      exibe um sinal para positivos e negativos                     	|
-
+</div>
 
 ```python
 nome = "Mirai"
