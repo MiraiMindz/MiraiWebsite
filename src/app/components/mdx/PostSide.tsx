@@ -53,7 +53,7 @@ export function ClassCard(props: ClassCardProps) {
   return (
     <Link href={props.href} className="w-[40ch] md:w-[80ch]">
       <div className="postCardClass">
-        <h2 className="font-black truncate transition-all text-left text-lg">{string}</h2>
+        <h2 className="font-black truncate transition-all text-left text-lg">{title}</h2>
         <p className="italic text-neutral-500 dark:text-neutral-400 whitespace-normal text-base">{props.shortSum}</p>
         <div className="flex flex-col items-start justify-start">
           <p className="text-neutral-500 dark:text-neutral-400 underline text-base">{props.readTime}</p>
