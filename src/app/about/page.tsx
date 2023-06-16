@@ -19,10 +19,7 @@ export default function About() {
               alt="Foto do autor"
             />
             <p>
-            Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu
-            tenho {currentYear - 2005}{" "}
-            anos, e sou principalmente um desenvolvedor Full-Stack; embora também
-            faça produção musical, design e escrita como hobbies.
+            Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
             </p>
           </div>
         </section>
