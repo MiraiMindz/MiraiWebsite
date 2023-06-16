@@ -33,7 +33,7 @@ export default function About() {
         </section>
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl mb-2">Formações</h1>
-          <div className="flex flex-row justify-between items-center">
+          <div>
             <div className="flex flex-row justify-between items-center">
               <p>UERJ: Tec. Análise e Desenvolvimento de Sistemas</p>
               <p className="text-sm text-neutral-200 dark:neutral-800">{`(2023 - ${currentYear == endingYear ? "Atualidade" : endingYear.toString()})`}</p>
