@@ -39,7 +39,7 @@ export default function Home() {
               typewriter
                 .changeDelay(100)
                 .typeString(
-                  "Onde a criatividade e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
+                  "Onde a <span class='underline text-flicker'>criatividade</span> e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
                 )
                 .pauseFor(500)
                 .callFunction(() => {
