@@ -50,7 +50,7 @@ export default function Home() {
           />
         </div>
         <p className={skipAnimation ? "inline-block" : "hidden"}>
-          Onde a <span class='text-flicker'>criatividade</span> e o tecnicismo dão um passo em direção ao <span class="underline">futuro</span>.
+          Onde a <span className='text-flicker'>criatividade</span> e o tecnicismo dão um passo em direção ao <span className="underline">futuro</span>.
         </p>
         <div
           className={(scrollDown
