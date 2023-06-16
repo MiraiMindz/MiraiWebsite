@@ -50,7 +50,7 @@ export function PostCard(props: PostSideProps) {
 
 export function ClassCard(props: ClassCardProps) {
   return (
-    <Link href={props.href}>
+    <Link href={props.href} className="w-[40ch] md:w-[80ch]">
       <div className="postCardClass w-fit">
         <h2 className="font-black transition-all text-left text-lg">{`${props.chapter} - ${props.title}`}</h2>
         <p className="italic text-neutral-500 dark:text-neutral-400 whitespace-normal text-base">{props.shortSum}</p>
