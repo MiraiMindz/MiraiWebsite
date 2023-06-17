@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 
-import PythonLogo from "../components/assets/PythonLogo";
-
 export default function Classes() {
   return (
     <main>
