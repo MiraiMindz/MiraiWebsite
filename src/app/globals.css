@@ -503,8 +503,6 @@ pre code.hljs {
   @apply text-violet-500 transition-all;
 }
 
-
-
 article.article p:first-of-type::first-letter {
   font-size: 2rem;
   font-weight: 500;
@@ -692,3 +690,6 @@ div.table-container {
   animation: textShadow 1.6s infinite;
 }
 
+li > p {
+  display: inline;
+}

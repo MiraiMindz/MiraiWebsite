@@ -26,7 +26,7 @@ export function CLink({className, ...props}: any) {
 
 export function HR({className, ...props}: any) {
     return (
-        <hr className={className + " my-2 w-[99%] bg-neutral-950 dark:bg-neutral-50 block h-1 rounded-full"} {...props} />
+        <hr className={className + " my-2 w-[99%] bg-neutral-950 dark:bg-neutral-50 block h-0.5 rounded-full"} {...props} />
     );
 }
 
