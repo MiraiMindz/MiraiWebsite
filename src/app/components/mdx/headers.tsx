@@ -6,7 +6,7 @@ export function H1(props: HeadersProps) {
   let pstr = String(props?.children);
   const idText = typeof pstr === 'string' ? pstr.replace(/ /g, "-").toLowerCase() : props?.children.toString().replace(/ /g, "-").toLowerCase();
   return (
-    <div className="flex flex-col justify-center items-center"><h1 id={idText} className="font-black text-3xl my-2 text-center">{props?.children}</h1><hr className="font-ibmPlexMono my-2 rounded-full w-[99%] bg-neutral-950/15 dark:bg-neutral-50/15"/></div>
+    <div className="flex flex-col justify-center items-center"><h1 id={idText} className="font-black text-3xl my-2 text-center">{props?.children}</h1><hr className="font-ibmPlexMono my-2 rounded-full w-[99%] bg-neutral-950 dark:bg-neutral-50 opacity-50"/></div>
   )
 }
 
