@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Classes() {
   return (
-    <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
+    <main className="min-h-screen min-w-full flex-grow flex flex-col justify-center items-start">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Aulas</h1>
       <p className="text-lg max-w-[40ch] max-w-[80ch]">
         Aqui você encontrará todo meu conhecimento em programação e linguagens escritos na forma de aulas e cursos. O processo de escrita é demorado, então não estranhe longos períodos sem atualização nesta seção.
