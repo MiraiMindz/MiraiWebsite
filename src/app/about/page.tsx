@@ -27,7 +27,7 @@ export default function About() {
               alt="Foto do autor"
             />
             <h1 className="text-lg text-center none md:block ml-2">
-              <Typewritter
+              <Typewriter
                 onInit={(typewriter) => {
                   typewriter.typeString(goString)
                     .pauseFor(500)
