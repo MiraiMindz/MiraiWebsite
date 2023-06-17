@@ -10,41 +10,37 @@ export default function About() {
       <article className="w-[40ch] md:w-[80ch] article">
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl my-2">Quem sou eu?</h1>
-          <div className="flex flex-row justify-center items-center">
-            <p className="my-2">
-            Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
-            </p>
-            <p className="my-2">
-              Eu nasci na cidade do Rio de Janeiro, e atualmente resido na mesma. Desde criança sempre tive interesse em criar coisas e quebrar a cabeça para resolver problemas, lembro que foram entre meus 9 e 10 anos que minha jornada &quot;começou&quot;
-            </p>
-            <h2 className="font-black text-xl my-2">Arte, experimentos e cálculos</h2>
-            <p className="my-2">
-              Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
-            </p>
-            <p className="my-2">
-              Desde pequeno eu tenho interesse por matemática e lógica em geral, me recordo bem das tardes em que eu pegava o livro de álgebra de meu irmão mais velho e o lia tentando compreender os conteúdos. Se eu não me engano, com meus 6 ou 7 anos, logo após aprender multiplicação e divisão na escola, eu havia aprendido potências e raizes através de um dos livros dele. Bom, não me considero nenhum gênio, mas percebo desde pequeno que eu tenho facilidade em entender coisas desse aspecto.
-            </p>
-            <p className="my-2">
-              O tempo passou, e com 13 anos eu comecei a me interessar por música, como não tinha condições de ter um instrumento, eu comecei como produtor, usando as DAWs (Digital Audio Workspace) para criar. Estudava teoria musical e sound design no tempo vago; confesso que nesse periodo, eu diminui a frequência de desenhos para focar mais em música mesmo. Nesse periodo eu produzia sob o nome &quot;Asthral&quot;, que surgiu depois de uma pequena música que eu fiz, e bom, era melhor que não ter alter-ego nenhum.
-            </p>
-            <p className="my-2">
-              Com 14 anos, através do YouTube eu descobri a existência do Game Maker, e comecei a programar pequenos jogos, sistemas de física, aceleração e colisão, entre outros. Mas confesso que era um hobbie secundário, meu foco continuava sendo produção músical. Porém, pouco antes dos meus 15 anos, eu tive contra-tempos em minha vida pessoal e tive de ficar sem computador, o que impossibilitava a produção de musicas ou de jogos.
-            </p>
-            <p className="my-2">
-              E assim eu segui até meus 16 anos, porém como sempre, parado não fiquei, nesse meio-tempo me mudei para Duque de Caxias, retomei desenho como hobbie e comecei a escrever. Escrevia poemas, narrativas, letras de músicas; eu estudava línguas e filologia para entender como os idiomas foram feitos. Nessa época, textos e línguas eram minha paixão, dominei inglês, aprendi o básico de línguas como francês, russo, espanhol; experimentava com escrita portuguêsa e criava idiomas para o mundo de RPG que eu escrevi no momento. 
-            </p>
-            <p className="my-2">
-              Com 16 anos eu obtive novamente um computador e pude retomar meus estudos em produção musical e programação.
-            </p>
-          </div>
+          <p className="my-2">
+          Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
+          </p>
+          <p className="my-2">
+            Eu nasci na cidade do Rio de Janeiro, e atualmente resido na mesma. Desde criança sempre tive interesse em criar coisas e quebrar a cabeça para resolver problemas, lembro que foram entre meus 9 e 10 anos que minha jornada &quot;começou&quot;
+          </p>
+          <h2 className="font-black text-xl my-2">Arte, experimentos e cálculos</h2>
+          <p className="my-2">
+            Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
+          </p>
+          <p className="my-2">
+            Desde pequeno eu tenho interesse por matemática e lógica em geral, me recordo bem das tardes em que eu pegava o livro de álgebra de meu irmão mais velho e o lia tentando compreender os conteúdos. Se eu não me engano, com meus 6 ou 7 anos, logo após aprender multiplicação e divisão na escola, eu havia aprendido potências e raizes através de um dos livros dele. Bom, não me considero nenhum gênio, mas percebo desde pequeno que eu tenho facilidade em entender coisas desse aspecto.
+          </p>
+          <p className="my-2">
+            O tempo passou, e com 13 anos eu comecei a me interessar por música, como não tinha condições de ter um instrumento, eu comecei como produtor, usando as DAWs (Digital Audio Workspace) para criar. Estudava teoria musical e sound design no tempo vago; confesso que nesse periodo, eu diminui a frequência de desenhos para focar mais em música mesmo. Nesse periodo eu produzia sob o nome &quot;Asthral&quot;, que surgiu depois de uma pequena música que eu fiz, e bom, era melhor que não ter alter-ego nenhum.
+          </p>
+          <p className="my-2">
+            Com 14 anos, através do YouTube eu descobri a existência do Game Maker, e comecei a programar pequenos jogos, sistemas de física, aceleração e colisão, entre outros. Mas confesso que era um hobbie secundário, meu foco continuava sendo produção músical. Porém, pouco antes dos meus 15 anos, eu tive contra-tempos em minha vida pessoal e tive de ficar sem computador, o que impossibilitava a produção de musicas ou de jogos.
+          </p>
+          <p className="my-2">
+            E assim eu segui até meus 16 anos, porém como sempre, parado não fiquei, nesse meio-tempo me mudei para Duque de Caxias, retomei desenho como hobbie e comecei a escrever. Escrevia poemas, narrativas, letras de músicas; eu estudava línguas e filologia para entender como os idiomas foram feitos. Nessa época, textos e línguas eram minha paixão, dominei inglês, aprendi o básico de línguas como francês, russo, espanhol; experimentava com escrita portuguêsa e criava idiomas para o mundo de RPG que eu escrevi no momento. 
+          </p>
+          <p className="my-2">
+            Com 16 anos eu obtive novamente um computador e pude retomar meus estudos em produção musical e programação.
+          </p>
         </section>
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl mb-2">Porquê você se chama Mirai?</h1>
-          <div className="flex flex-row justify-between items-center">
-            <p>
-              Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que &quot;sou o futuro&quot;, foi durante a produção de uma música com temática japonêsa e significa &quot;Futuro&quot;.
-            </p>
-          </div>
+          <p>
+            Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que &quot;sou o futuro&quot;, foi durante a produção de uma música com temática japonêsa e significa &quot;Futuro&quot;.
+          </p>
         </section>
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl my-2">Formações</h1>
