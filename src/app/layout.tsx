@@ -1,8 +1,21 @@
-import './globals.css'
-import { Fira_Code } from 'next/font/google'
-import { BodyLayout } from './layouts/BodyLayout'
+import './globals.css';
+import { Fira_Code, DM_Mono, IBM_Plex_Mono } from 'next/font/google';
+import { BodyLayout } from './layouts/BodyLayout';
 
-const firaCode = Fira_Code({ subsets: ['latin'] });
+const firaCode = Fira_Code({
+    subsets: ['latin'],
+    variable: '--font-FiraCode'
+});
+
+const dmMono = DM_Mono({
+  subsets: ['latin'],
+  variable: '--font-DmMono'
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  variable: '--font-IbmPlexMono'
+});
 
 export const metadata = {
   title: 'Mirai Website',
@@ -12,7 +25,7 @@ export const metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="pt-br">
-      <body className={firaCode.className + " transition-colors delay-0 ease-in-out text-justify scroll-smooth min-h-screen w-full scroll-snap tabular-nums slashed-zero"}>
+      <body className={`${firaCode.variable} ${dmMono.variable} ${ibmPlexMono.variable} transition-colors delay-0 ease-in-out text-justify scroll-smooth min-h-screen w-full scroll-snap tabular-nums slashed-zero font-dmMono`}>
         <BodyLayout>
           {children}
         </BodyLayout>

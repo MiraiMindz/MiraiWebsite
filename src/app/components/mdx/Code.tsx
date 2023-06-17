@@ -20,11 +20,11 @@ export function Code({className, ...props}: any) {
   const output = /language-output/.exec(className || '');
   if (match) {
     if (!output) {
-      return <div className='hljs-wrapper'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={false} language={match[1]} {...props} /></div>
+      return <div className='hljs-wrapper font-firaCode'><SyntaxHighlighter useInlineStyles={false} customStyle={syntaxHighlighterTheme} showLineNumbers={true} wrapLongLines={false} language={match[1]} {...props} /></div>
     } else {
-      return <div className='rounded-lg bg-neutral-900/5 dark:bg-neutral-100/5 p-2 border-2 border-neutral-950 dark:border-neutral-50 w-[40ch] md:w-[80ch] my-1'><h1 className='text-neutral-950 dark:text-neutral-50 text-center'>Saida</h1><hr className='h-0.5 rounded-full bg-neutral-950 dark:bg-neutral-50 my-2 w-[99%]'/> <div className={className + " text-left overflow-x-auto"} {...props}/> </div>
+      return <div className='font-firaCode rounded-lg bg-neutral-900/5 dark:bg-neutral-100/5 p-2 border-2 border-neutral-950 dark:border-neutral-50 w-[40ch] md:w-[80ch] my-1'><h1 className='text-neutral-950 dark:text-neutral-50 text-center'>Saida</h1><hr className='h-0.5 rounded-full bg-neutral-950 dark:bg-neutral-50 my-2 w-[99%]'/> <div className={className + " text-left overflow-x-auto"} {...props}/> </div>
     }
   } else {
-    return <code className={className + " border rounded-md border-neutral-950/20 dark:border-neutral-50/20 p-0.5 bg-neutral-900/5 dark:bg-neutral-100/5 break-all w-[40ch] md:w-[80ch] whitespace-normal"} {...props} />
+    return <code className={className + " font-firaCode border rounded-md border-neutral-950/20 dark:border-neutral-50/20 p-0.5 bg-neutral-900/5 dark:bg-neutral-100/5 break-all w-[40ch] md:w-[80ch] whitespace-normal"} {...props} />
   }
 }

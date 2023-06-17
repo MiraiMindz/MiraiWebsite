@@ -8,6 +8,13 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        firaCode: ['var(--font-FiraCode)'],
+        dmMono: ['var(--font-DmMono)'],
+        ibmPlexMono: ['var(--font-IbmPlexMono)'],
+      },
+    },
     screens: {
       'xs': '475px',
       ...defaultTheme.screens,
