@@ -10,6 +10,13 @@ export default function About() {
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
+          <Image 
+            className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square float-left"
+            src="/Selfie.png"
+            width={imgSize}
+            height={imgSize}
+            alt="Foto do autor"
+          />
           <p className="my-2">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
           </p>
@@ -45,7 +52,7 @@ export default function About() {
           </p>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl my-2">Formações</h1>
+          <h1 className="font-black text-xl my-2 text-center">Formações</h1>
           <h2 className="font-black text-xl my-2">Academia</h2>
           <div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
