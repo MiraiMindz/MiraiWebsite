@@ -157,7 +157,7 @@ export function BodyLayout({ children }: any) {
         style={mainComponentStyle}
       >
         <div className="text-neutral-950 dark:text-neutral-50 flex flex-col min-h-screen items-stretch flex-grow">
-          <header className="sticky top-0 backdrop-blur-sm px-2 py-2 md:px-1 blur-mobile z-10">
+          <header className="sticky top-0 backdrop-blur-sm px-2 py-2 md:px-1 blur-mobile z-10 font-firaCode">
             <div className="flex flex-row justify-between mb-1 items-center">
               <div className="flex flex-row items-center">
                 <div className="w-16 fill-neutral-950 dark:fill-neutral-50">

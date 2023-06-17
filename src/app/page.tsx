@@ -64,7 +64,7 @@ export default function Home() {
         className={(scrollDown ? "block" : "hidden") +
           " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
       >
-        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl">
+        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl tracking-wide">
           Quem sou eu?
         </h1>
         <p className="md:mx-16 md:text-2xl md:w-[60ch] w-[40ch]">
@@ -95,7 +95,7 @@ export default function Home() {
         className={(scrollDown ? "block" : "hidden") +
           " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
       >
-        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl">
+        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl tracking-wide">
           Recomendações
         </h1>
         <p className="text-center md:text-2xl md:w-[60ch] w-[40ch]">
