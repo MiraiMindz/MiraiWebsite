@@ -15,3 +15,5 @@
 - [ ] - Write the About Me page
 - [ ] - Write the Projects page
 - [ ] - Write the Lessons Page
+- [ ] - Split common components and styles into a specific folder
+- [ ] - Split CSS Styles into other files
