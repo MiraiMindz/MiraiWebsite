@@ -56,7 +56,7 @@ a()
 
 executando este código temos a seguinte saida:
 
-```
+```plaintext
 Traceback (most recent call last):
   File "tb.py", line 15, in <module>
     a()
@@ -87,7 +87,7 @@ esse *"most recent call last"* diz que a ultima chamada da CallStack é a mais r
 
 A arvore de chamadas contém a ordem que os elementos foram executados até chegar ao erro, observemos nosso exemplo:
 
-```
+```plaintext
 File "tb.py", line 15, in <module>
   a()
 File "tb.py", line 3, in a
@@ -485,12 +485,11 @@ raise TypeError("Tipo errado de dado")
 
 ```output
 ---------------------------------------------------------------------------
-``````output
 TypeError                                 Traceback (most recent call last)
-``````output
 /media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb Cell 11 in <cell line: 1>()
+
 ----> <a href='vscode-notebook-cell:/media/Arquivos/Programming/Lessons/PythonLessons/Classes/5-Erros.ipynb#X13sZmlsZQ%3D%3D?line=0'>1</a> raise TypeError("Tipo errado de dado")
-``````output
+
 TypeError: Tipo errado de dado
 ```
 
