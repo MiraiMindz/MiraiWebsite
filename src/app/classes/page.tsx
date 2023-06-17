@@ -8,14 +8,14 @@ export default function Classes() {
     <main>
       <Link href="/classes/PythonLessons">
         <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-md border-neutral-950 dark:border-neutral-50">
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-row justify-between">
             <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-2">
               <PythonLogo
                 blueClass="fill-blue-400"
                 yellowClass="fill-yellow-400"
               />
             </div>
-            <div className="block text-center">
+            <div className="text-center flex justify-center items-center">
               <h1>Python Lessons</h1>
             </div>
           </div>
