@@ -16,7 +16,7 @@ export default function Classes() {
               />
             </div>
             <div className="w-fit flex justify-center items-center">
-              <h1 className="text-center text-black font-ibmPlexMono">Python Lessons</h1>
+              <h1 className="text-2xl text-center text-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
             </div>
           </div>
           <p className="mt-2 text-neutral-950/60 dark:text-neutral-50/60">
