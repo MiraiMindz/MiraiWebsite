@@ -5,17 +5,59 @@ export default function About() {
   const imgSize: number = 160;
   const currentYear: number = new Date().getFullYear();
   const endingYear: number = 2026;
+
+  const goString = `<span class="text-orange-600 dark:text-orange-400">fmt</span>.<span class="text-blue-700 dark:text-blue-400">Println</span>(<span class='text-green-700 dark:text-green-400'>"Go"</span>)`;
+  const pythonString = `<span class="text-blue-700 dark:text-blue-400">print</span>(<span class='text-green-700 dark:text-green-400'>'Python'</span>)`;
+  const jsString = `<span class="text-orange-600 dark:text-orange-400">console</span>.<span class="text-blue-700 dark:text-blue-400">log</span>(<span class='text-green-700 dark:text-green-400'>'JavaScript'</span>);`;
+  const reactString = `<<span class="text-orange-600 dark:text-orange-400">ReactTS</span>/>`;
+  const asmString = `<span class="text-blue-700 dark:text-blue-400">mov</span> <span class="text-ctp-mauve">ecx</span>, <span class='text-green-700 dark:text-green-400'>"x86 ASM"</span>`;
+  const shellString = `<span class="text-blue-700 dark:text-blue-400">printf</span> <span class='text-green-700 dark:text-green-400'>"%s\\n"</span> <span class='text-green-700 dark:text-green-400'>"Shell Script"</span>`;
+
   return (
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
-          <Image 
-            className="rounded-full border-2 md:border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
-            src="/Selfie.png"
-            width={imgSize}
-            height={imgSize}
-            alt="Foto do autor"
-          />
+          <div className="flex flex-row justify-center md:justify-between items-center">
+            <Image 
+              className="rounded-full border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
+              src="/Selfie.png"
+              width={imgSize}
+              height={imgSize}
+              alt="Foto do autor"
+            />
+            <h1 className="text-lg text-center none md:block ml-2">
+              <Typewritter
+                onInit={(typewriter) => {
+                  typewriter.typeString(goString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(pythonString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(jsString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(reactString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(asmString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(pythonString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString(shellString)
+                    .pauseFor(500)
+                    .deleteAll()
+                    .start();
+                }}
+                options={{
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </h1>
+          </div>
           <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
           <p className="my-2">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
