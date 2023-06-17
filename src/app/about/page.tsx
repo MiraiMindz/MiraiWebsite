@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 export default function About() {
-  const imgSize: number = 96;
+  const imgSize: number = 160;
   const currentYear: number = new Date().getFullYear();
   const endingYear: number = 2026;
   return (
