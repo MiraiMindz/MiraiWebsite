@@ -1,6 +1,6 @@
 "use client";
-import Image from 'next/image';
 import Typewriter from "typewriter-effect";
+import Image from 'next/image';
 
 export default function About() {
   const imgSize: number = 160;
