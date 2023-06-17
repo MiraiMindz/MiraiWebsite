@@ -9,14 +9,14 @@ export default function Classes() {
       <Link href="/classes/PythonLessons">
         <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
           <div className="flex justify-between items-center w-full">
+            <div className="w-fit flex justify-center items-center">
+              <h1 className="text-2xl text-center font-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
+            </div>
             <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-2">
               <PythonLogo
                 blueClass="fill-blue-400"
                 yellowClass="fill-yellow-400"
               />
-            </div>
-            <div className="flex-grow flex justify-center items-center">
-              <h1 className="text-2xl text-center font-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
             </div>
           </div>
           <p className="mt-2 text-neutral-950/60 dark:text-neutral-50/60">
