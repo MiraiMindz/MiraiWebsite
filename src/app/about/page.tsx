@@ -50,24 +50,24 @@ export default function About() {
           <div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>UERJ: Tec. Análise e Desenvolvimento de Sistemas</p>
-              <p className="text-sm text-neutral-200 dark:neutral-800">{`(2023 - ${currentYear != endingYear ? "Atualidade" : endingYear.toString()})`}</p>
+              <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">{`(2023 - ${currentYear != endingYear ? "Atualidade" : endingYear.toString()})`}</p>
             </div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>Colégio Estadual Círculo Operário</p>
-              <p className="text-sm text-neutral-200 dark:neutral-800">(2021 - 2022)</p>
+              <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">(2021 - 2022)</p>
             </div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>Centro de Formação Nogueira Mineiro</p>
-              <p className="text-sm text-neutral-200 dark:neutral-800">(2020)</p>
+              <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">(2020)</p>
             </div>
             <h2 className="font-black text-xl my-2">Cursos</h2>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>Instituto PROA</p>
-              <p className="text-sm text-neutral-200 dark:neutral-800">(08/2022  - 11/2022)</p>
+              <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">(08/2022  - 11/2022)</p>
             </div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>RocketSeat Discover</p>
-              <p className="text-sm text-neutral-200 dark:neutral-800">09/2022</p>
+              <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">09/2022</p>
             </div>
           </div>
         </section>
