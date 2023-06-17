@@ -19,7 +19,7 @@ export default function About() {
             </p>
             <h2 className="font-black text-xl my-2">Arte, experimentos e cálculos</h2>
             <p className="my-2">
-              Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span classname="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
+              Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
             </p>
             <p className="my-2">
               Desde pequeno eu tenho interesse por matemática e lógica em geral, me recordo bem das tardes em que eu pegava o livro de álgebra de meu irmão mais velho e o lia tentando compreender os conteúdos. Se eu não me engano, com meus 6 ou 7 anos, logo após aprender multiplicação e divisão na escola, eu havia aprendido potências e raizes através de um dos livros dele. Bom, não me considero nenhum gênio, mas percebo desde pequeno que eu tenho facilidade em entender coisas desse aspecto.
