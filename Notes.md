@@ -10,8 +10,8 @@
   - [ ] - Wrap any tables in a `<div class="table-container">{table}</div>`
 - [ ] - Add more (Max of 3) fonts to the website, that complement each other.
   - [x] - Fira Code
-  - [ ] - IBM Plex Mono
-  - [ ] - DM Mono
+  - [x] - IBM Plex Mono
+  - [x] - DM Mono
 - [ ] - Write the About Me page
 - [ ] - Write the Projects page
 - [ ] - Write the Lessons Page
