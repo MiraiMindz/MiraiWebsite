@@ -7,7 +7,7 @@ export default function Classes() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <Link href="/classes/PythonLessons">
-        <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-1">
+        <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
           <div className="flex justify-between items-center w-full">
             <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-2">
               <PythonLogo
@@ -16,7 +16,7 @@ export default function Classes() {
               />
             </div>
             <div className="w-fit flex justify-center items-center">
-              <h1 className="text-center">Python Lessons</h1>
+              <h1 className="text-center text-black font-ibmPlexMono">Python Lessons</h1>
             </div>
           </div>
           <p className="mt-2 text-neutral-950/60 dark:text-neutral-50/60">

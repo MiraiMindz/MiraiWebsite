@@ -58,14 +58,14 @@ export default function About() {
               </h1>
             </div>
           </div>
-          <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
+          <h1 className="font-black text-xl my-2 text-center font-ibmPlexMono">Quem sou eu?</h1>
           <p className="my-2">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
           </p>
           <p className="my-2">
             Eu nasci na cidade do Rio de Janeiro, e atualmente resido na mesma. Desde criança sempre tive interesse em criar coisas e quebrar a cabeça para resolver problemas, lembro que foram entre meus 9 e 10 anos que minha jornada &quot;começou&quot;
           </p>
-          <h2 className="font-black text-xl my-2">Arte, experimentos e cálculos</h2>
+          <h2 className="font-black text-xl my-2 font-ibmPlexMono">Arte, experimentos e cálculos</h2>
           <p className="my-2">
             Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
           </p>
@@ -84,18 +84,18 @@ export default function About() {
           <p className="my-2">
             Com 16 anos eu obtive novamente um computador e pude retomar meus estudos em produção musical e programação. Tentei compensar o tempo que fiquei parado, me dedicando integralmente a desenvolvimento, comecei aprendendo Python, e em 6 meses já havia dominado a linguagem; depois, parti para assembly x86 (em especial NASM com sintaxe Intel), depois parti para aprender um pouco de Java, fiz um pequeno servidor local para transferência de dados, apenas para entender a linguagem e o paradigma de orientação a objetos. Resolvi então aprender Go, por ter me interessado na sintaxe da linguagem, atualmente pretendo trabalhar com Go, e tento sempre desenvolver projetos usando ela. Aprendi também desenvolvimento Web, em especial React com Typescript, porém não me considero ter maestria nesses campos (Desenvolvimento Web & Java), apenas aprendi o que precisava para fazer meus projetos.
           </p>
-          <h2 className="font-black text-xl mb-2">Porquê você se chama Mirai?</h2>
+          <h2 className="font-black text-xl mb-2 font-ibmPlexMono">Porquê você se chama Mirai?</h2>
           <p className="my-2">
             Mirai é o alter-ego criado por mim aos 16 anos para retornar com produção musical, inspirado no fato de amigos dizerem que &quot;sou o futuro&quot;, foi durante a produção de uma música com temática japonêsa e significa &quot;Futuro&quot;.
           </p>
-          <h2 className="font-black text-xl mb-2">Atualidade</h2>
+          <h2 className="font-black text-xl mb-2 font-ibmPlexMono">Atualidade</h2>
           <p className="my-2">
           Após o fim do ensino-médio, eu resolvi cursar um técnologo em desenvolvimento de sistemas pela Universidade Estadual do Rio de Janeiro (UERJ), atualmente eu ando programando bastante na linguagem C por conta da faculdade, e também retomo exporádicamente meus estudos em Java por conta da mesma, porém não pretendo deixar de lado meu objetivo de trabalhar com desenvolvimento em Go.
           </p>
         </section>
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl my-2 text-center">Formações</h1>
-          <h2 className="font-black text-xl my-2">Academia</h2>
+          <h1 className="font-black text-xl my-2 text-center font-ibmPlexMono">Formações</h1>
+          <h2 className="font-black text-xl my-2 font-ibmPlexMono">Academia</h2>
           <div>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>UERJ: Tec. Análise e Desenvolvimento de Sistemas</p>
@@ -109,7 +109,7 @@ export default function About() {
               <p>Centro de Formação Nogueira Mineiro</p>
               <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">(2020)</p>
             </div>
-            <h2 className="font-black text-xl my-2">Cursos</h2>
+            <h2 className="font-black text-xl my-2 font-ibmPlexMono">Cursos</h2>
             <div className="flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center">
               <p>Instituto PROA</p>
               <p className="text-sm text-neutral-950/60 dark:text-neutral-50/60">(08/2022  - 11/2022)</p>
