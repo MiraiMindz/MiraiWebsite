@@ -19,7 +19,8 @@ export default function Classes() {
               />
             </div>
           </div>
-          <p className="mt-2 text-neutral-950/60 dark:text-neutral-50/60">
+          <hr className="bg-neutral-950 dark:bg-neutral-50 my-2 w-[99%]" />
+          <p className="mt-2 text-neutral-950/75 dark:text-neutral-50/75">
             Um curso de Python escrito por mim para armazenar meu conhecimento na linguagem e ajudar as pessoas que desejam entrar no mundo de desenvolvimento ou apenas aprender Python.
           </p>
         </div>
