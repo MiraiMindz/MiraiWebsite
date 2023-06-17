@@ -27,7 +27,7 @@ export default function About() {
               alt="Foto do autor"
             />
             <div className="flex-grow w-full hidden md:block">
-              <h1 className="text-xl text-center ml-2 font-FiraCode">
+              <h1 className="text-2xl text-left ml-2 font-FiraCode">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString(goString)
@@ -43,9 +43,6 @@ export default function About() {
                       .pauseFor(500)
                       .deleteAll()
                       .typeString(asmString)
-                      .pauseFor(500)
-                      .deleteAll()
-                      .typeString(pythonString)
                       .pauseFor(500)
                       .deleteAll()
                       .typeString(shellString)
