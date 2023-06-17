@@ -26,38 +26,40 @@ export default function About() {
               height={imgSize}
               alt="Foto do autor"
             />
-            <h1 className="text-lg text-center none md:block ml-2">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString(goString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(pythonString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(jsString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(reactString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(asmString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(pythonString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .typeString(shellString)
-                    .pauseFor(500)
-                    .deleteAll()
-                    .start();
-                }}
-                options={{
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </h1>
+            <div className="flex-grow w-full hidden md:block">
+              <h1 className="text-xl text-center ml-2 font-FiraCode">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter.typeString(goString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(pythonString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(jsString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(reactString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(asmString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(pythonString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .typeString(shellString)
+                      .pauseFor(500)
+                      .deleteAll()
+                      .start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h1>
+            </div>
           </div>
           <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
           <p className="my-2">
