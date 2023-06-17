@@ -7,9 +7,9 @@ export default function Classes() {
   return (
     <main>
       <Link href="/classes/PythonLessons">
-        <div className="w-[40ch] flex flex-col justify-between items-center p-2 m-2 border-2 rounded-md border-neutral-950 dark:border-neutral-50">
-          <div className="flex justify-between items-center">
-            <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square">
+        <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-md border-neutral-950 dark:border-neutral-50">
+          <div className="flex flex-row justify-between items-center">
+            <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-0.5">
               <PythonLogo
                 blueClass="fill-blue-400"
                 yellowClass="fill-yellow-400"
