@@ -15,7 +15,7 @@ export default function Classes() {
                 yellowClass="fill-yellow-400"
               />
             </div>
-            <div className="w-fit flex justify-center items-center">
+            <div className="flex-grow flex justify-center items-center">
               <h1 className="text-2xl text-center font-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
             </div>
           </div>
