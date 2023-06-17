@@ -20,7 +20,7 @@ export function Emphasis({className, ...props}: any) {
 
 export function CLink({className, ...props}: any) {
     return (
-        <Link className={className + " transition-all hover:text-blue-400 dark:hover:text-blue-600 "} {...props} />
+        <Link className={className + " transition-all text-blue-400 hover:text-blue-600 hover:text-violet-400 dark:hover:text-violet-600 "} {...props} />
     );
 }
 
