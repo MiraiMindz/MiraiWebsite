@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Blockquote({className, ...props}: any) {
     return (
-        <blockquote className={className + " p-2 border-l-2 border-neutral-950/20 dark:border-neutral-50/20 bg-neutral-950/10 dark:bg-neutral-50/10 text-neutral-950/90 dark:text-neutral-50/90 rounded-r-md"} {...props} />
+        <blockquote className={className + " p-2 border-l-2 border-neutral-950/20 dark:border-neutral-50/20 bg-neutral-950/10 dark:bg-neutral-50/10 text-neutral-950/60 dark:text-neutral-50/60 rounded-r-md"} {...props} />
     );
 }
 
