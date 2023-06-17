@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 export default function About() {
-  const imgSize: number = 128;
+  const imgSize: number = 96;
   const currentYear: number = new Date().getFullYear();
   const endingYear: number = 2026;
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <section className="my-2 md:my-4">
           <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
           <Image 
-            className="rounded-full border-2 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square float-left"
+            className="rounded-full border-2 md:border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square float-left"
             src="/Selfie.png"
             width={imgSize}
             height={imgSize}
