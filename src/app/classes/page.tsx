@@ -6,13 +6,17 @@ import Link from "next/link";
 export default function Classes() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
-      <Link href="/classes/PythonLessons">
+      <h1 className="text-2xl font-black text-center font-ibmPlexMono">Aulas</h1>
+      <p className="text-lg max-w-[40ch] max-w-[80ch]">
+        Aqui você encontrará todo meu conhecimento em programação e linguagens escritos na forma de aulas e cursos. O processo de escrita é demorado, então não estranhe longos períodos sem atualização nesta seção.
+      </p>
+      <Link href="/classes/PythonLessons" className="CourseCard">
         <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
           <div className="flex justify-between items-center w-full">
             <div className="w-fit flex justify-center items-center">
               <h1 className="text-2xl text-center font-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
             </div>
-            <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-2">
+            <div className="rounded-full border-neutral-950 dark:border-neutral-50 border-2 w-16 h-16 aspect-square p-2 imageContainer">
               <PythonLogo
                 blueClass="fill-blue-400"
                 yellowClass="fill-yellow-400"

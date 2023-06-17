@@ -693,3 +693,15 @@ div.table-container {
 li > p {
   display: inline;
 }
+
+.CourseCard:hover > div {
+  @apply border-violet-500 dark:border-violet-400
+}
+
+.CourseCard:hover > div > div > div.imageContainer {
+  @apply border-violet-500 dark:border-violet-400
+}
+
+.CourseCard:hover > div > div > div > h1 {
+  @apply text-violet-500 dark:text-violet-400
+}
