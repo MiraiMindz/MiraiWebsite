@@ -9,14 +9,14 @@ export default function About() {
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
-          <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
           <Image 
-            className="rounded-full border-2 md:border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square float-left"
+            className="rounded-full border-2 md:border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
             src="/Selfie.png"
             width={imgSize}
             height={imgSize}
             alt="Foto do autor"
           />
+          <h1 className="font-black text-xl my-2 text-center">Quem sou eu?</h1>
           <p className="my-2">
           Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu tenho {currentYear - 2005} anos, e sou principalmente um desenvolvedor Full-Stack; embora também faça produção musical, design e escrita como hobbies.
           </p>
