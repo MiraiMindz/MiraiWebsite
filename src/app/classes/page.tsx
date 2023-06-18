@@ -11,7 +11,7 @@ export default function Classes() {
         Aqui você encontrará todo meu conhecimento em programação e linguagens escritos na forma de aulas e cursos. O processo de escrita é demorado, então não estranhe longos períodos sem atualização nesta seção.
       </p>
       <article className="max-w-full mt-4">
-        <Link href="/classes/PythonLessons" className="CourseCard">
+        <Link href="/classes/PythonLessons" className="CourseCard transition-all">
           <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
             <div className="flex justify-between items-center w-full">
               <div className="w-fit flex justify-center items-center">
