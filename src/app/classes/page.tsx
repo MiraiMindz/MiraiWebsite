@@ -1,6 +1,6 @@
 "use client";
-import PythonLogo from "../components/assets/PythonLogo";
 
+import PythonLogo from "../components/assets/PythonLogo";
 import Link from "next/link";
 
 export default function Classes() {

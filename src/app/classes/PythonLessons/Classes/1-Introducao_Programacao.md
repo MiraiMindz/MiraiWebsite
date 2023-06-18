@@ -53,47 +53,45 @@ Uma pequena introdução aos conceitos mais comuns:
   * Marcação (Documentação): As Linguagens de Marcação são marcada pelo uso de marcadores de texto (ex: itálico, negrito, cabeçalhos, etc...), elas são mais usadas na criação de documentos, exemplos seriam MarkDown e HTML (HyperTextMarkupLanguage)
   * Estilo (Design): As Linguagens de Estilo são marcadas pelo o uso de propriedades de aparência (ex: background-color, shadow, etc...), elas são usadas na estilização de sites e aplicativos, exemplos seriam CSS e SASS
 
-* Paradigma:
-  * O paradigma de uma linguagem de programação define sua funcionalidade, especificidade, ou orientação, informalmente dizendo, o paradigma de uma linguagem é o equivalente a "uma serie de métodos, dogmas, regras e conceitos que guiam o código fonte"
-  * os 3 paradigmas mais comuns são:
-    * Imperativa: as etapas são sequenciadas, normalmente de cima abaixo, e os comandos são imperativos, informalmente falando, são ordens que devem ser estritamente seguidas. Linguagens de *scripting* são os melhores exemplos para se descrever Imperatividade, um exemplo com a linguagem BASH:
-       ```shell
-        str="Movendo Arquivo1"            # Primeira Instrução
-        printf "%s\n" "${str}"            # Segunda Instrução
-        mv -vi Arquivo1.ext /diretorio1/  # Terceira Instrução
-        printf "%s\n" "Concluido"         # Quarta Instrução
-        ```
-    * Funcional: as etapas são divididas em blocos de código chamados funções e são executados de acordo com a sua chamada, ou seja, se a função X foi declarada na linha 38 de um programa e a função Y foi declarada na linha 85, sua execução independe da sequencia de declaração (é claro que, as funções não devem ser chamadas antes de suas devidas declarações), resultando em nós podendo chamar a função Y na linha 102 e função X na linha 103, um exemplo seria a linguagem de programação Go:
-       ```go
-        package main
+* Paradigma: O paradigma de uma linguagem de programação define sua funcionalidade, especificidade, ou orientação, informalmente dizendo, o paradigma de uma linguagem é o equivalente a "uma serie de métodos, dogmas, regras e conceitos que guiam o código fonte" os 3 paradigmas mais comuns são:
+  * Imperativa: as etapas são sequenciadas, normalmente de cima abaixo, e os comandos são imperativos, informalmente falando, são ordens que devem ser estritamente seguidas. Linguagens de *scripting* são os melhores exemplos para se descrever Imperatividade, um exemplo com a linguagem BASH:
+    ```shell
+    str="Movendo Arquivo1"            # Primeira Instrução
+    printf "%s\n" "${str}"            # Segunda Instrução
+    mv -vi Arquivo1.ext /diretorio1/  # Terceira Instrução
+    printf "%s\n" "Concluido"         # Quarta Instrução
+    ```
+  * Funcional: as etapas são divididas em blocos de código chamados funções e são executados de acordo com a sua chamada, ou seja, se a função X foi declarada na linha 38 de um programa e a função Y foi declarada na linha 85, sua execução independe da sequencia de declaração (é claro que, as funções não devem ser chamadas antes de suas devidas declarações), resultando em nós podendo chamar a função Y na linha 102 e função X na linha 103, um exemplo seria a linguagem de programação Go:
+    ```go
+    package main
 
-        import "fmt"
+    import "fmt"
 
-        // Aqui nós declaramos a primeira função
-        func funcao_print_1() {
-           fmt.Println("Função 1")
-        }
+    // Aqui nós declaramos a primeira função
+    func funcao_print_1() {
+        fmt.Println("Função 1")
+    }
 
-        // Aqui nós declaramos a segunda função
-        func funcao_print_2() {
-           fmt.Println("Função 2")
-        }
+    // Aqui nós declaramos a segunda função
+    func funcao_print_2() {
+        fmt.Println("Função 2")
+    }
 
-        func main() {
-           funcao_print_2() // Aqui chamamos a segunda
-           funcao_print_1()  // Aqui chamamos a primeira
+    func main() {
+        funcao_print_2() // Aqui chamamos a segunda
+        funcao_print_1()  // Aqui chamamos a primeira
+    }
+    ```
+    Note a ordem de declaração e de chamada, declaramos a `funcao_print_1` primeiro, e depois a `funcao_print_2`, porém chamamos a `funcao_print_2` antes da `funcao_print_1`
+  * Orientada a Objetos: este paradigma segue a interpretação de que os códigos devem ser divididos em objetos (classes), objetos são pequenos contêineres independentes entre si, a orientação a objetos é um campo de estudo deverás complexo, alguns dos seus conceitos como a [Abstração](https://pt.wikipedia.org/wiki/Abstração_(ciência_da_computação)) e a [Ação nos objetos](https://pt.wikipedia.org/wiki/Orientação_a_objetos#Ação_nos_objetos) costumam sempre confundir, você se percebem falando coisas como "o que é um cachorro?", "uma mensagem deveria se auto-mandar, ou ela deveria ser mandada por outra coisa?" e por ai vai. Alguns dos conceitos tratados pela orientação a objeto foram incorporados em outros paradigmas, como as classes. Uma das linguagens orientadas a objetos mais famosas é a Java, aqui um exemplo de código:
+    ```java
+    public class Program {
+        public static void main(String[] args) throws Exception {
+          String str = "Olá Mundo";
+          System.out.println(str);
         }
-        ```
-        Note a ordem de declaração e de chamada, declaramos a `funcao_print_1` primeiro, e depois a `funcao_print_2`, porém chamamos a `funcao_print_2` antes da `funcao_print_1`
-    * Orientada a Objetos: este paradigma segue a interpretação de que os códigos devem ser divididos em objetos (classes), objetos são pequenos contêineres independentes entre si, a orientação a objetos é um campo de estudo deverás complexo, alguns dos seus conceitos como a [Abstração](https://pt.wikipedia.org/wiki/Abstração_(ciência_da_computação)) e a [Ação nos objetos](https://pt.wikipedia.org/wiki/Orientação_a_objetos#Ação_nos_objetos) costumam sempre confundir, você se percebem falando coisas como "o que é um cachorro?", "uma mensagem deveria se auto-mandar, ou ela deveria ser mandada por outra coisa?" e por ai vai. Alguns dos conceitos tratados pela orientação a objeto foram incorporados em outros paradigmas, como as classes. Uma das linguagens orientadas a objetos mais famosas é a Java, aqui um exemplo de código:
-       ```java
-        public class Program {
-           public static void main(String[] args) throws Exception {
-               String str = "Olá Mundo";
-               System.out.println(str);
-           }
-        }
-        ```
+    }
+    ```
 
 * Tipagem: ela define a estrutura de tipos, ela essencialmente define a "praticidade" e o "controle" que o programador tem com a linguagem de programação
   * Força: Define a volatilidade da variável na memória, pode ser divida em Fraca ou Forte:
