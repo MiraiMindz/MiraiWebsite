@@ -32,13 +32,13 @@ export function HR({className, ...props}: any) {
 
 export function OL({className, ...props}: any) {
     return (
-        <ol className={className + " list-decimal list-inside pl-2 my-1"} {...props} />
+        <ol className={className + " list-decimal list-inside pl-2 my-2"} {...props} />
     );
 }
 
 export function UL({className, ...props}: any) {
     return (
-        <ul className={className + " list-disc list-inside pl-2 my-1"} {...props} />
+        <ul className={className + " list-disc list-inside pl-2 my-2"} {...props} />
     );
 }
 
@@ -50,6 +50,6 @@ export function Strong({className, ...props}: any) {
 
 export function ListItem({className, ...props}: any) {
     return (
-        <li className={className + " my-1"}  {...props}/>
+        <li className={className + " my-2"}  {...props}/>
     )
 }

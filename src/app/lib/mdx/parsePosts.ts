@@ -39,7 +39,7 @@ export function formatReadingTime(readingTimeString: string): ReadTimeData {
   if (minutes < 1) {
     formattedTime = '< 1 min.';
   } else {
-    formattedTime = `${minutes} min.`;
+    formattedTime = `${Math.round(minutes)} min.`;
   }
 
   //const formattedTime = minutes === 1 ? '1 min.' : minutes < 1 ? "< 1 min." : `${minutes} min.`;
