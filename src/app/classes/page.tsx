@@ -12,7 +12,7 @@ export default function Classes() {
       </p>
       <article className="max-w-full mt-2">
         <Link href="/classes/PythonLessons" className="CourseCard">
-          <div className="max-w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
+          <div className="w-[40ch] flex flex-col justify-between items-center border-2 rounded-lg border-neutral-950 dark:border-neutral-50 p-2">
             <div className="flex justify-between items-center w-full">
               <div className="w-fit flex justify-center items-center">
                 <h1 className="text-2xl text-center font-black font-ibmPlexMono text-neutral-950 dark:text-neutral-50">Python Lessons</h1>
