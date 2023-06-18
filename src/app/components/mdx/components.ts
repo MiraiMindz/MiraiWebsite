@@ -19,7 +19,8 @@ const MDXCustomComponents = {
   strong: TextElements.Strong,
   ul: TextElements.UL,
   a: TextElements.CLink,
-  img: CImage
+  img: CImage,
+  li: TextElements.ListItem,
 }
 
 export default MDXCustomComponents;
