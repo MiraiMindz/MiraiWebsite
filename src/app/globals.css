@@ -716,3 +716,8 @@ hr {
   border-left-width: 0 !important;
   border-right-width: 0 !important;
 }
+
+.text-balance {
+  text-wrap: balance;
+  white-space: unset;
+}
