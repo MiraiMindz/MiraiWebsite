@@ -50,7 +50,7 @@ export default async function Page({ params }: any) {
           {toc}
         </ul>
       </details>
-      <article className="w-[40ch] md:w-[80ch] article">
+      <article className="w-[40ch] md:w-[80ch] article max-h-[90vh] overflow-y-auto">
         {content}
       </article>
       <aside className="hidden md:block max-h-[85vh] overflow-y-auto">
