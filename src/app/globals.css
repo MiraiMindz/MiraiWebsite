@@ -721,3 +721,10 @@ hr {
   text-wrap: balance;
   white-space: unset;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  overflow: auto;
+  height: 100%;
+}

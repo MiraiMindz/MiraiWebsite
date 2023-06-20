@@ -33,9 +33,10 @@ export default async function Page({ params }: any) {
     nextPostSlug = null;
   }
 
+  // flex flex-col items-center md:flex-row md:justify-center md:items-start flex-grow
   return (
-    <section className="flex flex-col items-center md:flex-row md:justify-center md:items-start flex-grow">
-      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " fixed top-16 left-2 w-64 max-h-[85%] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
+    <section className="grid-container gap-x-4">
+      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " max-h-[85%] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
         <div>
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600 tracking-wide">Tabela de Conteúdos</h1>
           <ul>
@@ -52,7 +53,7 @@ export default async function Page({ params }: any) {
       <article className="w-[40ch] md:w-[80ch] article">
         {content}
       </article>
-      <aside className="fixed top-16 right-2 w-64 hidden md:block max-h-[85%] overflow-y-auto">
+      <aside className="hidden md:block max-h-[85%] overflow-y-auto">
         <ul>
           {posts?.map(post => (
             <li className="my-2" key={post?.slug}>
