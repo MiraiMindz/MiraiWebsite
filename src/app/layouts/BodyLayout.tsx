@@ -245,7 +245,7 @@ export function BodyLayout({ children }: any) {
               />
             </div>
           </header>
-          <div className="px-2 min-h-screen flex-grow items-stretch flex">
+          <div className="px-2 min-h-screen flex-grow items-stretch flex justify-center">
             {children}
           </div>
         </div>
