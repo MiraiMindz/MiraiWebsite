@@ -49,7 +49,7 @@ export default async function Page({ params }: any) {
           {toc}
         </ul>
       </details>
-      <article className="w-[40ch] md:w-[80ch] article max-h-[90vh] overflow-y-auto">
+      <article className="w-[40ch] md:w-[80ch] article max-h-[90vh] overflow-y-auto dropcap">
         {content}
       </article>
       <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto">
