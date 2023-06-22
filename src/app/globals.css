@@ -737,3 +737,7 @@ hr {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.FiraCodeFont {
+  @apply tabular-nums slashed-zero font-firaCode
+}

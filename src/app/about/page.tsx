@@ -19,7 +19,7 @@ export default function About() {
       <article className="w-[40ch] md:w-[80ch]">
         <section className="my-2 md:my-4">
           <div className="flex flex-row justify-center md:justify-between items-center">
-            <Image 
+            <Image
               className="rounded-full border-4 border-neutral-950 dark:border-neutral-50 mr-4 aspect-square"
               src="/Selfie.png"
               width={imgSize}
@@ -27,7 +27,7 @@ export default function About() {
               alt="Foto do autor"
             />
             <div className="flex-grow w-full hidden md:block">
-              <h1 className="text-3xl text-center ml-2 font-FiraCode">
+              <h1 className="text-3xl text-center ml-2 font-firaCode">
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString(goString)
@@ -67,7 +67,7 @@ export default function About() {
           </p>
           <h2 className="font-black text-xl my-2 font-ibmPlexMono">Arte, experimentos e cálculos</h2>
           <p className="my-2">
-            Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.  
+            Nesse periodo, eu comecei a desenhar, mesmo contendo problemas na coordenação motora, a vontade de me <span className="italic">expressar</span> eram maiores. Enquanto desenhava eu lembro também das tardes que eu passava no computador experimentando com o que eu podia, vendo tutoriais para modificar jogos, ou simplesmente vendo o que aconteceria se eu fizesse algo, como deletar a lixeira por exemplo; eu diria que meu interesse por computadores existe desde sempre.
           </p>
           <p className="my-2">
             Desde pequeno eu tenho interesse por matemática e lógica em geral, me recordo bem das tardes em que eu pegava o livro de álgebra de meu irmão mais velho e o lia tentando compreender os conteúdos. Se eu não me engano, com meus 6 ou 7 anos, logo após aprender multiplicação e divisão na escola, eu havia aprendido potências e raizes através de um dos livros dele. Bom, não me considero nenhum gênio, mas percebo desde pequeno que eu tenho facilidade em entender coisas desse aspecto.
@@ -79,7 +79,7 @@ export default function About() {
             Com 14 anos, através do YouTube eu descobri a existência do Game Maker, e comecei a programar pequenos jogos, sistemas de física, aceleração e colisão, entre outros. Mas confesso que era um hobbie secundário, meu foco continuava sendo produção músical. Porém, pouco antes dos meus 15 anos, eu tive contra-tempos em minha vida pessoal e tive de ficar sem computador, o que impossibilitava a produção de musicas ou de jogos.
           </p>
           <p className="my-2">
-            E assim eu segui até meus 16 anos, porém como sempre, parado não fiquei, nesse meio-tempo me mudei para Duque de Caxias, retomei desenho como hobbie e comecei a escrever. Escrevia poemas, narrativas, letras de músicas; eu estudava línguas e filologia para entender como os idiomas foram feitos. Nessa época, textos e línguas eram minha paixão, dominei inglês, aprendi o básico de línguas como francês, russo, espanhol; experimentava com escrita portuguêsa e criava idiomas para o mundo de RPG que eu escrevi no momento. 
+            E assim eu segui até meus 16 anos, porém como sempre, parado não fiquei, nesse meio-tempo me mudei para Duque de Caxias, retomei desenho como hobbie e comecei a escrever. Escrevia poemas, narrativas, letras de músicas; eu estudava línguas e filologia para entender como os idiomas foram feitos. Nessa época, textos e línguas eram minha paixão, dominei inglês, aprendi o básico de línguas como francês, russo, espanhol; experimentava com escrita portuguêsa e criava idiomas para o mundo de RPG que eu escrevi no momento.
           </p>
           <p className="my-2">
             Com 16 anos eu obtive novamente um computador e pude retomar meus estudos em produção musical e programação. Tentei compensar o tempo que fiquei parado, me dedicando integralmente a desenvolvimento, comecei aprendendo Python, e em 6 meses já havia dominado a linguagem; depois, parti para assembly x86 (em especial NASM com sintaxe Intel), depois parti para aprender um pouco de Java, fiz um pequeno servidor local para transferência de dados, apenas para entender a linguagem e o paradigma de orientação a objetos. Resolvi então aprender Go, por ter me interessado na sintaxe da linguagem, atualmente pretendo trabalhar com Go, e tento sempre desenvolver projetos usando ela. Aprendi também desenvolvimento Web, em especial React com Typescript, porém não me considero ter maestria nesses campos (Desenvolvimento Web & Java), apenas aprendi o que precisava para fazer meus projetos.
