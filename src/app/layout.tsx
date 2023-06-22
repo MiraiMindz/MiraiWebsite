@@ -4,7 +4,8 @@ import { BodyLayout } from './layouts/BodyLayout';
 
 const firaCode = Fira_Code({
     subsets: ['latin'],
-    variable: '--font-FiraCode'
+    variable: '--font-FiraCode',
+    weight: 'variable',
 });
 
 const dmMono = DM_Mono({
