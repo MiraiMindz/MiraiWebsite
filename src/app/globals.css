@@ -741,3 +741,7 @@ hr {
 .FiraCodeFont {
   @apply tabular-nums slashed-zero font-firaCode
 }
+
+.hljs-wrapper > pre > code > span {
+  @apply tabular-nums slashed-zero font-firaCode
+}
