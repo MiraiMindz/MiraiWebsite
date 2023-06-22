@@ -19,6 +19,9 @@ module.exports = {
       'xs': '475px',
       ...defaultTheme.screens,
     },
+    gridTemplateColumns: {
+      'article': '1fr auto 1fr',
+    }
   },
   darkMode: 'class',
   plugins: [
