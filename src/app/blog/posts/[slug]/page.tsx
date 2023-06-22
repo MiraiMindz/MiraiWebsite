@@ -33,8 +33,6 @@ export default async function Page({ params }: any) {
     nextPostSlug = null;
   }
 
-  // flex flex-col items-center md:flex-row md:justify-center md:items-start flex-grow
-  // grid-container gap-x-8
   return (
     <section className="grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-article md:gap-y-0 md:gap-x-8 overflow-auto">
       <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
@@ -54,7 +52,7 @@ export default async function Page({ params }: any) {
       <article className="w-[40ch] md:w-[80ch] article max-h-[90vh] overflow-y-auto">
         {content}
       </article>
-      <aside className="hidden md:block max-h-[85vh] overflow-y-auto">
+      <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto">
         <ul>
           {posts?.map(post => (
             <li className="my-2" key={post?.slug}>

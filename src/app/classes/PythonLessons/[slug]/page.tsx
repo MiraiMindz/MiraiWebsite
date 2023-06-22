@@ -35,8 +35,8 @@ export default async function Page({ params }: any) {
   }
 
   return (
-    <main className="flex flex-col items-center md:flex-row md:justify-center md:items-start flex-grow">
-      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " fixed top-16 left-2 w-64 max-h-[85%] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
+    <section className="grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-article md:gap-y-0 md:gap-x-8 overflow-auto">
+      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
         <div>
           <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600 tracking-wide">Tabela de Conteúdos</h1>
           <ul>
@@ -50,10 +50,10 @@ export default async function Page({ params }: any) {
           {toc}
         </ul>
       </details>
-      <article className="w-[40ch] md:w-[80ch]">
+      <article className="w-[40ch] md:w-[80ch] article max-h-[90vh] overflow-y-auto">
         {content}
       </article>
-      <aside className="fixed top-16 right-2 w-64 hidden md:block max-h-[85%] overflow-y-auto">
+      <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto">
         <ul>
           {classes?.map(classItem => (
             <li className="my-2" key={classItem?.slug}>
@@ -77,7 +77,6 @@ export default async function Page({ params }: any) {
           Next Chapter &gt;
         </Link>
       </div>
-
-    </main>
+    </section>
   );
 }
