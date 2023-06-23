@@ -15,11 +15,11 @@ export default async function Projects() {
   useEffect(() => {
     let repoData;
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
-    fetch(apiUrl)
+    repoData = fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         console.log('This is your data', data);
-        repoData = data;
+        return data;
       });
 
       console.log("repoData", repoData);
