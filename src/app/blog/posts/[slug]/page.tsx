@@ -35,13 +35,19 @@ export default async function Page({ params }: any) {
 
   return (
     <section className="grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-article md:gap-y-0 md:gap-x-8 overflow-auto">
-      <aside className={(toc.length > 0 ? "hidden md:block" : "hidden") + " h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
-        <div className="max-h-fit">
-          <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600 tracking-wide">Tabela de Conteúdos</h1>
-          <ul>
-            {toc}
-          </ul>
-        </div>
+      <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
+        {
+          toc.length > 0 ? "hidden md:block" (
+            <div className="max-h-fit">
+            <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600 tracking-wide">Tabela de Conteúdos</h1>
+            <ul>
+              {toc}
+            </ul>
+          </div>
+          ) : (
+            <div className="max-h-fit after:content-[' ']"></div>
+          )
+        }
       </aside>
       <details className={(toc.length > 0 ? "block md:hidden" : "hidden") + " truncate w-[40ch] p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
         <summary className="truncate">Tabela de Conteudos</summary>
