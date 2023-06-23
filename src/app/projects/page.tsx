@@ -25,6 +25,7 @@ export default async function Projects() {
           Aqui você encontrará meus projetos pessoais, músicas, artes, escritos, programas e afins.
         </p>
         <hr className="my-2 w-[99%] bg-neutral-950 dark:bg-neutral-50 block h-0.5 rounded-full"/>
+        <h2 className="text-xl font-black text-center font-ibmPlexMono my-2">GitHub</h2>
         {repoData != null ? (
           <div className="my-4">
             <p>
