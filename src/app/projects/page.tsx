@@ -28,7 +28,7 @@ export default async function Projects() {
         <h2 className="text-xl font-black text-center font-ibmPlexMono my-2">GitHub</h2>
         {repoData != null ? (
           <div className="my-4">
-            <p>
+            <p className="text-justify">
               Aqui estão meus projetos e repostórios do GitHub, eles são automaticamente coletados usando a API do GitHub.
             </p>
             <ul>
