@@ -9,7 +9,7 @@ interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps) {
   return (
     <Link href={props.htmlURL}>
-      <div>
+      <div className="">
         <h1>{props.repoName}</h1>
         <p>{props.repoDescription}</p>
       </div>
