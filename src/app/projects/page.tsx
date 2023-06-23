@@ -20,6 +20,7 @@ export default async function Projects() {
         console.error('Error fetching data:', error);
       });
   }, []);
+  
   useEffect(() => {
     console.log("repoData", repoData);
   }, [repoData]);
