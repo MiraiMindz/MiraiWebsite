@@ -26,9 +26,11 @@ export default async function Projects() {
       });
   }, []);
 
-  if (repoData != null) {
-    console.log("repoData", repoData);
-  }
+  useEffect(() => {
+    if (repoData != null) {
+      console.log("repoData", repoData);
+    }
+  }, []);
 
   return (
     <main>
