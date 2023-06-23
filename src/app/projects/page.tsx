@@ -22,7 +22,7 @@ export default async function Projects() {
       <article className="max-w-[40ch] max-w-[80ch]">
         <h1 className="text-2xl font-black text-center font-ibmPlexMono my-2">Projetos</h1>
         <p className="text-lg my-2">
-          Aqui você encontrará meus projetos pessoais, músicas, artes, escritos, programas e afins.
+          Aqui você encontrará meus projetos pessoais.
         </p>
         <hr className="my-2 w-[99%] bg-neutral-950 dark:bg-neutral-50 block h-0.5 rounded-full"/>
         <h2 className="text-xl font-black text-center font-ibmPlexMono my-2">GitHub</h2>
