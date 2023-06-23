@@ -13,14 +13,14 @@ export default async function Projects() {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data: any) => {
-        console.log(data);
+        console.log("data", data);
         setRepoData(data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
 
-    console.log(repoData);
+    console.log("repoData", repoData);
   }, []);
   return (
     <main>
