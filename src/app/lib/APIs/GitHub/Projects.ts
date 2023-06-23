@@ -20,7 +20,7 @@ export async function fetchGithubPublicRepos() {
             `https://api.github.com/repos/${repo.full_name}/readme`, {
               headers: {
               Authorization: `Bearer ${token}`,
-              Accept: 'application/vnd.github.VERSION.raw',
+              Accept: 'application/vnd.github+json',
               },
             }
           );
