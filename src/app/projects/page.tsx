@@ -1,7 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
-
 import { GitHubRepoType } from "../types/GitHubRepos";
 import { ProjectCard } from "../components/Projects/ProjectCards";
 
@@ -33,7 +33,9 @@ export default async function Projects() {
             <ul>
               {repoData?.map((repo: GitHubRepoType) => (
                   <li className="my-2 md:my-4" key={repo.id}>
-                    <ProjectCard htmlURL={repo.html_url} repoDescription={repo.description} repoName={repo.name}/>
+                    <Link href={repo.html_url}>
+                      <ProjectCard htmlURL={repo.html_url} repoDescription={repo.description} repoName={repo.name}/>
+                    </Link>
                   </li>
                 ))}
             </ul>
