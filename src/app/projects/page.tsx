@@ -19,7 +19,7 @@ async function getData() {
 
 export default async function Projects() {
   const repoData = await getData();
-
+  console.log(repoData);
   return (
     <main>
       Projects
