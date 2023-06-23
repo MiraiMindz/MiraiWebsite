@@ -20,18 +20,19 @@ export default async function Projects() {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data: GitHubRepoType[]) => {
+      .then((data: any) => {
         setRepoData(data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
 
-    console.log(repoData);
+    console.log(repoData as unknown as GitHubRepoType[]);
   }, []);
   return (
     <main>
       Projects
+      {repoData != null ? (
       <div>
         <ul>
           {repoData?.map((repo: GitHubRepoType) => (
@@ -40,7 +41,8 @@ export default async function Projects() {
               </li>
             ))}
         </ul>
-      </div>
+      </div>) : (<p>Error</p>)
+      }
     </main>
   );
 }
