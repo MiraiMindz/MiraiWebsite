@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { fetchGithubPublicRepos } from "../lib/APIs/GitHub/Projects";
+import { json } from "stream/consumers";
 
 export default async function Projects() {
   // useEffect(() => {
@@ -19,9 +20,8 @@ export default async function Projects() {
       .then((response) => response.json())
       .then((data) => {
         console.log('This is your data', data);
-        return data;
+        return json(data);
       });
-
       console.log("repoData", repoData);
   }, []);
 
