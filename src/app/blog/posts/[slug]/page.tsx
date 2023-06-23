@@ -37,7 +37,7 @@ export default async function Page({ params }: any) {
     <section className="grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-article md:gap-y-0 md:gap-x-8 overflow-auto">
       <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50">
         {
-          toc.length > 0 ? "hidden md:block" (
+          toc.length > 0 ? (
             <div className="max-h-fit">
             <h1 className="font-black hover:text-violet-400 dark:hover:text-violet-600 tracking-wide">Tabela de Conteúdos</h1>
             <ul>
