@@ -1,50 +1,43 @@
 import axios from 'axios';
-import { useEffect } from 'react';
 export async function fetchGithubPublicRepos() {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const token = process.env.GITHUB_API_KEY;
-        const response = await axios.get('https://api.github.com/user/repos', {
-          headers: {
-              Authorization: `Bearer ${token}`,
-          },
-        });
+  try {
+    const token = process.env.GITHUB_API_KEY;
+    const response = await axios.get('https://api.github.com/user/repos', {
+      headers: {
+          Authorization: `Bearer ${token}`,
+      },
+    });
 
-        const repositories = await Promise.all(
-        response.data.map(async (repo: any) => {
-          const readmeResponse = await axios.get(
-              `https://api.github.com/repos/${repo.full_name}/readme`, {
-                headers: {
-                Authorization: `Bearer ${token}`,
-                Accept: 'application/vnd.github.VERSION.raw',
-                },
-              }
-            );
-
-            return {
-              id: repo.id,
-              name: repo.name,
-              description: repo.description,
-              html_url: repo.html_url,
-              readme: readmeResponse.data,
-            };
-          })
+    const repositories = await Promise.all(
+    response.data.map(async (repo: any) => {
+      const readmeResponse = await axios.get(
+          `https://api.github.com/repos/${repo.full_name}/readme`, {
+            headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/vnd.github.VERSION.raw',
+            },
+          }
         );
 
         return {
-          props: {
-            repositories,
-          },
+          id: repo.id,
+          name: repo.name,
+          description: repo.description,
+          html_url: repo.html_url,
+          readme: readmeResponse.data,
         };
-      } catch (error) {
-        console.error('Error fetching repositories:', error);
-        return {
-          repositories: []
-        };
-      }
-    };
+      })
+    );
 
-    fetchData();
-  }, []);
+    return {
+      props: {
+        repositories,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching repositories:', error);
+    return {
+      repositories: []
+    };
+  }
 }
