@@ -11,18 +11,24 @@ export default async function Projects() {
   //   fetchData();
   // }, []);
 
-  const [repoData, setRepoData] = useState<any>();
+  const [repoData, setRepoData] = useState<Object | null>(null);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data: any) => {
+      .then((data: Object) => {
         console.log('This is your data', data);
         setRepoData(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
       });
-      console.log("repoData", repoData);
   }, []);
+
+  if (repoData != null) {
+    console.log("repoData", repoData);
+  }
 
   return (
     <main>
