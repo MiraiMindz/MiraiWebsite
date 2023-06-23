@@ -26,8 +26,9 @@ export default async function Projects() {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []);
 
+    console.log(repoData);
+  }, []);
   return (
     <main>
       Projects
