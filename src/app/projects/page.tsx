@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 
+import { GitHubRepoType } from "../types/GitHubRepos";
+import { ProjectCard } from "../components/Projects/ProjectCards";
+
 export default async function Projects() {
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -11,14 +14,13 @@ export default async function Projects() {
   //   fetchData();
   // }, []);
 
-  const [repoData, setRepoData] = useState<Object | null>(null);
+  const [repoData, setRepoData] = useState<GitHubRepoType[] | null>(null);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data: Object) => {
-        console.log('This is your data', data);
+      .then((data: GitHubRepoType[]) => {
         setRepoData(data);
       })
       .catch((error) => {
@@ -26,15 +28,18 @@ export default async function Projects() {
       });
   }, []);
 
-  useEffect(() => {
-    if (repoData != null) {
-      console.log("repoData", repoData);
-    }
-  }, []);
-
   return (
     <main>
       Projects
+      <div>
+        <ul>
+          {repoData?.map((repo: GitHubRepoType) => (
+              <li className="my-2 md:my-4" key={repo.id}>
+                <ProjectCard htmlURL={repo.html_url} repoDescription={repo.description} repoName={repo.name}/>
+              </li>
+            ))}
+        </ul>
+      </div>
     </main>
   );
 }
