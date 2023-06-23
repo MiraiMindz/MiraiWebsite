@@ -14,14 +14,15 @@ export default async function Projects() {
   //   fetchData();
   // }, []);
 
-  const [repoData, setRepoData] = useState<GitHubRepoType[] | null>(null);
+  const [repoData, setRepoData] = useState<any>(null);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data: any) => {
-        setRepoData(data);
+      .then((data: GitHubRepoType[]) => {
+        console.log(data as unknown as GitHubRepoType[]);
+        setRepoData(data as unknown as GitHubRepoType[]);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
