@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { fetchGithubPublicRepos } from "../lib/APIs/GitHub/Projects";
-import { json } from "stream/consumers";
+import { useEffect, useState } from "react";
 
 export default async function Projects() {
   // useEffect(() => {
@@ -13,14 +11,15 @@ export default async function Projects() {
   //   fetchData();
   // }, []);
 
+  const [repoData, setRepoData] = useState<any>();
+
   useEffect(() => {
-    let repoData;
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
-    repoData = fetch(apiUrl)
+    fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => {
+      .then((data: any) => {
         console.log('This is your data', data);
-        return json(data);
+        setRepoData(data);
       });
       console.log("repoData", repoData);
   }, []);
