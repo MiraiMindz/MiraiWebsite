@@ -7,6 +7,7 @@ import { ProjectCard } from "../components/Projects/ProjectCards";
 
 export default async function Projects() {
   const [repoData, setRepoData] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
@@ -14,10 +15,12 @@ export default async function Projects() {
       .then((response) => response.json())
       .then((data: any) => {
         console.log("data", data);
-        setRepoData(...data);
+        setRepoData(data);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
+        setIsLoading(false);
       });
   }, []);
   
@@ -26,6 +29,10 @@ export default async function Projects() {
       console.log('Updated repoData:', repoData);
     }
   }, [repoData]);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Render a loading state or spinner while fetching data
+  }
   return (
     <main>
       Projects
