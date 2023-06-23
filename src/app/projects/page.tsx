@@ -8,16 +8,8 @@ import { ProjectCard } from "../components/Projects/ProjectCards";
 async function getData() {
   const apiUrl = 'https://api.github.com/users/miraimindz/repos';
   const res = await fetch(apiUrl)
-      // .then((response) => response.json())
-      // .then((data: any) => {
-      //   console.log("data", data);
-      //   setRepoData(...data);
-      //   setIsLoading(false);
-      // })
-      // .catch((error) => {
-      //   console.error('Error fetching data:', error);
-      //   setIsLoading(false);
-      // });
+
+  console.log(res.json.toString())
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
