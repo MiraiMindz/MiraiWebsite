@@ -6,7 +6,7 @@ import { GitHubRepoType } from "../types/GitHubRepos";
 import { ProjectCard } from "../components/Projects/ProjectCards";
 
 export default async function Projects() {
-  const [repoData, setRepoData] = useState<any>();
+  const [repoData, setRepoData] = useState<any[]>([]);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
