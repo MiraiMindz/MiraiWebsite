@@ -1,9 +1,8 @@
 "use client";
 
+import 'dotenv/config';
 import { useEffect } from "react";
 import { fetchGithubPublicRepos } from "../lib/APIs/GitHub/Projects";
-
-
 
 export default async function Projects() {
   const token: string = String(process.env.API_KEY);
