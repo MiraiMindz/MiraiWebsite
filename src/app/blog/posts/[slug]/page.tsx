@@ -35,7 +35,7 @@ export default async function Page({ params }: any) {
 
   return (
     <section className="grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-article md:gap-y-0 md:gap-x-8 overflow-auto">
-      <aside className={(toc.length > 0 ? "border-neutral-950 dark:border-neutral-50" : "") + " hidden md:block h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg border-2"}>
+      <aside className={(toc.length > 0 ? "border-neutral-950 dark:border-neutral-50  border-2" : "") + " hidden md:block h-fit max-h-[85vh] overflow-y-auto p-2 rounded-lg"}>
         {
           toc.length > 0 ? (
             <div className="max-h-fit">
