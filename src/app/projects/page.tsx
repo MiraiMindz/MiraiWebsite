@@ -6,29 +6,21 @@ import { GitHubRepoType } from "../types/GitHubRepos";
 import { ProjectCard } from "../components/Projects/ProjectCards";
 
 export default async function Projects() {
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const GitRepos = await fetchGithubPublicRepos();
-  //     console.log(GitRepos);
-  //   }
-  //   fetchData();
-  // }, []);
-
   const [repoData, setRepoData] = useState<any>(null);
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data: GitHubRepoType[]) => {
-        console.log(data as unknown as GitHubRepoType[]);
-        setRepoData(data as unknown as GitHubRepoType[]);
+      .then((data: any) => {
+        console.log(data);
+        setRepoData(data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
 
-    console.log(repoData as unknown as GitHubRepoType[]);
+    console.log(repoData);
   }, []);
   return (
     <main>
