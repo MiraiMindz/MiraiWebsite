@@ -6,10 +6,9 @@ import { GitHubRepoType } from "../types/GitHubRepos";
 import { ProjectCard } from "../components/Projects/ProjectCards";
 
 async function getData() {
-  const apiUrl = 'https://api.github.com/users/miraimindz/repos';
-  const res = await fetch(apiUrl)
-
-  console.log(res.json.toString())
+  const res = await fetch("https://api.github.com/users/miraimindz/repos");
+  let temp = res.json.toString()
+  console.log()
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -19,23 +18,8 @@ async function getData() {
 }
 
 export default async function Projects() {
-  const [repoData, setRepoData] = useState<any[]>([]);
+  const repoData = await getData();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      let tempData = await getData();
-      setRepoData(tempData);
-    }
-    fetchData();
-  }, []);
-  
-  useEffect(() => {
-    if (repoData) {
-      console.log('Updated repoData:', repoData);
-    }
-  }, [repoData]);
-
-  
   return (
     <main>
       Projects
