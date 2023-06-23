@@ -11,9 +11,11 @@ export async function fetchGithubPublicRepos() {
         },
       });
 
+      console.log(response);
+
       const repositories = await Promise.all(
-      response.data.map(async (repo: any) => {
-        const readmeResponse = await axios.get(
+        response.data.map(async (repo: any) => {
+          const readmeResponse = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/readme`, {
               headers: {
               Authorization: `Bearer ${token}`,
@@ -21,6 +23,8 @@ export async function fetchGithubPublicRepos() {
               },
             }
           );
+
+          console.log(readmeResponse);
 
           return {
             id: repo.id,
@@ -32,16 +36,10 @@ export async function fetchGithubPublicRepos() {
         })
       );
 
-      return {
-        props: {
-          repositories,
-        },
-      };
+      return repositories;
     } catch (error) {
       console.error('Error fetching repositories:', error);
-      return {
-        repositories: []
-      };
+      return [];
     }
   }
 }
