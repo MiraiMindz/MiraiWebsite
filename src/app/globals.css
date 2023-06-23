@@ -750,3 +750,15 @@ hr {
   text-align: justify;
   text-align-last: center;
 }
+
+.ProjectCard
+
+.ProjectCard:hover {
+  @apply border-violet-500 dark:border-violet-400 transition-all
+}
+
+div.ProjectCard:hover > h1,
+div.ProjectCard:hover > p,
+div.ProjectCard:hover > div > p {
+  @apply text-violet-500 dark:text-violet-400 transition-all
+}
