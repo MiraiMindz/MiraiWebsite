@@ -6,7 +6,7 @@ import { GitHubRepoType } from "../types/GitHubRepos";
 import { ProjectCard } from "../components/Projects/ProjectCards";
 
 export default async function Projects() {
-  const [repoData, setRepoData] = useState<any>(null);
+  const [repoData, setRepoData] = useState<any>();
 
   useEffect(() => {
     const apiUrl = 'https://api.github.com/users/miraimindz/repos';
@@ -19,9 +19,10 @@ export default async function Projects() {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-
-    console.log("repoData", repoData);
   }, []);
+  useEffect(() => {
+    console.log("repoData", repoData);
+  }, [repoData]);
   return (
     <main>
       Projects
