@@ -30,24 +30,26 @@ export default async function Projects() {
     }
   }, [repoData]);
 
-  if (isLoading) {
-    return <div>Loading...</div>; // Render a loading state or spinner while fetching data
-  } else {
-    return (
-      <main>
-        Projects
-        {repoData != null ? (
-        <div>
-          <ul>
-            {repoData?.map((repo: GitHubRepoType) => (
-                <li className="my-2 md:my-4" key={repo.id}>
-                  <ProjectCard htmlURL={repo.html_url} repoDescription={repo.description} repoName={repo.name}/>
-                </li>
-              ))}
-          </ul>
-        </div>) : (<p>Error</p>)
-        }
-      </main>
-    );
+  while (isLoading) {
+    if (isLoading) {
+      return <div>Loading...</div>; // Render a loading state or spinner while fetching data
+    } else {
+      return (
+        <main>
+          Projects
+          {repoData != null ? (
+          <div>
+            <ul>
+              {repoData?.map((repo: GitHubRepoType) => (
+                  <li className="my-2 md:my-4" key={repo.id}>
+                    <ProjectCard htmlURL={repo.html_url} repoDescription={repo.description} repoName={repo.name}/>
+                  </li>
+                ))}
+            </ul>
+          </div>) : (<p>Error</p>)
+          }
+        </main>
+      );
+    }
   }
 }
