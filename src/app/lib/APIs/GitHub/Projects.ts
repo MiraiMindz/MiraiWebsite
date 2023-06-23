@@ -1,7 +1,7 @@
 import axios from 'axios';
 export async function fetchGithubPublicRepos() {
   try {
-    const token: string = String(process.env.GITHUB_API_KEY);
+    const token: string = String(process.env.API_KEY);
     console.log(token);
     const response = await axios.get('https://api.github.com/user/repos', {
       headers: {
