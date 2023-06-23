@@ -14,7 +14,7 @@ export default async function Projects() {
       .then((response) => response.json())
       .then((data: any) => {
         console.log("data", data);
-        setRepoData(data);
+        setRepoData([...data]);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -22,7 +22,9 @@ export default async function Projects() {
   }, []);
   
   useEffect(() => {
-    console.log("repoData", repoData);
+    if (repoData) {
+      console.log('Updated repoData:', repoData);
+    }
   }, [repoData]);
   return (
     <main>
