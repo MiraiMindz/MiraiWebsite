@@ -2,8 +2,9 @@ import axios from 'axios';
 import 'dotenv/config';
 
 export async function fetchGithubPublicRepos() {
-  const token: string | undefined = process.env.API_KEY;
+  const token: string | undefined = process.env.API_KEY?.toString();
   if (token != undefined) {
+    console.log(token.toString())
     try {
       const response = await axios.get('https://api.github.com/user/repos', {
         headers: {
@@ -11,7 +12,7 @@ export async function fetchGithubPublicRepos() {
         },
       });
 
-      console.log(response);
+      console.log(response.data);
 
       const repositories = await Promise.all(
         response.data.map(async (repo: any) => {
