@@ -11,7 +11,7 @@ export default async function Page() {
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <div className="relative grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-3 md:gap-y-0 md:gap-x-8 overflow-auto max-w-full">
         <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
-        <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto left-0">
+        <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto w-full">
           <div className="max-h-fit after:content-[' ']"></div>
         </aside>
         <section className="max-w-full">
@@ -32,7 +32,7 @@ export default async function Page() {
             </ul>
           </article>
         </section>
-        <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto right-0">
+        <aside className="hidden md:block h-fit max-h-[85vh] overflow-y-auto w-full">
           <div className="max-h-fit after:content-[' ']"></div>
         </aside>
       </div>
