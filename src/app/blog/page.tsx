@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
-      <article className="w-3/5">
+      <article className="max-w-[60%]">
         <ul className="min-w-full">
           {posts?.map(post => (
             <li className="my-2 md:my-4" key={post?.slug}>
