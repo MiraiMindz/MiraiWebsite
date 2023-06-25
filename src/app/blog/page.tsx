@@ -11,7 +11,7 @@ export default async function Page() {
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
       <article className="max-w-full">
-        <ul className="min-w-full">
+        <ul className="w-[40ch] md:w-[80ch]">
           {posts?.map(post => (
             <li className="my-2 md:my-4" key={post?.slug}>
               <PostCard 
