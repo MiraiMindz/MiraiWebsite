@@ -10,22 +10,47 @@ export default async function Page() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
-      <article className="max-w-full">
-        <ul className="w-full md:w-96">
-          {posts?.map(post => (
-            <li className="my-2 md:my-4" key={post?.slug}>
-              <PostCard 
-                title={post?.title}
-                shortSum={post?.shortSum}
-                href={`/blog/posts/${post?.slug}`}
-                readTime={post?.readTime?.text}
-                date={post?.publishDate}
-              />
-              <hr className="rounded-full h-0.5 w-[99%] bg-neutral-950 dark:bg-neutral-50 opacity-50"/>
-            </li>
-          ))}
-        </ul>
+      <article className="max-w-full grid gap-y-4 grid-cols-3">
+      <div className="max-h-fit after:content-[' ']"></div>
+      <section>
+      <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
+    //   <article className="max-w-full">
+    //     <ul className="w-full md:w-96">
+    //       {posts?.map(post => (
+    //         <li className="my-2 md:my-4" key={post?.slug}>
+    //           <PostCard
+    //             title={post?.title}
+    //             shortSum={post?.shortSum}
+    //             href={`/blog/posts/${post?.slug}`}
+    //             readTime={post?.readTime?.text}
+    //             date={post?.publishDate}
+    //           />
+    //           <hr className="rounded-full h-0.5 w-[99%] bg-neutral-950 dark:bg-neutral-50 opacity-50"/>
+    //         </li>
+    //       ))}
+    //     </ul>
+      </section>
+      <div className="max-h-fit after:content-[' ']"></div>
       </article>
     </main>
+    // <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
+    //   <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
+    //   <article className="max-w-full">
+    //     <ul className="w-full md:w-96">
+    //       {posts?.map(post => (
+    //         <li className="my-2 md:my-4" key={post?.slug}>
+    //           <PostCard
+    //             title={post?.title}
+    //             shortSum={post?.shortSum}
+    //             href={`/blog/posts/${post?.slug}`}
+    //             readTime={post?.readTime?.text}
+    //             date={post?.publishDate}
+    //           />
+    //           <hr className="rounded-full h-0.5 w-[99%] bg-neutral-950 dark:bg-neutral-50 opacity-50"/>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   </article>
+    // </main>
   )
 }
