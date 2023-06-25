@@ -16,7 +16,7 @@ export default function About() {
 
   return (
     <main className="min-h-screen min-w-full flex-grow flex flex-row justify-center items-start">
-      <article className="w-[40ch] md:w-[80ch]">
+      <article className="max-w-[40ch] md:max-w-[80ch]">
         <section className="my-2 md:my-4">
           <div className="flex flex-row justify-center md:justify-between items-center">
             <Image
