@@ -11,7 +11,7 @@ export default async function Page() {
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
       <article className="max-w-full grid gap-x-4 grid-cols-3">
-        <div className="max-h-fit after:content-[' ']"></div>
+        <div className="w-full max-h-fit after:content-[' ']"></div>
         <section className="max-w-full">
           <article className="max-w-full">
             <ul className="w-full">
@@ -30,7 +30,7 @@ export default async function Page() {
             </ul>
           </article>
         </section>
-        <div className="max-h-fit after:content-[' ']"></div>
+        <div className="max-h-fit w-full after:content-[' ']"></div>
       </article>
     </main>
   )
