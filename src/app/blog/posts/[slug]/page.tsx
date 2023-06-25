@@ -49,7 +49,7 @@ export default async function Page({ params }: any) {
           )
         }
       </aside>
-      <details className={(toc.length > 0 ? "block md:hidden" : "hidden") + " truncate w-[40ch] p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
+      <details className={(toc.length > 0 ? "block md:hidden" : "hidden") + " truncate max-w-[40ch] p-2 rounded-lg border-2 border-neutral-950 dark:border-neutral-50"}>
         <summary className="truncate">Tabela de Conteudos</summary>
         <ul className="truncate">
           {toc}
@@ -73,7 +73,7 @@ export default async function Page({ params }: any) {
           ))}
         </ul>
       </aside>
-      <div className="md:hidden my-4 flex flex-row justify-between items-center w-[40ch]">
+      <div className="md:hidden my-4 flex flex-row justify-between items-center max-w-[40ch]">
         <Link className={(prevPostSlug != null ? "block" : "hidden") + " text-left w-full"} href={`/blog/posts/${prevPostSlug}`}>
           &lt; Previous Post
         </Link>
