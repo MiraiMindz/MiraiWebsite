@@ -22,13 +22,13 @@ export default async function Page({ params }: any) {
   let currentClassIndex = classes.findIndex((classs) => classs.slug === params.slug);
   let nextClassSlug: any = undefined;
   let prevClassSlug: any = undefined;
-  if (classes.length > 1) {
+  if (currentClassIndex > 1) {
     prevClassSlug = classes[currentClassIndex - 1]?.slug;
   } else {
     prevClassSlug = null;
   }
 
-  if (currentClassIndex > 0) {
+  if (classes.length > 1) {
     nextClassSlug = classes[currentClassIndex + 1]?.slug;
   } else {
     nextClassSlug = null;
