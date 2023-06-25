@@ -10,10 +10,9 @@ export default async function Page() {
   return (
     <main className="min-h-screen min-w-full flex-grow flex justify-start items-center flex-col">
       <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
-      <article className="max-w-full grid gap-y-4 grid-cols-3">
+      <article className="max-w-full grid gap-x-4 grid-cols-3">
         <div className="max-h-fit after:content-[' ']"></div>
-        <section>
-          <h1 className="text-2xl font-black text-center font-ibmPlexMono">Blog</h1>
+        <section className="max-w-full">
           <article className="max-w-full">
             <ul className="w-full">
               {posts?.map(post => (
