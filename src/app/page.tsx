@@ -1,114 +1,101 @@
-"use client";
-import Typewriter from "typewriter-effect";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
-
-const ScrollButton = dynamic(
-  () => import("./components/ScrollToButtons/ScrollToButtons"),
-  {
-    ssr: false,
-  },
-);
+import Image from "next/image";
 
 export default function Home() {
-  const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const handleScrollDown = () => setScrollDown(true);
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  const handleScroll = () => {
-    scroll.scrollMore(window.innerHeight, { smooth: "easeInOutCubic" });
-  };
-  useEffect(() => {
-    handleScroll();
-  }, []);
-
-  const [skipAnimation, setSkipAnimation] = useState<boolean>(false);
-  const handleSkipAnimation = () => {
-    setSkipAnimation(true);
-    handleScrollDown();
-  }
-
-
   return (
-    <main className="min-h-screen min-w-full flex-grow" onClick={handleSkipAnimation}>
-      <section className="min-h-screen flex flex-col flex-grow text-center justify-center items-center relative text-lg md:text-2xl">
-        <div className={(skipAnimation ? "hidden" : "inline-block") + "  md:max-w-[80ch] max-w-[40ch]"}>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .changeDelay(100)
-                .typeString(
-                  "Onde a <span class='text-flicker'>criatividade</span> e o tecnicismo dão um passo em direção ao <span class='underline'>futuro</span>.",
-                )
-                .pauseFor(500)
-                .callFunction(() => {
-                  handleScrollDown();
-                })
-                .start();
-            }}
-          />
-        </div>
-        <p className={skipAnimation ? "inline-block" : "hidden"}>
-          Onde a <span className='text-flicker'>criatividade</span> e o tecnicismo dão um passo em direção ao <span className="underline">futuro</span>.
-        </p>
-        <div
-          className={(scrollDown
-            ? "toggleScrollDownOn"
-            : "toggleScrollDownOff") + " absolute bottom-8 md:bottom-8"}
-        >
-          <ScrollButton value={48} />
-        </div>
-      </section>
-      <section
-        className={(scrollDown ? "block" : "hidden") +
-          " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
-      >
-        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl tracking-wide">
-          Quem sou eu?
-        </h1>
-        <p className="md:mx-16 md:text-2xl md:max-w-[60ch] max-w-[40ch]">
-          Meu nome é Bruno Barreto, mas as pessoas me conhecem como Mirai. Eu
-          tenho {currentYear - 2005}{" "}
-          anos, e sou principalmente um desenvolvedor Full-Stack; embora também
-          faça produção musical, design e escrita como hobbies.
-        </p>
-        <div
-          className={(scrollDown
-            ? "toggleScrollDownOn"
-            : "toggleScrollDownOff") +
-            " absolute bottom-32 md:bottom-16 md:block hidden"}
-        >
-          <ScrollButton value={16} />
-        </div>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <li className="mb-2">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
+              src/app/page.tsx
+            </code>
+            .
+          </li>
+          <li>Save and see your changes instantly.</li>
+        </ol>
 
-        <div
-          className={(scrollDown
-            ? "toggleScrollDownOn"
-            : "toggleScrollDownOff") +
-            " absolute bottom-32 md:bottom-8 block md:hidden"}
-        >
-          <ScrollButton value={-52} />
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
         </div>
-      </section>
-      <section
-        className={(scrollDown ? "block" : "hidden") +
-          " min-h-screen relative flex flex-col flex-grow justify-center items-center"}
-      >
-        <h1 className="font-black block text-left absolute top-2 w-full text-2xl md:text-4xl tracking-wide">
-          Recomendações
-        </h1>
-        <p className="text-center md:text-2xl md:max-w-[60ch] max-w-[40ch]">
-          Porquê você não dá uma olhada nas outras seções do site? <br />
-          <br />
-          <span className="hidden md:inline-block text-neutral-500 dark:text-neutral-400">
-            Basta usar o menu superior
-          </span>
-          <span className="inline-block md:hidden text-neutral-500 dark:text-neutral-400">
-            basta usar o menu no canto superior-direito da tela
-          </span>
-        </p>
-      </section>
-    </main>
+      </main>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
   );
 }
